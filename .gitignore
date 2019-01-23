@@ -3,6 +3,7 @@ download/
 node-sample/
 gimp/
 RnD/
+.idea/
 
 # Embedded app
 HomeElecCtrl/node_modules/
