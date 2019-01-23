@@ -273,10 +273,8 @@
 
     </div> <!-- End of LED section -->
 
-    <div class="modal fade"
-      modal-show="showDialog"
-      sw-schedule
-      switch-id="{{selectedSwitch.id}}">
+    <div class="modal fade" modal-show="showDialog"
+      sw-schedule switch-id="{{selectedSwitch.id}}">
     </div>
 
   </div>
@@ -286,6 +284,12 @@
       <span class="glyphicon glyphicon-cog"></span>
     </button>
 
+  </div>
+
+  <div class="row" style="position: absolute; bottom: 2vh; right: 5vw;">
+    <button class="btn btn-link pull-right" nav-button nav-target="/voice-ctrl">
+      Test voice control
+    </button>
   </div>
 
   <!-- Test Custom Controls -->

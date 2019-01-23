@@ -4,7 +4,8 @@ var _global = {
   Controllers: {
     Base: 'BaseCtrl',
     Test: 'TestCtrl',
-    Schedule: 'ScheduleCtrl'
+    Schedule: 'ScheduleCtrl',
+    VoiceCtrl: 'VoiceCtrl',
   }
 };
 
@@ -60,8 +61,9 @@ var _global = {
     var Ctrl = _global.Controllers;
 
     var Views = [
-      { route: Routes.Home,         template: 'html/test.html',           ctrl: Ctrl.Test     },
-      { route: Routes.Schedule,     template: 'html/schedule.html',       ctrl: Ctrl.Schedule },
+      { route: Routes.Home,         template: 'html/test.html',           ctrl: Ctrl.Test      },
+      { route: Routes.Schedule,     template: 'html/schedule.html',       ctrl: Ctrl.Schedule  },
+      { route: Routes.VoiceCtrl,    template: 'html/voice-ctrl.html',     ctrl: Ctrl.VoiceCtrl },
     ];
 
     for(var i = 0; i < Views.length; i++) {
@@ -138,7 +140,10 @@ var _global = {
      * On device ready
      */
     function deviceReady() {
+
       $location.path(mConst.Routes.Home);
+      // $location.path(mConst.Routes.VoiceCtrl);
+
       var i18n = AppCsf.i18n;
       var dic = AppCsf.dic;
 

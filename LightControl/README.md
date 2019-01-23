@@ -1,5 +1,8 @@
 # Mobile application
 
+## plugins
+https://github.com/pbakondy/cordova-plugin-speechrecognition
+
 ## Plugman
 
 Ref: https://stackoverflow.com/questions/36923980/how-to-add-a-plugin-on-only-one-ionic-platform

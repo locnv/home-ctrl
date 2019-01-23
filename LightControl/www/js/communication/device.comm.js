@@ -95,7 +95,12 @@
     var inst = {
 
       getAllPreDefinedSwitches: getAllPreDefinedSwitches,
+      getSwitchById: getSwitchById,
+
       getAllPreDefinedLEDs: getAllPreDefinedLEDs,
+      getLedById: getLedById,
+
+      getDeviceById: getDeviceById,
 
       addDevChangedListener: addDevChangedListener,
       removeDevChangedListener: removeDevChangedListener,
@@ -112,6 +117,9 @@
       // LED commands
       sendSetLEDColor: sendSetLEDColor,
       sendSetLEDMode: sendSetLEDMode,
+
+      // Send text message
+      sendTextMessage: sendTextMessage
 
     };
 
@@ -149,6 +157,27 @@
 
     function getAllPreDefinedLEDs() {
       return mDevices.leds;
+    }
+
+    function getSwitchById(swId) {
+      return findDevice(swId, DeviceType.Switch);
+    }
+
+    function getLedById(ledId) {
+      return findDevice(ledId, DeviceType.Led);
+    }
+
+    function getDeviceById(devId, devType) {
+      if(devType) {
+        return findDevice(devId, devType);
+      }
+
+      var dev = findDevice(devId, DeviceType.Switch);
+      if(!dev) {
+        dev = findDevice(devId, DeviceType.Led);
+      }
+
+      return dev;
     }
 
     /**
@@ -250,7 +279,7 @@
     }
 
     /////////////////////////////////////////////////////////
-    //// C O M M A N D S
+    //// C O M M A N D S (Communication)
     /////////////////////////////////////////////////////////
 
     /**
@@ -416,6 +445,19 @@
 
       socketIo.sendMessage(EventName, message);
 
+    }
+
+    function sendTextMessage(msg) {
+      var message = {
+        sender: Identifier,
+        target: 'server',
+        messageType: MessageTypes.None,
+        data: {
+          text: msg
+        }
+      };
+
+      socketIo.sendMessage(EventName, message);
     }
 
   }

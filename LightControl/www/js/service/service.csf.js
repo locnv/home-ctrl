@@ -9,11 +9,11 @@
 
   ServiceImpl.$inject = [
     'AppNavigator', 'AppConstants', 'LogService', 'Util', 'Config', 'Notifier', 'FileStorage',
-    'RtStorage', 'TaskExecutor', 'I18N', 'DIC', 'HttpComm', 'SocketIO' ];
+    'RtStorage', 'TaskExecutor', 'I18N', 'DIC', 'HttpComm', 'SocketIO', 'Speech' ];
 
   function ServiceImpl(
     mAppNavigator, mConst, mLogger, appUtil, appConfig, notifier, fileStorage, rtStorage, taskExecutor,
-    I18N, dic, HttpComm, socketIo) {
+    I18N, dic, HttpComm, socketIo, speech) {
 
     let inst = {
       appConst: mConst,
@@ -28,7 +28,9 @@
       i18n: I18N,
       dic: dic,
       http: HttpComm,
-      socketIo: socketIo
+      socketIo: socketIo,
+      speech: speech,
+
     };
 
     return inst;

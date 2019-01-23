@@ -17,6 +17,7 @@
     Routes: {
       Home: '/test',
       Schedule: '/schedule',
+      VoiceCtrl: '/voice-ctrl'
     },
 
     SwitchStatus: {
