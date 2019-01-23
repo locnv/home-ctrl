@@ -1,0 +1,15 @@
+[
+  {
+    "id": "led-1",
+    "name": "LED 1",
+    "pinR": 21,
+    "pinG": 20,
+    "pinB": 16
+  }, {
+    "id": "led-2",
+    "name": "LED 2",
+    "pinR": 13,
+    "pinG": 19,
+    "pinB": 26
+  }
+]

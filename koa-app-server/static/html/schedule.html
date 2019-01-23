@@ -1,0 +1,65 @@
+<style>
+
+</style>
+
+<div class="container">
+  <div class="row" style="text-align: center; margin-bottom: 32px;">
+    <h4>Schedule</h4>
+  </div>
+
+  <!-- Test Elec Dev Controller -->
+  <div class="row">
+
+    <!-- Single schedule form -->
+    <div class="form">
+
+      <!-- Target -->
+      <div class="form-group">
+        <label for="sTarget">Target:</label>
+        <select class="form-control" id="sTarget" ng-model="sSW"
+          ng-options="sw as sw.display for sw in switches" ng-change="onSwitchSelected(sSW)">
+        </select>
+      </div>
+
+      <!-- Command -->
+      <div class="form-group">
+        <label for="sCommand">Command:</label>
+        <select class="form-control" ng-model="cmd" id="sCommand">
+          <option value="{{SwitchCommand.TurnOn}}">Turn On</option>
+          <option value="{{SwitchCommand.TurnOff}}">Turn Off</option>
+        </select>
+      </div>
+
+      <!-- Delay -->
+      <div class="form-group" style="position: relative">
+        <label for="nbDelay">Time:</label>
+        <input type='text' readonly class="form-control" id='datetimepicker4' />
+      </div>
+
+      <div class="row" style="padding-left: 15px; padding-right: 15px;">
+        <button class="btn btn-primary pull-left" ng-click="setSchedule(sSW, cmd, sDateTime)">Schedule</button>
+        <button class="btn btn-primary pull-right" nav-button nav-back="true">Back</button>
+      </div>
+
+      <ul ng-if="selectSw" style="margin-top: 25px;">
+        <li ng-repeat="p in selectSw.plans">{{ p.command }} @{{ p.time | date:'short' }}</li>
+      </ul>
+
+    </div>
+
+    <!-- Fan Sleeping mode -->
+    <div class="form" style="display: none;">
+        <h2>Fan Sleeping mode</h2>
+        <div class="row" ng-repeat="p in fanPlans">
+          {{ p.cmd }} @{{ p.time | date:'short' }}
+          <span class="btn-link" ng-click="removeFanPlansFromConfig(p)">delete</span>
+
+        </div>
+        <div class="row">
+          <button class="btn btn-primary" ng-click="applyFanPlans()">Set</button>
+        </div>
+    </div>
+
+  </div>
+
+</div>

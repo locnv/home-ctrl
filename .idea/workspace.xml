@@ -1,0 +1,1370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bc036ef2-d765-49de-b293-b0a96b2706d6" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ctrl.voice-ctrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.voice-ctrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="77" column="27" lean-forward="true" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#6106#6331#0" expanded="false" />
+                <element signature="e#6364#6481#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.test.constants.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/app.test.constants.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-354">
+              <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.util.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/app.util.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.constant.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HomeElecCtrl/app.constant.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.socketio.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HomeElecCtrl/socket/app.socketio.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HomeElecCtrl/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app-koa.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/koa-app-server/app-koa.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/koa-app-server/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/app.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="146" column="29" lean-forward="true" selection-start-line="146" selection-start-column="29" selection-end-line="146" selection-end-column="29" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>this</find>
+      <find>raiseLedColorChanged</find>
+      <find>raseLedStatusChanged</find>
+      <find>updateLed</find>
+      <find>findSocketByIdentifier</find>
+      <find>ledSlider</find>
+      <find>setSchedule</find>
+      <find>initui</find>
+      <find>onDevStatusChanged</find>
+      <find>applyFanPlans</find>
+      <find>directie</find>
+      <find>showModal</find>
+      <find>sSW</find>
+      <find>onSwitchSelected(</find>
+      <find>switchId</find>
+      <find>selectedSwitch</find>
+      <find>onSwitchSelected</find>
+      <find>selectSw</find>
+      <find>showDialog</find>
+      <find>leaving</find>
+      <find>getLedById</find>
+      <find>var</find>
+      <find>console.log</find>
+      <find>voice-c</find>
+      <find>fucking</find>
+      <find>mConnectedToDev</find>
+      <find>requestDevStatus</find>
+      <find>ondevice</find>
+      <find>going to</find>
+      <find>testAudioPermission</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>nodeUtil</replace>
+      <replace>sendSwitchesStatusReport</replace>
+      <replace />
+      <replace>removeSchedule</replace>
+      <replace>LedCommands</replace>
+      <replace>logger.</replace>
+      <replace>led-mng</replace>
+      <replace>internal_seneLedColor</replace>
+      <replace>setLEDColor</replace>
+      <replace>switch-mng</replace>
+      <replace>mWaitedTimeForInit</replace>
+      <replace>raseLedStatusChanged</replace>
+      <replace>id</replace>
+      <replace>raiseLedStatusChanged</replace>
+      <replace>let</replace>
+      <replace>logger.debug</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/HomeElecCtrl/led/definition.json" />
+        <option value="$PROJECT_DIR$/LightControl/config.xml" />
+        <option value="$PROJECT_DIR$/LightControl/www/html/test.html" />
+        <option value="$PROJECT_DIR$/HomeElecCtrl/led/led.js" />
+        <option value="$PROJECT_DIR$/HomeElecCtrl/app.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/server/util/logger.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/service/service.socket-io.js" />
+        <option value="$PROJECT_DIR$/HomeElecCtrl/app.constant.js" />
+        <option value="$PROJECT_DIR$/LightControl/www/js/controller/ctrl.test.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.schedule.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/html/schedule.html" />
+        <option value="$PROJECT_DIR$/HomeElecCtrl/sensor/sensor.temp.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/directive/directive.sw.schedule.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/directive/directive.model.schedule.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/server/socket-io/app.socket.js" />
+        <option value="$PROJECT_DIR$/LightControl/www/index.html" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/directive/directive.modal.schedule.js" />
+        <option value="$PROJECT_DIR$/RnD/TypeScript/greeter.ts" />
+        <option value="$PROJECT_DIR$/RnD/TypeScript/greeter.html" />
+        <option value="$PROJECT_DIR$/RnD/TypeScript/package.json" />
+        <option value="$PROJECT_DIR$/RnD/TypeScript/dist/greet.ts" />
+        <option value="$PROJECT_DIR$/RnD/TypeScript/tsconfig.json" />
+        <option value="$PROJECT_DIR$/RnD/TypeScript/dist/main.js" />
+        <option value="$PROJECT_DIR$/RnD/TypeScript/gulpfile.js" />
+        <option value="$PROJECT_DIR$/RnD/TypeScript/src/main.ts" />
+        <option value="$PROJECT_DIR$/RnD/TypeScript/src/index.html" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/html/partial/sw-schedule.html" />
+        <option value="$PROJECT_DIR$/HomeElecCtrl/switch/switch.mng.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/directive/directive.modal.js" />
+        <option value="$PROJECT_DIR$/HomeElecCtrl/bluetooth/peripheral.js" />
+        <option value="$PROJECT_DIR$/HomeElecCtrl/bluetooth/ble.mng.js" />
+        <option value="$PROJECT_DIR$/HomeElecCtrl/bluetooth/characteristic-01.js" />
+        <option value="$PROJECT_DIR$/node-sample/simple-http-server/index.js" />
+        <option value="$PROJECT_DIR$/node-sample/node-cluster/index.js" />
+        <option value="$PROJECT_DIR$/HomeElecCtrl/led/led.mng.js" />
+        <option value="$PROJECT_DIR$/node-sample/http-server/index.js" />
+        <option value="$PROJECT_DIR$/node-sample/memory-leak/index.js" />
+        <option value="$PROJECT_DIR$/node-sample/app.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/service/service.csf.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/app.test.constants.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/server/controller.test/ctrl.test.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/html/test.html" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.test.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/service/service.speech.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/communication/device.comm.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.voice-ctrl.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/html/voice-ctrl.html" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/app.test.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/app.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/app.util.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <exe-path>/usr/local/bin/bower</exe-path>
+    <config-path />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="mobile-src" pattern="file[koa-app]:LightControl/www//*&amp;&amp;!file[koa-app]:LightControl/www/vendor//*&amp;&amp;!file[koa-app]:LightControl/www/font//*||file:LightControl/.npmignore||file:LightControl/config.xml||file:LightControl/package-lock.json||file:LightControl/package.json" />
+    <scope name="embed-src" pattern="file[koa-app]:HomeElecCtrl//*&amp;&amp;!file[koa-app]:HomeElecCtrl/node_modules//*&amp;&amp;!file[koa-app]:HomeElecCtrl/native//*" />
+    <scope name="server-src" pattern="file[koa-app]:koa-app-server//*&amp;&amp;!file[koa-app]:koa-app-server/.idea//*&amp;&amp;!file[koa-app]:koa-app-server/node_modules//*" />
+    <scope name="working" pattern="((file:koa-app-server/server/controller/ctrl.constants.js||file:koa-app-server/server/controller.test/ctrl.test.js||file:koa-app-server/server/controller.elec-control/ctrl.elec.control.js||file:koa-app-server/server/layout/app.test.html||file[koa-app]:koa-app-server/server/socket-io//*||file[koa-app]:koa-app-server/server/util//*||file[koa-app]:koa-app-server/static//*)&amp;&amp;!file[koa-app]:koa-app-server/static/html//*||file:koa-app-server/static/html/test.html||file[koa-app]:koa-app-server/tools/*||file[koa-app]:koa-app-server/tools//*||file:koa-app-server/app-koa.js||file:koa-app-server/app-render.js||file:koa-app-server/app-router.js||file:koa-app-server/app.js||file:koa-app-server/bootstrap.js||file:koa-app-server/package-lock.json||file:koa-app-server/package.json||file:koa-app-server/router.js||file:koa-app-server/rsync-exclude.txt||file:koa-app-server/rsync.sh||file[koa-app]:HomeElecCtrl//*||file[koa-app]:LightControl//*)&amp;&amp;!file[koa-app]:HomeElecCtrl/native//*&amp;&amp;!file[koa-app]:koa-app-server/static/css//*&amp;&amp;!file[koa-app]:koa-app-server/static/font//*&amp;&amp;!file:koa-app-server/static/js/communication/learnvoca.comm.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.learnvoca.test.js&amp;&amp;!file:koa-app-server/static/js/controller/to-be-deleted-main.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.learnvoca.setting.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.learnvoca.card.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.learnvoca.word.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.learnvoca.about.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.template.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.learnvoca.word-create.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.chat.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.learnvoca.home.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.authen.signup.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.authen.signin.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.admin.js&amp;&amp;!file[koa-app]:koa-app-server/static/js/directive//*&amp;&amp;!file[koa-app]:koa-app-server/static/js/i18n//*&amp;&amp;!file[koa-app]:koa-app-server/static/js/native//*&amp;&amp;!file:koa-app-server/static/js/service/service.template.js&amp;&amp;!file:koa-app-server/static/js/service/service.log.js&amp;&amp;!file:koa-app-server/static/js/service/service.runtime-storage.js&amp;&amp;!file:koa-app-server/static/js/service/service.file-storage.js&amp;&amp;!file:koa-app-server/static/js/service/service.navigator.js&amp;&amp;!file:koa-app-server/static/js/service/service.http.js&amp;&amp;!file:koa-app-server/static/js/service/service.dic.js&amp;&amp;!file:koa-app-server/static/js/service/service.task-executor.js&amp;&amp;!file:koa-app-server/static/js/service/service.i18n.js&amp;&amp;!file:koa-app-server/static/js/service/service.help.js&amp;&amp;!file:koa-app-server/static/js/service/service.configuration.js&amp;&amp;!file[koa-app]:koa-app-server/static/js/template//*&amp;&amp;!file:koa-app-server/static/js/app.admin.constants.js&amp;&amp;!file:koa-app-server/static/js/app.admin.js&amp;&amp;!file:koa-app-server/static/js/app.authen.constants.js&amp;&amp;!file:koa-app-server/static/js/app.authen.js&amp;&amp;!file:koa-app-server/static/js/app.chat.constants.js&amp;&amp;!file:koa-app-server/static/js/app.chat.js&amp;&amp;!file:koa-app-server/static/js/app.learnvoca.constants.js&amp;&amp;!file:koa-app-server/static/js/app.learnvoca.js&amp;&amp;!file[koa-app]:LightControl/hooks//*&amp;&amp;!file[koa-app]:LightControl/plugins//*&amp;&amp;!file[koa-app]:LightControl/res//*&amp;&amp;!file[koa-app]:LightControl/www/css//*&amp;&amp;!file[koa-app]:LightControl/www/font//*&amp;&amp;!file[koa-app]:LightControl/www/img//*&amp;&amp;!file[koa-app]:LightControl/www/vendor//*&amp;&amp;!file[koa-app]:LightControl/www/js/directive//*&amp;&amp;!file[koa-app]:LightControl/www/js/i18n//*&amp;&amp;!file[koa-app]:LightControl/www/js/template//*||file:koa-app-server/static/js/directive/directive.button-navigator.js" />
+    <scope name="socket-io-src" pattern="((file[koa-app]:HomeElecCtrl//*||file[koa-app]:koa-app-server//*)&amp;&amp;!file[koa-app]:HomeElecCtrl/native//*&amp;&amp;!file[koa-app]:HomeElecCtrl/node_modules//*&amp;&amp;!file[koa-app]:koa-app-server/.idea//*&amp;&amp;!file[koa-app]:koa-app-server/lib//*&amp;&amp;!file[koa-app]:koa-app-server/native//*&amp;&amp;!file[koa-app]:koa-app-server/node_modules//*&amp;&amp;!file[koa-app]:koa-app-server/tools//*&amp;&amp;!file[koa-app]:koa-app-server/test//*&amp;&amp;!file[koa-app]:koa-app-server/static/vendor//*&amp;&amp;!file[koa-app]:koa-app-server/server/controller.admin//*&amp;&amp;!file[koa-app]:koa-app-server/server/database//*&amp;&amp;!file[koa-app]:koa-app-server/server/controller.authen//*&amp;&amp;!file[koa-app]:koa-app-server/server/controller.chat//*&amp;&amp;!file[koa-app]:koa-app-server/server/controller.learnvoca//*&amp;&amp;!file[koa-app]:koa-app-server/server/controller//*&amp;&amp;!file[koa-app]:koa-app-server/static/css//*&amp;&amp;!file[koa-app]:koa-app-server/static/font//*&amp;&amp;!file[koa-app]:koa-app-server/static/img//*&amp;&amp;!file[koa-app]:koa-app-server/static/html/partial//*&amp;&amp;!file[koa-app]:koa-app-server/static/js/i18n//*&amp;&amp;!file[koa-app]:koa-app-server/static/js/directive//*&amp;&amp;!file[koa-app]:koa-app-server/static/js/native//*&amp;&amp;!file[koa-app]:koa-app-server/static/js/template//*&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.learnvoca.test.js&amp;&amp;!file:koa-app-server/static/js/controller/to-be-deleted-main.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.learnvoca.setting.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.learnvoca.card.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.learnvoca.word.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.learnvoca.about.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.template.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.learnvoca.word-create.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.chat.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.learnvoca.home.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.authen.signup.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.authen.signin.js&amp;&amp;!file:koa-app-server/static/js/controller/ctrl.admin.js&amp;&amp;!file[koa-app]:koa-app-server/static/js/service//*||file:koa-app-server/static/js/service/service.csf.js||file:koa-app-server/static/js/service/service.socket-io.js)&amp;&amp;!file:koa-app-server/static/js/app.authen.constants.js&amp;&amp;!file:koa-app-server/static/js/app.authen.js&amp;&amp;!file:koa-app-server/static/js/app.learnvoca.js&amp;&amp;!file:koa-app-server/static/js/app.admin.js&amp;&amp;!file:koa-app-server/static/js/app.chat.js&amp;&amp;!file:koa-app-server/static/js/app.chat.constants.js&amp;&amp;!file:koa-app-server/static/js/app.admin.constants.js&amp;&amp;!file:koa-app-server/static/js/app.learnvoca.constants.js&amp;&amp;!file:koa-app-server/static/js/communication/learnvoca.comm.js||file:koa-app-server/static/js/service/service.notifier.js" />
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/HomeElecCtrl/node_modules" />
+    <handled-path value="$PROJECT_DIR$/LightControl/node_modules" />
+    <handled-path value="$PROJECT_DIR$/RnD/TypeScript/node_modules" />
+    <handled-path value="$PROJECT_DIR$/download/koa-socket.io/node_modules" />
+    <handled-path value="$PROJECT_DIR$/koa-app-server/node_modules" />
+    <handled-path value="$PROJECT_DIR$/koa-samples/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="54" />
+    <option name="y" value="23" />
+    <option name="width" value="1204" />
+    <option name="height" value="535" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="koa-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="koa-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="koa-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="koa-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LightControl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="koa-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="koa-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="koa-app-server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="server-elec-ctrl-src">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app-server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="socket-io-src">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app-server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app-server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="static">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="js">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app-server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="static">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="js">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="controller">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app-server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="static">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="js">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="communication">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app-server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="static">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="html">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="embed-src">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="working">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app-server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app-server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="static">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app-server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="static">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="js">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app-server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="static">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="js">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="directive">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app-server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="static">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="html">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app-server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app-server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="server">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="controller.test">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="HomeElecCtrl">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="HomeElecCtrl">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="switch">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="koa-app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="JavaScriptPreferStrict" value="true" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v8.11.2/bin/node" />
+    <property name="javascript.nodejs.core.library.configured.version" value="8.11.2" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/examples/node_modules/eslint" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.standard" value="$PROJECT_DIR$/examples/node_modules/eslint" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.selected.package.jscs" value="$USER_HOME$/.nvm/versions/node/v8.11.2/lib/node_modules/jscs" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/koa-app-server/static/html" />
+      <recent name="$PROJECT_DIR$/koa-app-server/static/js/controller" />
+      <recent name="$PROJECT_DIR$/koa-app-server/static/js/service" />
+      <recent name="$PROJECT_DIR$/HomeElecCtrl/bluetooth" />
+      <recent name="$PROJECT_DIR$/RnD/TypeScript/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bc036ef2-d765-49de-b293-b0a96b2706d6" name="Default" comment="" />
+      <created>1543715075240</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1543715075240</updated>
+      <workItem from="1543715076625" duration="49910000" />
+      <workItem from="1544235985150" duration="125945000" />
+      <workItem from="1545536432084" duration="21361000" />
+      <workItem from="1547818976431" duration="16872000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="214088000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="54" y="23" width="1204" height="535" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26936316" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48307" sideWeight="0.23924269" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298193" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48307" sideWeight="0.7607573" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/RnD/TypeScript/greeter.js" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/RnD/TypeScript/dist/greet.ts" />
+    <entry file="file://$PROJECT_DIR$/RnD/TypeScript/dist/greet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RnD/TypeScript/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RnD/TypeScript/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RnD/TypeScript/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RnD/TypeScript/dist/bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RnD/TypeScript/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RnD/TypeScript/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/html/partial/sw-schedule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/directive/directive.button-navigator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="53" column="64" lean-forward="false" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="162" column="45" lean-forward="false" selection-start-line="162" selection-start-column="38" selection-end-line="162" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/service/service.navigator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="107" column="30" lean-forward="false" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeElecCtrl/switch/switch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeElecCtrl/switch/switch.mng.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/directive/directive.modal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/directive/directive.modal.schedule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="131" column="34" lean-forward="false" selection-start-line="131" selection-start-column="34" selection-end-line="131" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeElecCtrl/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeElecCtrl/bluetooth/ble.mng.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#428#1737#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeElecCtrl/bluetooth/characteristic-01.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-samples/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-samples/stream-file/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-sample/node-cluster/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="55" lean-forward="false" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeElecCtrl/led/led.mng.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-sample/http-server/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-sample/http-server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-sample/memory-leak/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node-sample/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download/web-speech-api/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download/web-speech-api/phrase-matcher/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download/web-speech-api/phrase-matcher/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="123" column="46" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="123" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/service/service.notifier.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="37" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/service/service.csf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/download/web-speech-api/phrase-matcher/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/controller.test/ctrl.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="63" column="49" lean-forward="true" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/service/service.speech.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="431" column="20" lean-forward="false" selection-start-line="431" selection-start-column="20" selection-end-line="431" selection-end-column="20" />
+          <folding>
+            <element signature="e#832#1169#0" expanded="false" />
+            <element signature="e#5257#5579#0" expanded="false" />
+            <element signature="e#5686#5721#0" expanded="false" />
+            <element signature="e#6148#6543#0" expanded="false" />
+            <element signature="e#6594#6882#0" expanded="false" />
+            <element signature="e#7049#7278#0" expanded="false" />
+            <element signature="e#7351#7528#0" expanded="false" />
+            <element signature="e#7578#7728#0" expanded="false" />
+            <element signature="e#7775#8105#0" expanded="false" />
+            <element signature="e#8769#8823#0" expanded="false" />
+            <element signature="e#9507#10298#0" expanded="false" />
+            <element signature="e#10763#11008#0" expanded="false" />
+            <element signature="e#11732#12271#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/service/service.socket-io.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/communication/device.comm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="449" column="28" lean-forward="false" selection-start-line="449" selection-start-column="13" selection-end-line="449" selection-end-column="28" />
+          <folding>
+            <element signature="e#41#61#0" expanded="false" />
+            <element signature="e#62#82#0" expanded="false" />
+            <element signature="e#917#1641#0" expanded="false" />
+            <element signature="e#1664#2018#0" expanded="false" />
+            <element signature="e#3242#3496#0" expanded="false" />
+            <element signature="e#3320#3345#0" expanded="false" />
+            <element signature="e#3540#3803#0" expanded="false" />
+            <element signature="e#3618#3643#0" expanded="false" />
+            <element signature="e#3922#3957#0" expanded="false" />
+            <element signature="e#4517#5145#0" expanded="false" />
+            <element signature="e#5196#5301#0" expanded="false" />
+            <element signature="e#5342#5601#0" expanded="false" />
+            <element signature="e#5635#5865#0" expanded="false" />
+            <element signature="e#5901#6123#0" expanded="false" />
+            <element signature="e#6165#6592#0" expanded="false" />
+            <element signature="e#6764#6852#0" expanded="false" />
+            <element signature="e#6888#7170#0" expanded="false" />
+            <element signature="e#6910#7113#0" expanded="false" />
+            <element signature="e#7027#7105#0" expanded="false" />
+            <element signature="e#7176#7265#0" expanded="false" />
+            <element signature="e#7302#7585#0" expanded="false" />
+            <element signature="e#7325#7529#0" expanded="false" />
+            <element signature="e#7442#7521#0" expanded="false" />
+            <element signature="e#7591#7718#0" expanded="false" />
+            <element signature="e#7768#8103#0" expanded="false" />
+            <element signature="e#7791#8047#0" expanded="false" />
+            <element signature="e#7908#8039#0" expanded="false" />
+            <element signature="e#8109#8228#0" expanded="false" />
+            <element signature="e#8280#8592#0" expanded="false" />
+            <element signature="e#8303#8536#0" expanded="false" />
+            <element signature="e#8420#8528#0" expanded="false" />
+            <element signature="e#8598#8668#0" expanded="false" />
+            <element signature="e#8710#8919#0" expanded="false" />
+            <element signature="e#8733#8862#0" expanded="false" />
+            <element signature="e#8925#9060#0" expanded="false" />
+            <element signature="e#9114#9514#0" expanded="false" />
+            <element signature="e#9137#9385#0" expanded="false" />
+            <element signature="e#9254#9377#0" expanded="false" />
+            <element signature="e#9520#9649#0" expanded="false" />
+            <element signature="e#9850#9946#0" expanded="false" />
+            <element signature="e#9977#10099#0" expanded="false" />
+            <element signature="e#10013#10091#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/html/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/html/voice-ctrl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/app.test.constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-354">
+          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.voice-ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="77" column="27" lean-forward="true" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#6106#6331#0" expanded="false" />
+            <element signature="e#6364#6481#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/app.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="146" column="29" lean-forward="true" selection-start-line="146" selection-start-column="29" selection-end-line="146" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeElecCtrl/app.constant.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeElecCtrl/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/app-koa.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeElecCtrl/node_modules/socket.io-client/lib/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1104">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeElecCtrl/socket/app.socketio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/app.util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>working</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+          <order>
+            <scope name="mobile-src" />
+            <scope name="embed-src" />
+            <scope name="server-src" />
+            <scope name="working" />
+            <scope name="socket-io-src" />
+          </order>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,50 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h4 class="modal-title">Switch scheduling!</h4>
+    </div>
+
+    <div class="modal-body">
+      <div class="form">
+
+        <!-- Target -->
+        <div class="form-group">
+          <label for="sTarget">Target:</label>
+          <select class="form-control" id="sTarget" ng-model="_switchId"
+            ng-options="sw.id as sw.display for sw in switches"
+            ng-change="onSwitchSelected(_switchId)">
+          </select>
+
+        </div>
+
+        <!-- Command -->
+        <div class="form-group">
+          <label for="sCommand">Command:</label>
+          <select class="form-control" ng-model="cmd" id="sCommand">
+            <option value="{{SwitchCommand.TurnOn}}">Turn On</option>
+            <option value="{{SwitchCommand.TurnOff}}">Turn Off</option>
+          </select>
+        </div>
+
+        <!-- Delay -->
+        <div class="form-group" style="position: relative">
+          <label for="nbDelay">Time:</label>
+          <input type='text' readonly class="form-control" id='datetimepicker4' />
+        </div>
+
+        <ul ng-if="selectSw" style="margin-top: 25px;">
+          <li ng-repeat="p in selectSw.plans">{{ p.command }} @{{ p.time | date:'short' }}</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn btn-primary pull-left" ng-click="setSchedule(selectSw, cmd, sDateTime)">Schedule</button>
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+  </div><!-- /.modal-content -->
+
+</div><!-- /.modal-dialog -->

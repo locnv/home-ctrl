@@ -1,0 +1,132 @@
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+#sidebar {
+    width: 100%;
+    max-width: 320px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 95vh;
+    z-index: 999;
+    background: #337ab7;
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: auto;
+}
+
+#sidebar.active {
+    margin-left: -320px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#sidebar ul li {
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+.fav-dev .dev-name {
+    font-size: 4vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.fav-dev .dev-addr {
+    color: lightgray;
+    font-style: italic;
+    font-size: 80%;
+}
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    width: calc(100% - 320px);
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#content.active {
+    width: 100%;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+#sidebar {
+    margin-left: -320px;
+}
+#sidebar.active {
+    margin-left: 0;
+}
+#content {
+    width: 100%;
+}
+#content.active {
+    width: calc(100% - 320px);
+}
+#sidebarCollapse span {
+    display: none;
+}
+
+.btn-fav-action {
+    color: lightcoral;
+    margin-left: 15px;
+    margin-top: 5px;
+    font-style: italic;
+}

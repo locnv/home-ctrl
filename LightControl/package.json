@@ -1,0 +1,40 @@
+{
+  "name": "com.app.light_control",
+  "displayName": "LightControl",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "cheerio": "^1.0.0-rc.2",
+    "cordova-android": "^6.3.0",
+    "cordova-browser": "^5.0.4",
+    "cordova-plugin-browsersync": "^1.1.0",
+    "cordova-plugin-whitelist": "^1.3.3",
+    "csp-parse": "0.0.2",
+    "elementtree": "^0.1.7",
+    "glob": "^7.1.3",
+    "npm": "^6.4.1",
+    "plist": "^3.0.1"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-file": {},
+      "cordova-plugin-browsersync": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-local-notification": {},
+      "cordova-plugin-dialogs": {}
+    },
+    "platforms": [
+      "browser",
+      "android"
+    ]
+  }
+}

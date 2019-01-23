@@ -1,0 +1,29 @@
+{
+  "name": "hello-koa",
+  "version": "1.0.0",
+  "description": "KOA JS TUTORIAL.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "locnv",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.3",
+    "koa-body": "^4.0.4",
+    "koa-compress": "^3.0.0",
+    "koa-convert": "^1.2.0",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa-socket.io": "^1.1.2",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.1.4",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.3.3",
+    "swig": "^1.4.2",
+    "util": "^0.11.0",
+    "uuid": "^3.3.2",
+    "winston": "^3.1.0",
+    "winston-daily-rotate-file": "^3.5.1"
+  }
+}

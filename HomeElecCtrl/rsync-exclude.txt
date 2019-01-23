@@ -1,0 +1,11 @@
+.git
+.gitignore
+.idea
+logs
+node_modules
+rsync-exclude.txt
+tests
+tools
+working
+examples
+download

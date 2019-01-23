@@ -1,0 +1,61 @@
+{
+  "static": {
+    "SCAN": "Scan",
+    "STOP": "Stop",
+    "FILTER": "Filter",
+    "CONNECT": "Connect",
+    "DISCONNECT": "Disconnect",
+    "ADDRESS": "Address",
+    "RSSI": "Rssi",
+    "RAW": "RAW",
+    "REMOVE": "Remove",
+    "DEVICE": "Device",
+    "FLAGS": "Flags",
+    "COMPLETE_LOCAL_NAME": "Complete Local Name",
+    "MANUFACTURER_SPEC_DATA": "Manufacturer Specific Data",
+    "TEST_PAGE": "Test page",
+    "DEV_NAME": "Device name",
+    "BLE_MANU": "Bluetooth manufacturer (id)",
+    "APPLY": "Apply",
+    "FAV_DEV": "Favourite devices",
+    "THE_LST_EMPTY": "The list is empty!",
+    "CONNECTING": "connecting ...",
+    "DISCOVERING": "discovering ...",
+    "DISCONNECTING": "disconnecting ...",
+    "DISCONNECTED": "disconnected!",
+    "READY": "Ready!",
+    "FAIL_TO_CONNECT": "Fail to connect!",
+    "READ": "Read",
+    "WRITE": "Write",
+    "NOTIFY": "Notify",
+    "NOTIFY_ON": "Notify (on)",
+    "NOTIFY_OFF": "Notify (off)",
+
+    "BACK": "Back",
+
+    "SCAN_DESC": "Touch on button 'Scan' to find nearby devices!",
+    "FILTER_EMPTY_DESC": "Not found devices matched filter material!",
+    "SCANNING": "Scanning",
+
+    "SETTING": "Setting",
+    "LANGUAGE": "Language",
+    "ENGLISH": "English",
+    "FRENCH": "French",
+    "VIETNAMESE": "Vietnamese",
+    "ABOUT_THIS_APP": "About this app!"
+
+  },
+
+  "template": {
+    "WELCOME": "Hello {{name}}!",
+    "CONNECTING": "Connecting to {{devName}} ...",
+    "DISCONNECTED": "Disconnected from {{devName}}"
+  },
+
+  "HELLO": "Hello Eugene!",
+  "HELLO_PARAM": "Hello {{name}}!",
+
+  "TEXT_OK": "OK",
+  "TEXT_YES": "Yes",
+  "TEXT_NO": "No"
+}

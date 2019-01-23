@@ -1,0 +1,27 @@
+<style>
+
+</style>
+<div class="container">
+    <div ng-if="isDev" style="position: fixed; right: 2px; top: 2px; opacity: 0.25;">
+      <button class="btn btn-danger" nav-button nav-target="/Test">{{ 'static.TEST_PAGE' | translate }}</button>
+      <button class="btn btn-danger" nav-button nav-target="/setting">{{ 'static.SETTING' | translate }}</button>
+    </div>
+    <h2>Learn Voca 1.0!</h2>
+
+    <a href="/authen" class="btn btn-link pull-right">Login</a>
+
+    <ul class="lst-card">
+        <li class="btn btn-link"
+            nav-button nav-target="/card" nav-param="{ cardId:'{{card.id}}'}"
+            ng-repeat="card in cards track by $index">
+            {{ card.name }}
+        </li>
+        <li class="btn btn-link" ng-click="toggleFormCreateCard()">Add card</li>
+    </ul>
+    <div class="frm-create-card" ng-show="formCreateCard.show">
+        <h3>Form create new Card!</h3>
+    </div>
+    <add-card></add-card>
+
+    <button class="btn btn-link" nav-button nav-target="/about">About</button>
+</div>

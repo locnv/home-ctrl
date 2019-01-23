@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap-slider/css/bootstrap-slider.css">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap-toggle/css/bootstrap-toggle.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/loader/css-loader.css">
+    <link rel="stylesheet" type="text/css" href="css/app-test.css">
+
+    <title>Lights Control!</title>
+
+  </head>
+
+  <body data-ng-app="AppTest">
+    <div class="container">
+      <!-- App's view -->
+      <div ng-view id="app-view" class=""></div>
+
+      <!-- L O A D E R ++ -->
+      <div class="loader loader-bar"
+        ng-class="{'is-active': pageLoading }"
+        data-text="contacting to devices ..."
+        data-rounded>
+      </div>
+      <!-- L O A D E R -- -->
+    </div>
+
+    <!-- Dependencies -->
+    <script type="text/javascript" src="vendor/socket.io.min.js"></script>
+
+    <script type="text/javascript" src="vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap-slider/bootstrap-slider.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap-notifier/bootstrap-notify.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
+    <script type="text/javascript" src="vendor/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+
+    <script type="text/javascript" src="vendor/angular/angular.min.js"></script>
+    <script type="text/javascript" src="vendor/angular/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="vendor/angular/angular-route.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-translate/angular-translate.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-translate/angular-translate-loader-static-files.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-translate/angular-translate-storage-local.min.js"></script>
+    <script type="text/javascript" src="vendor/angular-translate/angular-translate-storage-cookie.min.js"></script>
+    <script type="text/javascript" src="vendor/angular/angular-animate.min.js"></script>
+
+    <script type="text/javascript" src="js/app.test.js"></script>
+    <script type="text/javascript" src="js/app.test.constants.js"></script>
+    <script type="text/javascript" src="js/app.util.js"></script>
+    <script type="text/javascript" src="js/service/service.runtime-storage.js"></script>
+    <script type="text/javascript" src="js/service/service.log.js"></script>
+    <script type="text/javascript" src="js/service/service.i18n.js"></script>
+    <script type="text/javascript" src="js/service/service.help.js"></script>
+    <script type="text/javascript" src="js/service/service.configuration.js"></script>
+    <script type="text/javascript" src="js/service/service.file-storage.js"></script>
+    <script type="text/javascript" src="js/service/service.help.js"></script>
+    <script type="text/javascript" src="js/service/service.csf.js"></script>
+    <script type="text/javascript" src="js/service/service.task-executor.js"></script>
+    <script type="text/javascript" src="js/service/service.notifier.js"></script>
+    <script type="text/javascript" src="js/service/service.navigator.js"></script>
+    <script type="text/javascript" src="js/service/service.dic.js"></script>
+    <script type="text/javascript" src="js/service/service.http.js"></script>
+    <script type="text/javascript" src="js/service/service.socket-io.js"></script>
+    <script type="text/javascript" src="js/communication/device.comm.js"></script>
+
+    <script type="text/javascript" src="js/directive/directive.button-navigator.js"></script>
+    <script type="text/javascript" src="js/directive/directive.modal.js"></script>
+    <script type="text/javascript" src="js/directive/directive.modal.schedule.js"></script>
+    <script type="text/javascript" src="js/controller/ctrl.base.js"></script>
+    <script type="text/javascript" src="js/controller/ctrl.test.js"></script>
+    <script type="text/javascript" src="js/controller/ctrl.schedule.js"></script>
+
+  </body>
+</html>

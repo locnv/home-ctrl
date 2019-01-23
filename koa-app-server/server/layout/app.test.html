@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    {% for style in styles %}
+    <link rel="stylesheet" type="text/css" href="{{style}}">
+    {% endfor %}
+
+    <title>{{AppTitle}}</title>
+  </head>
+
+  <body data-ng-app="AppTest">
+    <div class="container">
+      <!-- App's view -->
+      <div ng-view id="app-view" class=""></div>
+
+      <!-- L O A D E R ++ -->
+      <div class="loader loader-bar"
+        ng-class="{'is-active': pageLoading }"
+        data-text="contacting to devices ..."
+        data-rounded>
+      </div>
+      <!-- L O A D E R -- -->
+
+    </div>
+
+    <!-- Dependencies -->
+    {% for js in scripts %}
+      <script type="text/javascript" src="{{js}}"></script>
+    {% endfor %}
+
+  </body>
+</html>

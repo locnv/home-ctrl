@@ -1,0 +1,19 @@
+<style>
+</style>
+<div class="container">
+    <h2>{{card.name}}</h2>
+
+    <ul class="lst-word">
+      <li class="btn btn-line"
+        nav-button nav-target="/word" nav-param="{cardId: '{{card.id}}', word: '{{word.name}}'}"
+        ng-repeat="word in card.words track by $index">{{word.name}}</li>
+    </ul>
+
+    <div>
+        <button class="btn btn-link pull-left" nav-button nav-back="true">back</button>
+        <button class="btn btn-link pull-right" ng-click="toggleFormCreateWord()">Add word</button>
+    </div>
+
+    <add-word card-id="{{card.id}}"></add-word>
+
+</div>

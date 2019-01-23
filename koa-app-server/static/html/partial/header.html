@@ -1,0 +1,30 @@
+<style>
+    #learnvoca-header {
+        margin-bottom: 12px;
+        min-height: 22px;
+        width: 100%;
+        display: inline-block;
+    }
+    #learnvoca-header h4 {
+        font-size: 7vw;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #337ab7;
+        text-shadow: 2px 0px 1px black;
+    }
+    #app-page-title .learnvoca-app-name {
+        font-size: 5vw;
+    }
+    #app-page-title .learnvoca-page-name {
+        font-size: 4vw;
+    }
+</style>
+<div id="learnvoca-header" class="text-center">
+    <div class="col-xs-11 pull-left text-center"><h4>{{AppInfo.Name}}</h4></div>
+</div>
+<div id="app-page-title">
+    <div class="row">
+        <div class="col-xs-5 learnvoca-app-name">{{AppInfo.Name}}</div>
+        <div class="col-xs-7 text-right learnvoca-page-name">{{AppInfo.PageTitle}}</div>
+    </div>
+</div>

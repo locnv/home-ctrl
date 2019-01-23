@@ -1,0 +1,49 @@
+<style>
+    .btn-footer-right {
+        margin-right: 6px;
+    }
+    .learnvoca-footer button:focus {
+        outline: none;
+    }
+    .learnvoca-footer button {
+        background-color: transparent;
+        border: none;
+        font-weight: bold;
+        font-size: 5vw;
+    }
+    .learnvoca-footer button:active {
+        color: lightblue;
+    }
+    .learnvoca-footer button:disabled {
+        color: darkgray;
+    }
+    .learnvoca-footer-btn {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+</style>
+<div class="learnvoca-footer">
+    <!-- Left panel -->
+    <div class="col-xs-4 text-left learnvoca-footer-btn">
+        <button ng-if="btnLeft.active" ng-disabled="!btnLeft.enabled"
+            ng-click="onBtnLeftClicked()">{{btnLeft.caption}}</button>
+    </div>
+
+    <!-- Middle panel -->
+    <div class="col-xs-3 text-center">
+        <button ng-if="btnMiddle.active" ng-disabled="!btnMiddle.enabled"
+            class="btn-footer-mid" ng-click="onBtnMiddleClicked()">
+            {{btnMiddle.caption}} <span class="{{btnMiddle.icon}}"></span>
+        </button>
+    </div>
+
+    <!-- Right panel -->
+    <div class="col-xs-5 text-right learnvoca-footer-btn">
+        <button ng-if="btnRight.active" ng-disabled="!btnRight.enabled"
+            class="btn-footer-right" ng-click="onBtnRightClicked()">
+            {{btnRight.caption}} <span class="{{btnRight.icon}}"></span>
+        </button>
+    </div>
+
+</div>

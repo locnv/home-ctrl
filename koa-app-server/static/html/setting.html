@@ -1,0 +1,43 @@
+<style>
+    .setting-lang {
+        text-align: center;
+    }
+    .setting-lang img {
+        width: 20vw;
+        height: auto;
+    }
+    .link-about-app button {
+        position: absolute;
+        right: 0;
+        bottom: 4vh;
+        z-index: 9999;
+        font-style: italic;
+        color: darkblue;
+        text-decoration: underline;
+    }
+    .lang-active img {
+        border: 2px solid lightgray;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+</style>
+<div class="container" style="display: inline-block">
+    <div class="page-setting">
+        <h2>{{ 'static.SETTING' | translate }}</h2>
+
+        <div class="">
+            <label><h3>{{ 'static.LANGUAGE' | translate }}: {{activeLanguage.Display}}</h3></label> <br/>
+            <div class="setting-lang col-xs-4"
+                ng-repeat="lang in Languages"
+                ng-class="{'lang-active': lang.Active || ''}"
+                ng-click="onBtnLanguageClicked(lang)">
+                <img ng-src="{{lang.Flag}}" />
+                {{lang.Display}}
+            </div>
+        </div>
+
+        <div class="row link-about-app">
+            <button class="btn btn-link" nav-button nav-target="/about">{{ 'static.ABOUT_THIS_APP' | translate }}</button>
+        </div>
+    </div>
+</div>

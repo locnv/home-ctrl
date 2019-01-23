@@ -1,0 +1,11 @@
+[
+  {
+    "id": "switch-lamp",
+    "name": "Lamp",
+    "pin": 24
+  }, {
+    "id": "switch-fan",
+    "name": "Fan",
+    "pin": 23
+  }
+]

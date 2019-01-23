@@ -1,0 +1,61 @@
+<style>
+  .sw-img {
+    text-align: center;
+  }
+
+  .sw-img img {
+    width: 12vw;
+    height: auto;
+  }
+  .err-no-mic-perm {
+    text-align: center;
+    color: red;
+    margin-bottom: 20px;
+  }
+  ul#lstValidCmd {
+    padding-left: 18px;
+  }
+</style>
+
+<div class="container">
+  <div class="row" style="text-align: center; margin-bottom: 32px;">
+    <button class="btn btn-link" nav-button nav-target="/test">
+      <i class="glyphicon glyphicon-home"></i>
+    </button>
+    <h4>Voice Control Demo</h4>
+  </div>
+
+  <!-- Voice control demo -->
+  <div class="row hidden">
+    <label>Voice control: {{voiceCtrl.enable}} </label> </br>
+    <button class="btn btn-primary" ng-click="toggleVoiceCtrl()">Enable/Disable</button>
+  </div>
+
+  <div class="row err-no-mic-perm" ng-if="!hasMicAccessMic">
+    <span class="red">Please grant the permission to access the microphone to use this feature.</span>
+  </div>
+  <div class="row">
+    <div class="col-xs-6" ng-repeat="sw in switches">
+
+      <div class="sw-img">
+        <img ng-src="{{sw | StatusImage}}" />
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 2vh;">
+    <ul id="lstValidCmd">
+      <li>Turn on the light</li>
+      <li>Turn off the light</li>
+      <li>Turn on the fan</li>
+      <li>Turn off the fan</li>
+    </ul>
+  </div>
+
+  <div class="row hidden">
+    <video width="320" height="240" controls>
+      Your browser does not support the video tag.
+    </video>
+    <div id="errorMsg"></div>
+  </div>
+
+</div>

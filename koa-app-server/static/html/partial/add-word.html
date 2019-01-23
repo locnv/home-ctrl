@@ -1,0 +1,44 @@
+<style>
+    .input-error {
+        color: red;
+        font-style: italic;
+    }
+    .input-info {
+        color: green;
+        font-style: italic;
+    }
+</style>
+
+<div id="modelAddWord" class="modal fade bs-learnvoca-write-modal"
+    tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Add word! {{ cardId }}</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <input type="text" id="txtName" class="form-control" placeholder="word!" ng-model="word.name">
+              </div>
+              <div class="form-group">
+                <input type="text" id="txtDescription" class="form-control" placeholder="A description?" ng-model="word.description">
+              </div>
+              <div class="form-group">
+                <input type="text" id="txtExample" class="form-control" placeholder="An example?" ng-model="word.example">
+              </div>
+            </div>
+            <div class="modal-footer">
+                <span class="pull-left" ng-class="{'input-error': status.isError, 'input-info': !status.isError }"
+                    ng-if="status.active">{{status.message}}</span>
+                <button type="button" class="btn btn-primary" ng-click="onBtnAddClicked(word)">Add</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div>
+</div>
+<script>
+    $('#bleWriteForm').on('shown.bs.modal', function() {
+        $('#txtValueToWrite').focus();
+    });
+</script>

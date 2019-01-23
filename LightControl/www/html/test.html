@@ -1,0 +1,334 @@
+<style>
+  #lst-file-del {
+    list-style: none;
+    padding-left: 5px;
+    padding-right: 20px;
+  }
+  #lst-file-del li {
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .hidden {
+    display: none;
+  }
+  .light-cell {
+    margin-bottom: 20px;
+  }
+  #lst-plan {
+    clear: both;
+    padding-top: 32px;
+  }
+
+  #lst-plan ul {
+    padding-left: 15px;
+  }
+
+  .from-schedule .form-control {
+    max-width: 150px !important;
+  }
+
+  .from-schedule .form-group {
+    padding-left: 0 !important;
+  }
+  .color-red {
+    color: red;
+  }
+  .color-blue {
+    color: blue;
+  }
+  .color-green {
+    color: green;
+  }
+  .color-gray {
+    color: lightgrey;
+  }
+  .btn-rm {
+    margin-left: 10px;
+  }
+  .btn-rm:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  #RGB {
+  	width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid cornflowerblue;
+  	background: rgb(128, 128, 128);
+  }
+  #RC .slider-selection {
+  	background: #FF8282;
+  }
+  #RC .slider-handle {
+  	background: red;
+  }
+  #GC .slider-selection {
+  	background: #428041;
+  }
+  #GC .slider-handle {
+  	background: green;
+  }
+  #BC .slider-selection {
+  	background: #8283FF;
+  }
+  #BC .slider-handle {
+  	border-bottom-color: blue;
+  }
+  #R, #G, #B {
+  	width: 98%;
+  }
+  .slider.slider-horizontal {
+    width: 100%;
+  }
+  .sw-img {
+    margin-right: 32px;
+  }
+
+  .sw-img img {
+    width: 12vw;
+    height: auto;
+  }
+
+  .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20px; }
+  .toggle.ios .toggle-handle { border-radius: 20px; }
+
+  .toggle.android { border-radius: 0px;}
+  .toggle.android .toggle-handle { border-radius: 0px; }
+
+  .led-item:hover {
+    cursor:pointer;
+    color: #d58512;
+  }
+  .app-title {
+    text-align: center; margin-bottom: 32px;
+  }
+  .n-plan {
+    font-size: 89%; font-style: italic;
+  }
+  .led-item {
+    margin-right: 5px
+  }
+  .btn-mode {
+    padding-left: 15px; margin-bottom: 25px; margin-top: 20px;
+  }
+  .slider.slider-horizontal {
+    margin: 6px 0px;
+  }
+  .led-opt {
+    display: inline;
+    margin-right: 20px;
+  }
+  .led-opt label {
+    margin-left: 5px;
+  }
+  .capitalize {
+     text-transform: capitalize;
+  }
+</style>
+
+<div class="container">
+  <div class="row app-title">
+    <h3>{{'Lights control' | uppercase}}</h3>
+  </div>
+
+  <!-- Test Elec Dev Controller -->
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-6 light-cell" ng-repeat="sw in switches">
+
+      <label>{{sw.display | uppercase }}</label>
+
+      <span class="n-plan color-green" ng-if="sw.plans.length">
+        > {{sw.plans[0].command}} @{{sw.plans[0].time | date:'short'}}</span>
+      <button class="btn btn-xs pull-right" ng-click="toggleFormSchedule(sw)">
+        <i class="glyphicon glyphicon-time"></i>
+      </button>
+      <br>
+
+      <div class="pull-left sw-img">
+        <img ng-src="{{sw | StatusImage}}" />
+      </div>
+
+      <div class="pull-left">
+        <br/><input id="btnToggleOnOff-{{sw.id}}" class="btnToggleOnOff"
+          type="checkbox"
+          data-toggle="toggle"
+          data-onstyle="warning"
+          data-style="android"
+          switchId="{{sw.id}}" />
+      </div>
+      <br/><br/>
+
+      <!-- List of schedules of selected switch -->
+      <div id="lst-plan" ng-if="sw.plans.length">
+        <label>Schedule ({{sw.plans.length}})</label>
+        <ul>
+          <li ng-repeat="p in sw.plans">
+            {{p.command}} @{{p.time | date:'short'}}
+            <span ng-click="removeSchedule(sw, p.id)" class="btn-link btn-rm">remove</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    </div> <!-- LED section -->
+    <div class="col-xs-12 col-sm-6 light-cell">
+
+      <label>LED</label> <br/>
+
+      <!-- LED selection -->
+      <div ng-repeat="led in leds"
+        class="custom-control custom-radio led-opt">
+
+        <input
+          id="led-{{led.id}}" name="ledSelection"
+          type="radio" class="custom-control-input"
+          ng-checked="led.id === selectedLed.id"
+          ng-click="selectLED(led)">
+
+        <label for="led-{{led.id}}"
+          class="custom-control-label capitalize">
+          {{ led.name | lowercase }}
+        </label>
+
+      </div>
+
+      <!-- Buttons select LED's modes (Solid, chase, blink, dim, ...) -->
+      <div class="row btn-mode">
+        <button class="btn"
+          ng-class="{'btn-warning': selectedLed.mode === LedModes.None}"
+          ng-click="setLedMode(selectedLed, LedModes.None)">Solid</button>
+
+        <button class="btn"
+          ng-class="{'btn-warning': selectedLed.mode === LedModes.Blink}"
+          ng-click="setLedMode(selectedLed, LedModes.Blink)">Blink</button>
+
+        <button class="btn"
+          ng-class="{'btn-warning': selectedLed.mode === LedModes.Chase}"
+          ng-click="setLedMode(selectedLed, LedModes.Chase)">Chase</button>
+
+        <button class="btn"
+          ng-class="{'btn-warning': selectedLed.mode === LedModes.Dim}"
+          ng-click="setLedMode(selectedLed, LedModes.Dim)">Dim</button>
+
+      </div>
+
+      <!-- Slider interval (blink, chase, ...) -->
+      <div class="color-selection" ng-show="selectedLed.mode !== LedModes.None">
+        <div class="col-xs-8 col-sm-6 col-md-4" style="padding-left: 0px;">
+          <input id="IN" type="text"
+          data-slider-min="10"
+          data-slider-max="1000"
+          data-slider-step="1"
+          data-slider-value="1000"
+          data-slider-id="INC"
+          data-slider-tooltip="hide"
+          data-slider-handle="round" />
+        </div>
+      </div>
+
+      <!-- RGB Slider -->
+      <div class="color-selection" ng-show="selectedLed.mode === LedModes.None">
+        <div class="col-xs-8 col-sm-6 col-md-4" style="padding-left: 0px;">
+
+          <input id="R" type="text"
+          data-slider-min="0"
+          data-slider-max="255"
+          data-slider-step="1"
+          data-slider-value="128"
+          data-slider-id="RC"
+          data-slider-tooltip="hide"
+          data-slider-handle="round" />
+
+          <input id="G" type="text"
+          data-slider-min="0"
+          data-slider-max="255"
+          data-slider-step="1"
+          data-slider-value="128"
+          data-slider-id="GC"
+          data-slider-tooltip="hide"
+          data-slider-handle="round" />
+
+          <input id="B" type="text"
+          data-slider-min="0"
+          data-slider-max="255"
+          data-slider-step="1"
+          data-slider-value="128"
+          data-slider-id="BC"
+          data-slider-tooltip="hide"
+          data-slider-handle="round" />
+
+        </div>
+
+        <div class="col-xs-4 col-md-2" style="margin-top: 20px;">
+          <div id="RGB"></div>
+        </div>
+
+      </div>
+
+    </div> <!-- End of LED section -->
+
+    <div class="modal fade"
+      modal-show="showDialog"
+      sw-schedule
+      switch-id="{{selectedSwitch.id}}">
+    </div>
+
+  </div>
+
+  <div class="row" style="position: absolute; bottom: 2vh; right: 5vw; display: none;">
+    <button class="btn btn-danger pull-right" nav-button nav-target="/schedule">
+      <span class="glyphicon glyphicon-cog"></span>
+    </button>
+
+  </div>
+
+  <!-- Test Custom Controls -->
+  <div class="row hidden">
+    <h4>Test custom control</h4>
+    <div id="cc.base1" style="width: 300px; height: 300px;"></div>
+    <div id="cc.base2" style="width: 300px; height: 300px;"></div>
+
+  </div>
+
+  <!-- Test Translate -->
+  <div class="row hidden">
+    <h4>Test translate</h4>
+    <span>{{'HELLO' | translate}}</span>
+    <p>
+    <button class="btn btn-primary" ng-click="setLang('en_US')">English</button>
+    <button class="btn btn-primary" ng-click="setLang('vn_VN')">Vietnamese</button>
+    <button class="btn btn-primary" ng-click="setLang('fr_FR')">French</button>
+  </p>
+  </div>
+
+  <!-- Test Notification -->
+  <div class="row hidden">
+    <h4>Test notifier</h4>
+    <button class="btn btn-primary" ng-click="showNotification()">Notify</button>
+  </div>
+
+  <!-- Test Files -->
+  <div class="row hidden">
+    <h4>Test File</h4>
+    <ul id="lst-file-del">
+      <li ng-repeat="file in files" class="row">
+      <div class="pull-left">{{file.name}}</div>
+      <div class="pull-right">
+          <span ng-click="deleteFile(file.name)"
+            class="btn btn-danger btn-xs"
+            style="margin-left: 32px;">x</span>
+          <span ng-click="readFromFile(file.name)"
+            class="btn btn-primary btn-xs glyphicon glyphicon-triangle-right" style="margin-left: 12px;"></span>
+      </div>
+      </li>
+    </ul>
+    <div id="fileContent" to-json json-object="lastRead"></div>
+  </div>
+
+</div>

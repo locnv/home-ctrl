@@ -1,0 +1,59 @@
+{
+  "static": {
+    "SCAN": "Bắt đầu",
+    "STOP": "Dừng",
+    "FILTER": "Bộ lọc",
+    "CONNECT": "Kết nối",
+    "DISCONNECT": "Ngắt kết nối",
+    "ADDRESS": "Địa chỉ",
+    "RSSI": "Rssi",
+    "RAW": "RAW",
+    "REMOVE": "Xoá",
+    "DEVICE": "Tên thiết bị",
+    "FLAGS": "Flags",
+    "COMPLETE_LOCAL_NAME": "Complete Local Name",
+    "MANUFACTURER_SPEC_DATA": "Manufacturer Specific Data",
+    "TEST_PAGE": "Test page",
+    "DEV_NAME": "Tên thiết bị",
+    "BLE_MANU": "Mã nhà sản xuất (id)",
+    "APPLY": "Xong",
+    "FAV_DEV": "Đã đánh dấu",
+    "THE_LST_EMPTY": "Không tìm thấy!",
+    "CONNECTING": "Đang kết nối ...",
+    "DISCOVERING": "Đang tìm ...",
+    "DISCONNECTING": "Đang ngắt ...",
+    "DISCONNECTED": "Đã ngắt!",
+    "READY": "Sẵn sàng!",
+    "FAIL_TO_CONNECT": "Không thể kết nối!",
+    "READ": "Doc",
+    "WRITE": "Ghi",
+    "NOTIFY": "Notify",
+    "NOTIFY_ON": "Notify (on)",
+    "NOTIFY_OFF": "Notify (off)",
+
+    "BACK": "Trước",
+
+    "SCAN_DESC": "Nhấn nút 'Scan' để bắt đầu!",
+    "FILTER_EMPTY_DESC": "Không có thiết bị nào phù hợp!",
+    "SCANNING": "Đang dò",
+
+    "SETTING": "Cài đặt",
+    "LANGUAGE": "Ngôn ngữ",
+    "ENGLISH": "Tiếng Anh",
+    "FRENCH": "Tiếng Pháp",
+    "VIETNAMESE": "Tiếng Việt",
+    "ABOUT_THIS_APP": "Giới thiệu!"
+  },
+  "template": {
+    "WELCOME": "Xin chào {{name}}!",
+    "CONNECTING": "Connecting to {{devName}} ...",
+    "DISCONNECTED": "Disconnected from {{devName}}"
+  },
+
+  "HELLO": "Xin chào Eugene!!",
+  "HELLO_PARAM": "Xin chào {{name}}!",
+
+  "TEXT_OK": "OK",
+  "TEXT_YES": "Co",
+  "TEXT_NO": "Khong"
+}
