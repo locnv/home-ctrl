@@ -1,0 +1,19 @@
+
+download/
+node-sample/
+gimp/
+RnD/
+
+# Embedded app
+HomeElecCtrl/node_modules/
+
+# Web app
+koa-app-server/.idea
+koa-app-server/bower_components
+koa-app-server/node_modules
+koa-samples/
+
+# Mobile app
+LightControl/node_modules/
+LightControl/platforms/
+LightControl/plugins/
