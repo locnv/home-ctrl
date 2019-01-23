@@ -59,6 +59,12 @@
         return;
       }
 
+      speechRecognition.hasPermission(function onSuccess(ok) {
+        logger.debug('SpeechRecognition.hasPermission: ' + ok);
+      }, function errorCallback(err) {
+        logger.error(err);
+      });
+
       speechRecognition.isRecognitionAvailable(function onSuccess(ok) {
         logger.debug('SpeechRecognition.isRecognitionAvailable: ' + ok);
         mInitialized = ok;

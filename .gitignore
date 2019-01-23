@@ -15,7 +15,7 @@ koa-app-server/node_modules
 koa-samples/
 
 # Mobile app
-LightControl/koa-app-server/.idea
+LightControl/.idea
 LightControl/node_modules/
 LightControl/platforms/
 LightControl/plugins/
