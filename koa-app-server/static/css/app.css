@@ -413,3 +413,8 @@ ul.lst-card li, ul.lst-word li {
     text-align: left;
     font-size: 6vw;
 }
+
+ul.lst-card li:hover {
+    background-color: oldlace;
+    border: 1px solid lightblue;
+}

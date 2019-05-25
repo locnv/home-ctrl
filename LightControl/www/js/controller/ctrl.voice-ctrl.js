@@ -45,6 +45,7 @@
     /* Scope variables */
     vm.CtrlName = CtrlName;
     vm.PageTitle = 'Voice Control!';
+    vm.dontShowLoading = true;
 
     vm.switches = allSwitches;
     vm.voiceCtrl = {
@@ -75,7 +76,8 @@
 
       vm.voiceCtrl.enable = true;
 
-      testAudioPermission()
+      speech.setEnable(true);
+      /*testAudioPermission()
       .then(function(ok) {
         vm.hasMicAccessMic = ok;
 
@@ -86,17 +88,7 @@
         var msg = 'Has audio permission > ' + ok;
         devComm.sendTextMessage(msg);
         logger.info(msg);
-
-        /*if(!ok) {
-          navigator.permissions.query({name: 'microphone'})
-          .then((permissionObj) => {
-            console.log(permissionObj.state);
-          })
-          .catch((error) => {
-            console.log('Got error :', error);
-          })
-        }*/
-      });
+      });*/
 
       var promise = new Promise(function(resolve) {
         waitForContactingDevices(resolve);
@@ -117,13 +109,6 @@
           resolve(true);
         })
         .catch(resolve.bind(null, false));
-
-        // navigator.permissions.query({name: 'microphone'})
-        // .then((permissionObj) => {
-        //   console.log('    ====  audio permission state > ' +permissionObj.state);
-        //   resolve(false);
-        // })
-        // .catch(resolve.bind(null, false));
       });
 
       return promise;
@@ -248,6 +233,8 @@
       if(!rs || rs.length <= 0) {
         return;
       }
+
+      notifier.notify(rs);
 
       allSpeech.push(rs);
       schedulePostSpeech();

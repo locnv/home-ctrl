@@ -18,6 +18,7 @@
       SignIn:             '/signin',
       Card:               '/card',
       Word:               '/word',
+      WordBuilder:        '/words-builder',
       WordCreate:         '/word-create',
       About:              '/about',
       Setting:            '/setting',

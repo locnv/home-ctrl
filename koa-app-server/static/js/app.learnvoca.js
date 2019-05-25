@@ -8,6 +8,7 @@ var _global = {
     SignIn:         'SignInCtrl',
     Card:           'CardCtrl',
     Word:           'WordCtrl',
+    WordBuilder:    'WordBuilderCtrl',
     WordCreate:     'WordCreateCtrl',
     About:          'AboutCtrl',
     Setting:        'SettingCtrl',
@@ -31,11 +32,11 @@ var _global = {
     'digestHud' ];
 
 	angular
-	  .module(_global.AppName, Dependencies)
-	  .config(configRoutes)
+    .module(_global.AppName, Dependencies)
+    .config(configRoutes)
     .config(configI18n)
     .config(configDigestHub)
-	  .run(runApp);
+    .run(runApp );
 
   ////////////////////////////////////////////////////////////
   //// ++ Configure I18N
@@ -99,6 +100,7 @@ var _global = {
       { route: Routes.SignIn,         template: 'html/signin.html',           ctrl: Ctrl.SignIn           },
       { route: Routes.Card,           template: 'html/card.html',             ctrl: Ctrl.Card             },
       { route: Routes.Word,           template: 'html/word.html',             ctrl: Ctrl.Word             },
+      { route: Routes.WordBuilder,    template: 'html/word-builder.html',     ctrl: Ctrl.WordBuilder      },
       { route: Routes.WordCreate,     template: 'html/word-create.html',      ctrl: Ctrl.WordCreate       },
       { route: Routes.About,          template: 'html/about.html',            ctrl: Ctrl.About            },
       { route: Routes.Setting,        template: 'html/setting.html',          ctrl: Ctrl.Setting          },
@@ -114,7 +116,8 @@ var _global = {
     }
 
     $routeProvider.when('/', {
-      redirectTo: Routes.Home
+      //redirectTo: Routes.Home
+      redirectTo: Routes.WordBuilder
     }).otherwise({
       redirectTo: Routes.Home
     });
@@ -232,7 +235,6 @@ var _global = {
      * On device ready
      */
     function deviceReady() {
-      $location.path(mConst.Routes.Home);
       var i18n = AppCsf.i18n;
       var dic = AppCsf.dic;
 
@@ -255,7 +257,9 @@ var _global = {
 
     function finalReady() {
       //writeInitLog();
+      logger.info("Device ready!");
       _global.deviceReady = true;
+      //$location.path(mConst.Routes.Home);
 
       //Init ads on mobile and production only
       //if(!util.isBrowser() && mConst.ENV === 'prod') {

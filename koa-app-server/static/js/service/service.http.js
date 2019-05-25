@@ -16,6 +16,7 @@
     var Api = {
       Card: '/cards',
       Word: '/words',
+      WordBuilder: '/words_builder',
 
       ElecCtrl: '/elec_ctrl'
     };
@@ -28,6 +29,10 @@
       UpdateWord: 5,
       RemoveWord: 6,
       GetWordsByCard: 7,
+
+      BuildWords: 9,
+      GetUnBuilt: 10,
+
 
       CmdSwitch: 8,
     };
@@ -58,6 +63,8 @@
       getWordsByCard: getWordsByCard,
       getAllWords: getAllWords,
       addNewWord: addNewWord,
+      buildWords: buildWords,
+      getUnBuiltWord: getUnBuiltWord,
 
       // Home Elec Control
       sendSwitchCommand: sendSwitchCommand,
@@ -180,6 +187,29 @@
       };
 
       return sendRequest(RequestType.Post, Host, Api.Word, params);
+    }
+
+    /**
+     * Get a random word not yet built
+     */
+    function getUnBuiltWord() {
+
+      var reqParamsObj = { params: { action: Actions.GetUnBuilt } };
+
+      return sendRequest(RequestType.Get, Host, Api.WordBuilder, reqParamsObj);
+    }
+
+    /**
+     *
+     * @param words -> text array
+     */
+    function buildWords(words) {
+      var params = {
+        data: { words: words },
+        action: Actions.BuildWords,
+      };
+
+      return sendRequest(RequestType.Post, Host, Api.WordBuilder, params);
     }
 
     /**

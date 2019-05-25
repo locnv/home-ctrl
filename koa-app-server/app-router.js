@@ -32,6 +32,8 @@
       '/cards/':      { Fn: '*',                handle: CtrlAppDemo.cards         },
       // Word
       '/words/':      { Fn: '*',                handle: CtrlAppDemo.words         },
+      // Words Builder
+      '/words_builder/': { Fn: '*',             handle: CtrlAppDemo.wordsBuilder  },
 
       '/authen':      { Fn: GET,                handle: CtrlAuthen.load           },
 

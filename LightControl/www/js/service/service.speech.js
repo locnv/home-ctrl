@@ -25,7 +25,7 @@
       showPartial: false
     };
 
-    var speechRecognition = window.plugins.speechRecognition;
+    var speechRecognition; // = window.plugins.speechRecognition;
 
     var inst = {
       initialize: initialize,
@@ -60,13 +60,13 @@
       }
 
       speechRecognition.hasPermission(function onSuccess(ok) {
-        logger.debug('SpeechRecognition.hasPermission: ' + ok);
+        logger.info('   ===> SpeechRecognition.hasPermission: ' + ok);
       }, function errorCallback(err) {
         logger.error(err);
       });
 
       speechRecognition.isRecognitionAvailable(function onSuccess(ok) {
-        logger.debug('SpeechRecognition.isRecognitionAvailable: ' + ok);
+        logger.info('   ===> SpeechRecognition.isRecognitionAvailable: ' + ok);
         mInitialized = ok;
         onDone();
       }, function onError(err) {
@@ -117,6 +117,20 @@
     }
 
     function enableSpeech() {
+      if(!speechRecognition) {
+        if(window && window.plugins) {
+          alert('Praying. ..');
+          speechRecognition = window.plugins.speechRecognition;
+        } else {
+          alert('No window.plugins');
+        }
+
+      }
+
+      if(!speechRecognition) {
+        alert('NOK');
+      }
+
       mEnabled = true;
 
       speechRecognition.startListening(onRecognized, onStartError, options);

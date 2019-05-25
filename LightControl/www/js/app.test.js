@@ -141,7 +141,7 @@ var _global = {
      */
     function deviceReady() {
 
-      $location.path(mConst.Routes.Home);
+      $location.path(mConst.RoutesDef);
       // $location.path(mConst.Routes.VoiceCtrl);
 
       var i18n = AppCsf.i18n;

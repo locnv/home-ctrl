@@ -142,6 +142,57 @@
     return promise;
   };
 
+  DsBase.prototype.count = function() {
+    let model = this.model;
+    let promise = new Promise(function(resolve) {
+      model.count()
+      .then(function(nb) {
+        resolve(nb);
+      })
+      .catch(function(err) {
+        logger.error(err);
+        resolve(new Error('Count error.'));
+      });
+    });
+
+    return promise;
+  };
+
+  DsBase.prototype.getAt = function(idx) {
+    let model = this.model;
+    let promise = new Promise(function(resolve) {
+      model
+        //.where('field1').gte(25)
+        // .where().in([])
+        .where({})
+        .select()
+        .skip(idx)
+        .limit(1)
+        //.asc('field1')
+        .exec(function(err, ret) {
+          resolve(ret);
+        });
+    });
+
+    return promise;
+  };
+
+  DsBase.prototype.findOne = function(criteria) {
+    let model = this.model;
+    let promise = new Promise(function(resolve) {
+      model.findOne(criteria)
+        .then(function(doc) {
+          resolve(doc);
+        })
+        .catch(function(err) {
+          logger.error(err);
+          resolve(new Error('FindOne error.'));
+        });
+    });
+
+    return promise;
+  };
+
   DsBase.prototype.findAll = function() {
     let model = this.model;
     let promise = new Promise(function(resolve) {

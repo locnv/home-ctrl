@@ -4,12 +4,13 @@
 
 const cardCtrl = require('./ctrl.learn.voca.card');
 const wordCtrl = require('./ctrl.learn.voca.word');
+const wordBuilderCtrl = require('./ctrl.learn.voca.word.builder');
 
 let Styles = [
   'vendor/bootstrap/css/bootstrap.min.css',
   'vendor/animate.css/animate.min.css',
   'css/app.css',
-  'css/app.signup.css',
+  /*'css/app.signup.css',*/
   'css/sideNav.css',
   'js/directive/directive.css',
 ];
@@ -28,6 +29,7 @@ let JS = [
   'vendor/angular/angular-animate.min.js',
   'vendor/fast-click/fast-click.min.js',
   'vendor/digest-hub/digest-hud.js',
+  'vendor/socket.io.min.js',
 
   // Native
   'js/native/base.js',
@@ -49,9 +51,11 @@ let JS = [
   'js/service/service.csf.js',
   'js/service/service.task-executor.js',
   'js/service/service.notifier.js',
+  'js/service/service.speech.js',
   'js/service/service.navigator.js',
   'js/service/service.dic.js',
   'js/service/service.http.js',
+  'js/service/service.socket-io.js',
 
   // Animation -->
 
@@ -72,6 +76,7 @@ let JS = [
   'js/controller/ctrl.learnvoca.home.js',
   'js/controller/ctrl.learnvoca.card.js',
   'js/controller/ctrl.learnvoca.word.js',
+  'js/controller/ctrl.learnvoca.word.builder.js',
   'js/controller/ctrl.learnvoca.about.js',
   'js/controller/ctrl.learnvoca.setting.js',
   'js/controller/ctrl.learnvoca.test.js',
@@ -127,5 +132,13 @@ AppController.prototype.words = async function (ctx, next) {
   retData.serverTime = new Date();
   ctx.body = retData;
 };
+
+AppController.prototype.wordsBuilder = async function (ctx, next) {
+
+  let retData = await wordBuilderCtrl.handle(ctx.request, ctx.params, ctx.query);
+  retData.serverTime = new Date();
+  ctx.body = retData;
+};
+
 
 module.exports = new AppController();

@@ -41,7 +41,7 @@
     'vendor/admin-lte/bower_components/moment/min/moment.min.js',
     'vendor/admin-lte/bower_components/bootstrap-daterangepicker/daterangepicker.js',
     'vendor/admin-lte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
-    'vendor/admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js',
+    'vendor/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js',
     'vendor/admin-lte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js',
     'vendor/admin-lte/bower_components/fastclick/lib/fastclick.js',
     'vendor/admin-lte/js/pages/dashboard.js',
@@ -67,6 +67,8 @@
     'js/service/service.navigator.js',
     'js/service/service.dic.js',
     'js/service/service.http.js',
+    'js/service/service.socket-io.js',
+    'js/service/service.speech.js',
 
     // Animation -->
 
@@ -82,6 +84,7 @@
 
   AppController.prototype.load = async function (ctx) {
     await ctx.render('app.admin.lte', {
+    // await ctx.render('app.admin', {
       styles: Styles,
       scripts: JS,
       AppName: 'Admin',

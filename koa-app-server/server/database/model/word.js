@@ -8,11 +8,14 @@ let ObjectId = mongoose.Schema.Types.ObjectId;
 const Model = {
   card: {
     type: ObjectId,
-    required: true,
+    required: false,
   },
   name: String,
-  description: String,
-  example: String
+  type: String,
+  pronunciation: String,
+  descriptions: [ String ],
+  examples: [ String ],
+  imageUrl: String
 };
 
 module.exports = Model;

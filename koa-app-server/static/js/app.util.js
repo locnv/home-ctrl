@@ -20,8 +20,8 @@
 
     var services = {
       Remote: {
-        Host: 'http://192.168.0.116:1337',
-        // Host: 'http://localhost:1337',
+        //Host: 'http://192.168.0.116:1337',
+        Host: 'http://localhost:1337',
         // Host: 'http://ec2-18-222-53-144.us-east-2.compute.amazonaws.com/',
       },
       stringToByteArray: stringToByteArray,

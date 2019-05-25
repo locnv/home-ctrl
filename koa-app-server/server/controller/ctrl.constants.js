@@ -19,6 +19,11 @@ const CtrlConstants = {
     RemoveWord: 6,
     GetWordsByCard: 7,
 
+    // Word Builder
+    BuildWords: 9,
+    GetUnBuilt: 10,
+    UpdateImage: 11,
+
     SetSwitchStatus: 8,
   },
 

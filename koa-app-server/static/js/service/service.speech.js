@@ -18,9 +18,8 @@
 
     var recognition;
 
-    var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-    //var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
-    //var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+    //var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+    var SpeechRecognition = SpeechRecognition || {};
 
     var inst = {
       initialize: initialize,

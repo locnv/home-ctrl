@@ -168,10 +168,10 @@ var _global = {
       var dic = AppCsf.dic;
 
       //config.initialize()
-      i18n.initialize()
-        .then(dic.initialize)
-        .then(finalReady);
-      //finalReady();
+      // i18n.initialize()
+        // .then(dic.initialize)
+        // .then(finalReady);
+      finalReady();
 
     }
 

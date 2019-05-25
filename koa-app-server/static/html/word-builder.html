@@ -1,0 +1,84 @@
+
+<style></style>
+
+<div class="container">
+
+    <div class="row title">
+        <h2>Words Builder</h2>
+    </div>
+
+    <hr>
+
+    <div class="row" style="margin-bottom: 25px;">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <label>Build a word (first,
+                <span style="color: green;">Get a word</span>; then,
+                <span style="color: green;">Build</span>)</label>
+            <br>
+            <button
+              class="btn btn-primary"
+              ng-click="onBtnGetAWordClicked()">Get a word</button>
+
+            <button
+              class="btn btn-primary"
+              ng-click="onBtnBuildWordClicked(wordToBuild.name)">Build</button>
+
+            <pre style="margin-top: 5px;">{{ wordToBuild | json }}</pre>
+
+            <hr>
+            <label>Update image</label>
+            <div class="row">
+                <form style="margin-bottom: 25px; width: 70%; float: left;">
+                    <div class="form-group">
+                        <label for="txtLink">Link</label>
+                        <input type="text" class="form-control" id="txtLink" ng-model="txtLink" placeholder="Image link">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtSource">Source</label>
+                        <input type="text" class="form-control" id="txtSource" ng-model="txtSource" placeholder="Source">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label" for="txtAuthor">Author</label>
+                        <input type="text" class="form-control" id="txtAuthor" ng-model="txtAuthor" placeholder="Author">
+                    </div>
+
+                    <button
+                      class="btn btn-primary" style="margin-top: 15px;"
+                      ng-click="onBtnUpdateImageClicked(wordToBuild._id, txtLink)">Update image</button>
+                </form>
+                <div style="margin-bottom: 25px; width: 30%; float: left;">
+                    <i>Image appears here!</i>
+                    <img style="width: 90%; margin-left: 5px; height: auto;" src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"/>
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <label>Build result</label>
+            <pre style="margin-top: 5px;">{{ wordBuilt | json }}</pre>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <textarea
+          style="width: 100%;"
+          hint="Enter word(s) - separated by comma ';' then click Submit"
+          ng-init="txtWordsInput='eugene; teacher; old; kind'"
+          ng-model="txtWordsInput"></textarea>
+
+    </div>
+
+    <div class="row">
+        <button
+          class="btn btn-primary pull-right"
+          ng-click="onBtnSubmitClicked(txtWordsInput)">Submit</button>
+    </div>
+
+    <hr>
+
+</div>

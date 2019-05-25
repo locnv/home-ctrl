@@ -64,6 +64,10 @@
           }
 
           _resolve();
+        })
+        .catch(function(err) {
+          logger.error("An error occurs while fetching cards data", err);
+          _resolve()
         });
 
         /*fileStorage.getAllFiles()

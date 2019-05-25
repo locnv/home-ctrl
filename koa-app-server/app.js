@@ -10,9 +10,11 @@
   const socketIo = require('./server/socket-io');
   const logger = require('./server/util/logger');
 
+  const wordBuilderService = require('./server/word-builder/service.word.builder');
+
   const PORT = 1337;
-  // const HOST = 'localhost';
-  const HOST = '192.168.0.116';
+  const HOST = 'localhost';
+  // const HOST = '192.168.0.116';
 
   setTimeout(start, 1);
 
@@ -28,7 +30,12 @@
     });
 
     server.listen(PORT, HOST, function () {
-      logger.debug('[app] server listen on: http://' + HOST + ':' + PORT);
+      logger.debug(`[app] server listen on: http://${HOST}:${PORT}`);
+
+      // Demo
+      //logger.info('Start word-builder in 2 seconds ...');
+      //setTimeout(wordBuilderService.start.bind(null, 'en-en'), 2000);
+      //wordBuilderService.importBaseWord();
     });
   }
 

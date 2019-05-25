@@ -163,12 +163,24 @@
 
       initialize();
 
+      //setTimeout(testEugeneXXX, 2000);
+
       var promise = new Promise(function(resolve) {
         waitForContactingDevices(resolve);
       });
 
       return promise;
 
+    }
+
+    function testEugeneXXX() {
+      // if (!('webkitSpeechRecognition' in window)) {
+      //   alert('no webkitSpeechRecognition');
+      // } else {
+      //   alert(' no no webkitSpeechRecognition');
+      // }
+
+      alert(typeof SpeechRecognition);
     }
 
     var mWaitedTime = 0;

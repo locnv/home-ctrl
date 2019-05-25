@@ -19,6 +19,7 @@
       Schedule: '/schedule',
       VoiceCtrl: '/voice-ctrl'
     },
+    RoutesDef: '/test', /* Home */
 
     SwitchStatus: {
       Unknown: -1,

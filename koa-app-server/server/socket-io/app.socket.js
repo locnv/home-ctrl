@@ -18,6 +18,17 @@
     RemoteMessage: 'rm-message'
   };
 
+  /**
+   *
+   * @type {
+   * {
+   *  StatusReport: string,
+   *  StatusReportReq: string,
+   *  DirectCommand: string,
+   *  Ack: string,
+   *  None: string
+   * }}
+   */
   const MessageTypes = {
     StatusReport: 'status-report',
     StatusReportReq: 'status-report-req',
@@ -48,7 +59,7 @@
   function initialize(server) {
     this.server = server;
 
-    io.on('global-nsp', function* () {
+    /*io.on('global-nsp', function* () {
 
       logger.debug('[socket-io] join event received, new user: ', this.data);
 
@@ -60,7 +71,7 @@
 
       // just send to current user
       this.socket.emit('message', '[' + this.data + ']' + " Welcome to koa-socket.io !");
-    });
+    });*/
 
     let options = {/* socket.io options */};
     io.start(server, options/*, port, host */);
@@ -112,9 +123,6 @@
     //  }
     //});
 
-    // Send welcome message to everyone (no need)
-    //io.emit('global-message', 'everyone, there is a new guy just join us > ' + socketId);
-
     socket.on('message', onClientMessage.bind(this));
 
     // when the user disconnects.. perform this
@@ -134,8 +142,7 @@
 
   async function onClientMessage(ctx) {
     let socket = findSocketById(ctx.id);
-    if(!socket) {
-      // Something wrong.
+    if(!socket) { // Something wrong.
       return;
     }
 
