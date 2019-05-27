@@ -14,8 +14,8 @@
     },
 
     Remote: {
-      Host: 'http://localhost:1337',
-      // Host: 'http://ec2-18-222-53-144.us-east-2.compute.amazonaws.com/',
+      //Host: 'http://localhost:1337',
+      Host: 'http://ec2-18-222-53-144.us-east-2.compute.amazonaws.com/',
     },
 
     DeviceType: {

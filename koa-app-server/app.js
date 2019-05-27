@@ -35,7 +35,14 @@
       // Demo
       //logger.info('Start word-builder in 2 seconds ...');
       //setTimeout(wordBuilderService.start.bind(null, 'en-en'), 2000);
-      //wordBuilderService.importBaseWord();
+
+      // Test import base words
+      //let csvPath = '/Users/locnv/Documents/projects/koa-app/koa-app-server/server/word-builder/base/en-1000.csv';
+      //wordBuilderService.importBaseWord(csvPath);
+
+      // Test export dic (vn-en)
+      //let csvPath = '/Users/locnv/Documents/projects/koa-app/koa-app-server/server/word-builder/base/vn-en.1000.csv';
+      //wordBuilderService.exportDic(csvPath);
     });
   }
 

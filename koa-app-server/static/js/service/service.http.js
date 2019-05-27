@@ -32,7 +32,7 @@
 
       BuildWords: 9,
       GetUnBuilt: 10,
-
+      UpdateImage: 11,
 
       CmdSwitch: 8,
     };
@@ -63,8 +63,10 @@
       getWordsByCard: getWordsByCard,
       getAllWords: getAllWords,
       addNewWord: addNewWord,
+      updateWord: updateWord,
       buildWords: buildWords,
       getUnBuiltWord: getUnBuiltWord,
+      updateImage: updateImage,
 
       // Home Elec Control
       sendSwitchCommand: sendSwitchCommand,
@@ -189,6 +191,15 @@
       return sendRequest(RequestType.Post, Host, Api.Word, params);
     }
 
+    function updateWord(word) {
+      var params = {
+        data: word,
+        action: Actions.UpdateWord,
+      };
+
+      return sendRequest(RequestType.Post, Host, Api.Word, params);
+    }
+
     /**
      * Get a random word not yet built
      */
@@ -197,6 +208,16 @@
       var reqParamsObj = { params: { action: Actions.GetUnBuilt } };
 
       return sendRequest(RequestType.Get, Host, Api.WordBuilder, reqParamsObj);
+    }
+
+    function updateImage(imageInfo) {
+      var params = {
+        data: imageInfo,
+        action: Actions.UpdateImage,
+      };
+
+      return sendRequest(RequestType.Post, Host, Api.WordBuilder, params);
+
     }
 
     /**

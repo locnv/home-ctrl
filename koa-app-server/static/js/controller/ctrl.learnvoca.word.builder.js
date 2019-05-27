@@ -30,6 +30,16 @@
     $scope.CtrlName = CtrlName;
     $scope.PageTitle = 'Word Builder';
 
+    // Manual builder
+    $scope.mWord = {
+      name: '',
+      type: '',
+      pronunciation: '',
+      descriptions: [''],
+      examples: [''],
+      imageUrl: ''
+    };
+
     $scope.onEntering = onEntering;
     $scope.onLeaving = onLeaving;
     $scope.onResume = onResume;
@@ -39,6 +49,12 @@
     $scope.onBtnGetAWordClicked = onBtnGetAWordClicked;
     $scope.onBtnBuildWordClicked = onBtnBuildWordClicked;
     $scope.onBtnUpdateImageClicked = onBtnUpdateImageClicked;
+    $scope.onTxtLinkLostFocus = onTxtLinkLostFocus;
+
+    // Manual
+    $scope.onBtnAddDef = onBtnAddDef;
+    $scope.onBtnAddExample = onBtnAddExample;
+    $scope.onBtnManualUpdateClicked = onBtnManualUpdateClicked;
 
     /* Extend from base controller */
     $controller('BaseCtrl', { $scope: $scope });
@@ -74,12 +90,56 @@
       //$scope.word = dic.getWord(cardId, name);
     }
 
-    function onLanguageChanged() {
+    function onLanguageChanged() { }
 
+    function onBtnAddDef() {
+      $scope.mWord.descriptions.push('');
     }
 
-    function onBtnUpdateImageClicked(wordId, link) {
-      notifier.notify('Going to update image -> ' + wordId + ' -> ' + link);
+    function onBtnAddExample() {
+      $scope.mWord.examples.push('');
+    }
+
+    function onBtnManualUpdateClicked() {
+      let hasModify = !angular.equals($scope.wordToBuild, $scope.mWord);
+      if(!hasModify) {
+        notifier.error('No changes!');
+        return;
+      }
+
+      http.updateWord($scope.mWord)
+      .then(function(resp) {
+        notifier.notify(JSON.stringify(resp));
+      });
+
+      notifier.notify('Request is sent!');
+    }
+
+    //https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80
+    function onTxtLinkLostFocus(txtLink) {
+      $scope._txtLink = txtLink;
+    }
+
+    function onBtnUpdateImageClicked(wordId, link, imgSource, author) {
+      if(link === null || link === undefined) {
+        notifier.error('Image url cannot be empty!');
+        return;
+      }
+
+      var imgInfo = {
+        wordId: wordId,
+        imgUrl: link,
+        source: imgSource,
+        author: author
+      };
+
+      http.updateImage(imgInfo)
+      .then(function(resp) {
+        notifier.notify(JSON.stringify(resp));
+      });
+
+      log.info('Going to update image -> ' + wordId + ' -> ' + link);
+      notifier.notify('Sent update image request!)');
     }
 
     function onBtnBuildWordClicked(wordBase) {
@@ -121,8 +181,9 @@
         }
 
         $scope.wordToBuild = respData.data;
+        $scope.mWord = angular.copy(respData.data);
+        //log.info(angular.equals($scope.wordToBuild, $scope.mWord));
         $scope.$digest();
-        //logger.info('Done! ' + JSON.stringify(resp));
       });
 
       notifier.notify('Request is sent!)');

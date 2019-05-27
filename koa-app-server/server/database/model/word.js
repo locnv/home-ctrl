@@ -15,7 +15,10 @@ const Model = {
   pronunciation: String,
   descriptions: [ String ],
   examples: [ String ],
-  imageUrl: String
+
+  imageUrl: String,
+  imageSource: String,
+  imageAuthor: String
 };
 
 module.exports = Model;

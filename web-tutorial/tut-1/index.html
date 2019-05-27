@@ -3,8 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Javascript programming!</title>
+
+    <style>
+        .rectangle {
+            width: 120px;
+            height: 60px;
+            border: 2px solid blue;
+            background: yellow;
+        }
+    </style>
 </head>
 <body>
 
+<div id="rectDemo" class="rectangle"></div>
+
+
+<script>
+
+    var rect = document.getElementById('rectDemo');
+    rect.style.background = 'red';
+    rect.style.position = 'absolute';
+
+    setTimeout(function() {
+        rect.style.left = '25%';
+    }, 1000);
+
+    setTimeout(function() {
+        rect.style.left = '50%';
+    }, 2000);
+
+    setTimeout(function() {
+        rect.style.left = '75%';
+    }, 3000);
+
+    setTimeout(function() {
+        rect.style.left = '90%';
+    }, 4000);
+
+</script>
 </body>
 </html>

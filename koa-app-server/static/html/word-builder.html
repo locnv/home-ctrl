@@ -1,15 +1,24 @@
 
-<style></style>
+<style>
+    ul#lst-manual-def, ul#lst-manual-example {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    ul#lst-manual-def li, ul#lst-manual-example li {
+        margin-bottom: 5px;
+    }
+
+    ul#lst-manual-def li input, ul#lst-manual-example li input, #txtManualImageUrl {
+        width: 95%;
+    }
+</style>
 
 <div class="container">
 
-    <div class="row title">
-        <h2>Words Builder</h2>
-    </div>
-
-    <hr>
-
     <div class="row" style="margin-bottom: 25px;">
+
+        <!-- Build auto -->
         <div class="col-lg-6 col-md-6 col-sm-12">
             <label>Build a word (first,
                 <span style="color: green;">Get a word</span>; then,
@@ -25,13 +34,81 @@
 
             <pre style="margin-top: 5px;">{{ wordToBuild | json }}</pre>
 
-            <hr>
+            <hr> <!-- Manual builder -->
+            <label>Manual</label>
+            <div>
+                <form style="margin-bottom: 25px;">
+
+                    <div class="form-group">
+                        <label for="txtManualName">Word</label>
+                        <input id="txtManualName" class="form-control"
+                               type="text" ng-model="mWord.name"
+                               placeholder="...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtManualType">Type</label>
+                        <input id="txtManualType" class="form-control"
+                               type="text" ng-model="mWord.type"
+                               placeholder="word type (noun / verb / adj / adv ...">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtManualPronunciation">Pronunciation</label>
+                        <input type="text" class="form-control" id="txtManualPronunciation"
+                           ng-model="mWord.pronunciation" placeholder="Pronunciation">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Definitions</label>
+                        <ul id="lst-manual-def">
+                            <li ng-repeat="def in mWord.descriptions track by $index">
+                                <input type="text" ng-model="mWord.descriptions[$index]">
+                            </li>
+                            <li><button class="btn btn-link" ng-click="onBtnAddDef()">add</button></li>
+                        </ul>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Examples</label>
+                        <ul id="lst-manual-example">
+                            <li ng-repeat="eg in mWord.examples track by $index">
+                                <input type="text" ng-model="mWord.examples[$index]">
+                            </li>
+                            <li><button class="btn btn-link" ng-click="onBtnAddExample()">add</button></li>
+                        </ul>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtManualImageUrl">Image</label>
+                        <input id="txtManualImageUrl" type="text" ng-model="mWord.imageUrl">
+                    </div>
+
+                    <div class="form-group">
+                        <button
+                          class="btn btn-primary"
+                          style="margin-top: 15px;"
+                          ng-click="onBtnManualUpdateClicked()">Update word</button>
+                    </div>
+                </form>
+
+                <div style="margin-bottom: 25px; width: 30%; float: left;">
+                    <img
+                      style="width: 90%; margin-left: 5px; height: auto;"
+                      ng-src="{{_txtLink}}"/>
+                </div>
+
+            </div>
+
+            <hr><!-- Update image -->
             <label>Update image</label>
             <div class="row">
                 <form style="margin-bottom: 25px; width: 70%; float: left;">
                     <div class="form-group">
                         <label for="txtLink">Link</label>
-                        <input type="text" class="form-control" id="txtLink" ng-model="txtLink" placeholder="Image link">
+                        <input id="txtLink" class="form-control"
+                           type="text" ng-model="txtLink"
+                           ng-blur="onTxtLinkLostFocus(txtLink)"
+                           placeholder="Image link">
                     </div>
                     <div class="form-group">
                         <label for="txtSource">Source</label>
@@ -44,23 +121,24 @@
 
                     <button
                       class="btn btn-primary" style="margin-top: 15px;"
-                      ng-click="onBtnUpdateImageClicked(wordToBuild._id, txtLink)">Update image</button>
+                      ng-click="onBtnUpdateImageClicked(wordToBuild._id, txtLink, txtSource, txtAuthor)">Update image</button>
                 </form>
+
                 <div style="margin-bottom: 25px; width: 30%; float: left;">
-                    <i>Image appears here!</i>
-                    <img style="width: 90%; margin-left: 5px; height: auto;" src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"/>
+                    <img
+                      style="width: 90%; margin-left: 5px; height: auto;"
+                      ng-src="{{_txtLink}}"/>
                 </div>
 
             </div>
 
         </div>
 
-        <hr>
-
+        <hr> <!-- Build auto result -->
         <div class="col-lg-6 col-md-6 col-sm-12">
             <label>Build result</label>
             <pre style="margin-top: 5px;">{{ wordBuilt | json }}</pre>
-        </div>
+        </div> <!-- Build auto result -->
 
     </div>
 

@@ -37,7 +37,7 @@
       method: 'handleGet',
     };
 
-    console.log(query);
+    //console.log(query);
     let action = parseInt(query.action);
 
     switch(action) {
@@ -116,6 +116,8 @@
     switch(action) {
 
       case Actions.UpdateImage:
+        let reqData = reqBody.data;
+        await updateImage(reqData);
         break;
 
       case Actions.BuildWords:
@@ -135,6 +137,35 @@
     }
 
     return Promise.resolve(retObj);
+  }
+
+  async function updateImage(imageInfo) {
+    logger.info(`Update image -> ${JSON.stringify(imageInfo)}`);
+
+    if(!imageInfo.wordId || !imageInfo.imgUrl) {
+      logger.error('[word-builder] -> update image. wordId and imgUrl are required!');
+      return false;
+    }
+
+    try {
+      let word = await dsWord.findOne({ _id: imageInfo.wordId });
+      if(word === null) {
+        logger.warn(`[word-builder] -> update image on non-exist word ${imageInfo.wordId}. Stop!`);
+        return false;
+      }
+
+      word.imageUrl = imageInfo.imgUrl;
+      word.imageSource = imageInfo.source || '';
+      word.imageAuthor = imageInfo.author || '';
+
+      await dsWord.update(word);
+    } catch (e) {
+      logger.error(`word-builder -> failed to update image.`, e);
+      return false;
+    }
+
+    return true;
+
   }
 
   async function getWordsByCard(cardId) {

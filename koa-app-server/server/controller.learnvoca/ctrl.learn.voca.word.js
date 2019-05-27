@@ -61,31 +61,30 @@
   async function handlePost(req, params) {
 
     let retObj = {
-      isSuccess: true,
+      isSuccess: false,
       controller: 'word',
       method: 'handlePost',
     };
 
     let body = req.body;
     let action = body.action;
-    let Fn = null;
     switch(action) {
       case Actions.AddWord:
-        Fn = addWord;
+        let word = getRequestWord(body.data);
+        retObj = await addWord(word);
+        retObj.isSuccess = true;
         break;
       case Actions.RemoveWord:
+        break;
       case Actions.UpdateWord:
+        let word1 = body.data;
+        //console.log('Updating word -> ' + JSON.stringify(word1));
+        retObj = await updateWord(word1);
+        retObj.isSuccess = true;
         break;
 
       default:
         break;
-    }
-
-    if(typeof Fn === 'function') {
-      let word = getRequestWord(body.data);
-      retObj = await Fn.call(this, word);
-    } else {
-      console.error('Invalid Action!');
     }
 
     return Promise.resolve(retObj);
@@ -99,6 +98,10 @@
 
   async function addWord(word) {
     return await dsWord.create(word);
+  }
+
+  async function updateWord(word) {
+    return await dsWord.update(word);
   }
 
   function getRequestWord(body) {

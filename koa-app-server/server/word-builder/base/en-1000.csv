@@ -1,1020 +1,1001 @@
-#ignore,No.,Word,Type,Pronounce,Meaning
-1,a,"det, pron",,
-2,abandon,v,ə'bændən,
-3,abandoned,adj,ə'bændənd,
-4,ability,n,ə'biliti,
-5,able,adj,eibl,
-6,about,"adv, prep",ə'baut,
-7,above,"prep, adv",ə'bʌv,
-8,abroad,adv,ə'brɔ:d,
-9,absence,n,æbsəns,
-10,absent,adj,æbsənt,
-11,absolute,adj,æbsəlu:t,
-12,absolutely,adv,æbsəlu:tli,
-13,absorb,v,əb'sɔ:b,
-14,abuse,"n, v",ə'bju:s,
-15,academic,adj,",ækə'demik",
-16,accent,n,æksənt,
-17,accept,v,ək'sept,
-18,acceptable,adj,ək'septəbl,
-19,access,n,ækses,
-20,accident,n,æksidənt,
-21,accidental,adj,",æksi'dentl",
-22,accidentally,adv,",æksi'dentəli",
-23,accommodation,n,"ə,kɔmə'deiʃn",
-24,accompany,v,ə'kʌmpəni,
-25,according to,prep,ə'kɔ:diɳ,
-26,account,"n, v",ə'kaunt,
-27,accurate,adj,ækjurit,
-28,accurately,adv,ækjuritli,
-29,accuse,v,ə'kju:z,
-30,achieve,v,ə'tʃi:v,
-31,achievement,n,ə'tʃi:vmənt,
-32,acid,n,æsid,
-33,acknowledge,v,ək'nɔlidʤ,
-34,acquire,v,ə'kwaiə,
-35,across,"adv, prep",ə'krɔs,
-36,act,"n, v",ækt,
-37,action,n,ækʃn,
-38,active,adj,æktiv,
-39,actively,adv,æktivli,
-40,activity,n,æk'tiviti,
-41,actor,n,æktə,
-42,actress,n,æktris,
-43,actual,adj,æktjuəl,
-44,actually,adv,æktjuəli,
-45,adapt,v,ə'dæpt,
-46,add,v,æd,
-47,addition,n,ə'diʃn,
-48,additional,adj,ə'diʃənl,
-49,address,"n, v",ə'dres,
-50,adequate,adj,ædikwit,
-51,adequately,adv,ædikwitli,
-52,adjust,v,ə'dʤʌst,
-53,admiration,n,",ædmə'reiʃn",
-54,admire,v,əd'maiə,
-55,admit,v,əd'mit,
-56,adopt,v,ə'dɔpt,
-57,adult,"n, adj",ædʌlt,
-58,advance,"n, v",əd'vɑ:ns,
-59,advanced,adj,əd'vɑ:nst,
-60,advantage,n,əb'vɑ:ntidʤ,
-61,adventure,n,əd'ventʃə,
-62,advertise,v,ædvətaiz,
-63,advertisement,n,əd'və:tismənt,
-64,advertising,n,,
-65,advice,n,əd'vais,
-66,advise,v,əd'vaiz,
-67,affair,n,ə'feə,
-68,affect,v,ə'fekt,
-69,affection,n,ə'fekʃn,
-70,afford,v,ə'fɔ:d,
-71,afraid,adj,ə'freid,
-72,after,"prep, conj, adv",ɑ:ftə,
-73,afternoon,n,ɑ:ftə'nu:n,
-74,afterwards,adv,ɑ:ftəwəd,
-75,again,adv,ə'gen,
-76,against,prep,ə'geinst,
-77,age,n,eidʤ,
-78,aged,adj,eidʤid,
-79,agency,n,eidʤənsi,
-80,agent,n,eidʤənt,
-81,aggressive,adj,ə'gresiv,
-82,ago,adv,ə'gou,
-83,agree,v,ə'gri:,
-84,agreement,n,ə'gri:mənt,
-85,ahead,adv,ə'hed,
-86,aid,"n, v",eid,
-87,aim,"n, v",eim,
-88,air,n,eə,
-89,aircraft,n,eəkrɑ:ft,
-90,airport,n,,
-91,alarm,"n, v",ə'lɑ:m,
-92,alarmed,adj,ə'lɑ:m,
-93,alarming,adj,ə'lɑ:miɳ,
-94,alcohol,n,ælkəhɔl,
-95,alcoholic,"adj, n",",ælkə'hɔlik",
-96,alive,adj,ə'laiv,
-97,all,"pron, adv",ɔ:l,
-98,all right,"adj, adv, exclamation",ɔ:l'rait,
-99,allied,adj,ə'laid,
-100,allow,v,ə'lau,
-101,ally,"n, v",æli,
-102,almost,adv,ɔ:lmoust,
-103,alone,"adj, adv",ə'loun,
-104,along,"prep, adv",ə'lɔɳ,
-105,alongside,"prep, adv",ə'lɔɳ'said,
-106,aloud,adv,ə'laud,
-107,alphabet,n,ælfəbit,
-108,alphabetical,adj,",æflə'betikl",
-109,alphabetically,adv,",ælfə'betikəli",
-110,already,adv,ɔ:l'redi,
-111,also,adv,ɔ:lsou,
-112,alter,v,ɔ:ltə,
-113,alternative,"n, adj",ɔ:l'tə:nətiv,
-114,alternatively,adv,,
-115,although,conj,ɔ:l'ðou,
-116,altogether,adv,",ɔ:ltə'geðə",
-117,always,adv,ɔ:lwəz,
-118,amaze,v,ə'meiz,
-119,amazed,adj,ə'meiz,
-120,amazing,adj,ə'meiziɳ,
-121,ambition,n,æm'biʃn,
-122,ambulance,n,æmbjuləns,
-123,"among, amongst",prep,ə'mʌɳ,
-124,amount,"n, v",ə'maunt,
-125,amuse,v,ə'mju:z,
-126,amused,adj,ə'mju:zd,
-127,amusing,adj,ə'mju:ziɳ,
-128,"analyse, analyze",v,ænəlaiz,
-129,analysis,n,ə'næləsis,
-130,ancient,adj,einʃənt,
-131,and,conj,"ænd, ənd, ən",
-132,anger,n,æɳgə,
-133,angle,n,æɳgl,
-134,angrily,adv,æɳgrili,
-135,angry,adj,æɳgri,
-136,animal,n,æniməl,
-137,ankle,n,æɳkl,
-138,anniversary,n,",æni'və:səri",
-139,announce,v,ə'nauns,
-140,annoy,v,ə'nɔi,
-141,annoyed,adj,ə'nɔid,
-142,annoying,adj,ə'nɔiiɳ,
-143,annual,adj,ænjuəl,
-144,annually,adv,ænjuəli,
-145,another,"det, pron",ə'nʌðə,
-146,answer,"n, v",ɑ:nsə,
-147,anti,prefix,,
-148,anticipate,v,æn'tisipeit,
-149,anxiety,n,æɳ'zaiəti,
-150,anxious,adj,æɳkʃəs,
-151,anxiously,adv,æɳkʃəsli,
-152,any,"detpron, adv",,
-153,anyone (anybod),pron,eniwʌn,
-154,anything,pron,eniθiɳ,
-155,anyway,adv,eniwei,
-156,anywhere,adv,eniweə,
-157,apart,adv,ə'pɑ:t,
-158,apart from,prep,ə'pɑ:t,
-159,"apart from, aside from",prep,,
-160,apartment,n,ə'pɑ:tmənt,
-161,apologize,v,ə'pɔlədʤaiz,
-162,apparent,adj,ə'pærənt,
-163,apparently,adv,,
-164,appeal,"n, v",ə'pi:l,
-165,appear,v,ə'piə,
-166,appearance,n,ə'piərəns,
-167,apple,n,æpl,
-168,application,n,",æpli'keiʃn",
-169,apply,v,ə'plai,
-170,appoint,v,ə'pɔint,
-171,appointment,n,ə'pɔintmənt,
-172,appreciate,v,ə'pri:ʃieit,
-173,approach,"v, n",ə'proutʃ,
-174,"appropriate (to, for)",adj,ə'proupriit,
-175,approval,n,ə'pru:vəl,
-176,approve,"of, v",ə'pru:v,
-177,approving,adj,ə'pru:viɳ,
-178,approximate,"adj, to",ə'prɔksimit,
-179,approximately,adv,ə'prɔksimitli,
-180,April (abbr Apr),n,eiprəl,
-181,area,n,eəriə,
-182,argue,v,ɑ:gju:,
-183,argument,n,ɑ:gjumənt,
-184,arise,v,ə'raiz,
-185,arm,"n, v",ɑ:m,
-186,armed,adj,ɑ:md,
-187,arms,n,,
-188,army,n,ɑ:mi,
-189,around,"adv, prep",ə'raund,
-190,arrange,v,ə'reindʤ,
-191,arrangement,n,ə'reindʤmənt,
-192,arrest,"v, n",ə'rest,
-193,arrival,n,ə'raivəl,
-194,"arrive (at, in)",v,ə'raiv,
-195,arrow,n,ærou,
-196,art,n,ɑ:t,
-197,article,n,ɑ:tikl,
-198,artificial,adj,",ɑ:ti'fiʃəl",
-199,artificially,adv,",ɑ:ti'fiʃəli",
-200,artist,n,ɑ:tist,
-201,artistic,adj,ɑ:'tistik,
-202,as,"adv, conj, prep","æz, əz",
-203,as well,,,
-204,ashamed,adj,ə'ʃeimd,
-205,aside,adv,ə'said,
-206,ask,v,ɑ:sk,
-207,asleep,adj,ə'sli:p,
-208,aspect,n,æspekt,
-209,assist,v,ə'sist,
-210,assistance,n,ə'sistəns,
-211,assistant,"n, adj",ə'sistənt,
-212,associate,v,ə'souʃiit,
-213,association,n,"ə,sousi'eiʃn",
-214,assume,v,ə'sju:m,
-215,assure,v,ə'ʃuə,
-216,atmosphere,n,ætməsfiə,
-217,atom,n,ætəm,
-218,attach,v,ə'tætʃ,
-219,attached,adj,,
-220,attack,"n, v",ə'tæk,
-221,attempt,"n, v",ə'tempt,
-222,attempted,adj,ə'temptid,
-223,attend,v,ə'tend,
-224,attention,n,ə'tenʃn,
-225,attitude,n,ætitju:d,
-226,attorney,n,ə'tə:ni,
-227,attract,v,ə'trækt,
-228,attraction,n,ə'trækʃn,
-229,attractive,adj,ə'træktiv,
-230,audience,n,ɔ:djəns,
-231,August (abbr Aug),n,ɔ:gəst - ɔ:'gʌst,
-232,aunt,n,ɑ:nt,
-233,author,n,ɔ:θə,
-234,authority,n,ɔ:'θɔriti,
-235,automatic,adj,",ɔ:tə'mætik",
-236,automatically,adv,,
-237,autumn,n,ɔ:təm,
-238,available,adj,ə'veiləbl,
-239,average,"adj, n",ævəridʤ,
-240,avoid,v,ə'vɔid,
-241,awake,adj,ə'weik,
-242,award,"n, v",ə'wɔ:d,
-243,aware,adj,ə'weə,
-244,away,adv,ə'wei,
-245,awful,adj,ɔ:ful,
-246,awfully,adv,,
-247,awkward,adj,ɔ:kwəd,
-248,awkwardly,adv,,
-249,back,"n, adj, adv, v",bæk,
-250,background,n,bækgraund,
-251,backward,adj,bækwəd,
-252,backwards,adv,bækwədz,
-253,bacteria,n,bæk'tiəriəm,
-254,bad,adj,bæd,
-255,badly,adv,bædli,
-256,bad-tempered,adj,bæd'tempəd,
-257,bag,n,bæg,
-258,baggage,n,bædidʤ,
-259,bake,v,beik,
-260,balance,"n, v",bæləns,
-261,ball,n,bɔ:l,
-262,ban,"v, n",bæn,
-263,band,n,bænd,
-264,bandage,"n, v",bændidʤ,
-265,bank,n,bæɳk,
-266,bar,n,bɑ:,
-267,bargain,n,bɑ:gin,
-268,barrier,n,bæriə,
-269,base,"n, v",beis,
-270,basic,adj,beisik,
-271,basically,adv,beisikəli,
-272,basis,n,beisis,
-273,bath,n,bɑ:θ,
-274,bathroom,n,,
-275,battery,n,bætəri,
-276,battle,n,bætl,
-277,bay,n,bei,
-278,be sick,,,
-279,beach,n,bi:tʃ,
-280,beak,n,bi:k,
-281,bear,v,beə,
-282,beard,n,biəd,
-283,beat,"n, v",bi:t,
-284,beautiful,adj,bju:təful,
-285,beautifully,adv,bju:təfuli,
-286,beauty,n,bju:ti,
-287,because,conj,bi'kɔz,
-288,become,v,bi'kʌm,
-289,bed,n,bed,
-290,bedroom,n,bedrum,
-291,beef,n,bi:f,
-292,beer,n,bi:ə,
-293,before,"prep, conj, adv",bi'fɔ:,
-294,begin,v,bi'gin,
-295,beginning,n,bi'giniɳ,
-296,behalf,n,bi:hɑ:f,
-297,"behalf, on sb’s behalf",,,
-298,behave,v,bi'heiv,
-299,"behaviour, behavior",n,,
-300,behind,"prep, adv",bi'haind,
-301,belief,n,bi'li:f,
-302,believe,v,bi'li:v,
-303,bell,n,bel,
-304,belong,v,bi'lɔɳ,
-305,below,"prep, adv",bi'lou,
-306,belt,n,belt,
-307,bend,"v, n",bentʃ,
-308,beneath,"prep, adv",bi'ni:θ,
-309,benefit,"n, v",benifit,
-310,bent,adj,bent,
-311,beside,prep,bi'said,
-312,bet,"v, n",bet,
-313,"better, best",adj,"betə, best",
-314,betting,n,beting,
-315,between,"prep, adv",bi'twi:n,
-316,beyond,"prep, adv",bi'jɔnd,
-317,bicycle (bike),n,baisikl,
-318,bid,"v, n",bid,
-319,big,adj,big,
-320,bill,n,bil,
-321,bin,n,bin,
-322,biology,n,bai'ɔlədʤi,
-323,bird,n,bə:d,
-324,birth,n,bə:θ,
-325,birthday,n,bə:θdei,
-326,biscuit,n,biskit,
-327,bit,n,bit,
-328,bite,"v, n",bait,
-329,bitter,adj,bitə,
-330,bitterly,adv,bitəli,
-331,black,"adj, n",blæk,
-332,blade,n,bleid,
-333,blame,"v, n",bleim,
-334,blank,"adj, n",blæɳk,
-335,blankly,adv,blæɳkli,
-336,blind,adj,blaind,
-337,block,"n, v",blɔk,
-338,blonde (blond),"adj, n, adj",blɔnd,
-339,blood,n,blʌd,
-340,blow,"v, n",blou,
-341,blue,"adj, n",blu:,
-342,board,"n, v",bɔ:d,
-343,boat,n,bout,
-344,body,n,bɔdi,
-345,boil,v,bɔil,
-346,bomb,"n, v",bɔm,
-347,bone,n,boun,
-348,book,"n, v",buk,
-349,boot,n,bu:t,
-350,border,n,bɔ:də,
-351,bore,v,bɔ:,
-352,bored,adj,,
-353,boring,adj,bɔ:riɳ,
-354,born ( be born),v,bɔ:n,
-355,borrow,v,bɔrou,
-356,boss,n,bɔs,
-357,both,"det, pron",bouθ,
-358,bother,v,bɔðə,
-359,bottle,n,bɔtl,
-360,bottom,"n, adj",bɔtəm,
-361,bound (bound to),adj,baund,
-362,bowl,n,boul,
-363,box,n,bɔks,
-364,boy,n,bɔi,
-365,boyfriend,n,,
-366,brain,n,brein,
-367,branch,n,brɑ:ntʃ,
-368,brand,n,brænd,
-369,brave,adj,breiv,
-370,bread,n,bred,
-371,break,"v, n",breik,
-372,breakfast,n,brekfəst,
-373,breast,n,brest,
-374,breath,n,breθ,
-375,breathe,v,bri:ð,
-376,breathing,n,bri:ðiɳ,
-377,breed,"v, n",bri:d,
-378,brick,n,brik,
-379,bridge,n,bridʤ,
-380,brief,adj,bri:f,
-381,briefly,adv,bri:fli,
-382,bright,adj,brait,
-383,brightly,adv,braitli,
-384,brilliant,adj,briljənt,
-385,bring,v,briɳ,
-386,broad,adj,broutʃ,
-387,broadcast,"v, n",brɔ:dkɑ:st,
-388,broadly,adv,brɔ:dli,
-389,broken,adj,broukən,
-390,brother,n,brΔðз,
-391,brown,"adj, n",braun,
-392,brush,"n, v",brΔ∫,
-393,bubble,n,bΔbl,
-394,budget,n,ˈbʌdʒɪt,
-395,build,v,bild,
-396,building,n,bildiŋ,
-397,bullet,n,bulit,
-398,bunch,n,bΛnt∫,
-399,burn,v,bə:n,
-400,burnt,adj,bə:nt,
-401,burst,v,bə:st,
-402,bury,v,beri,
-403,bus,n,bʌs,
-404,bush,n,bu∫,
-405,business,n,bizinis,
-406,"businessman, businesswoman",n,,
-407,busy,adj,́bizi,
-408,but,conj,bʌt,
-409,butter,n,bʌtə,
-410,button,n,bʌtn,
-411,buy,v,bai,
-412,buyer,n,́baiə,
-413,by,"prep, adv",bai,
-414,bye,exclamation,bai,
-415,cabinet,n,kæbinit,
-416,cable,n,keibl,
-417,cake,n,keik,
-418,calculate,v,kælkjuleit,
-419,calculation,n,",kælkju'lei∫n",
-420,call,"v, n",kɔ:l,
-421,calm,"adj, v, n",kɑ:m,
-422,calmly,adv,kɑ:mli,
-423,camera,n,kæmərə,
-424,camp,"n, v",kæmp,
-425,campaign,n,kæmˈpeɪn,
-426,camping,n,kæmpiη,
-427,can,"modal, v, n",kæn,
-428,cancel,v,́kænsəl,
-429,cancer,n,kænsə,
-430,candidate,n,kændidit,
-431,candy,n,́kændi,
-432,cap,n,kæp,
-433,capable,"of, adj",keipәb(ә)l,
-434,capacity,n,kə'pæsiti,
-435,capital,"n, adj",ˈkæpɪtl,
-436,captain,n,kæptin,
-437,capture,"v, n",kæptʃə,
-438,car,n,kɑ:,
-439,card,n,kɑ:d,
-440,cardboard,n,́ka:d ̧bɔ:d,
-441,care,"n, v",kɛər,
-442,career,n,kə'riə,
-443,careful,adj,keəful,
-444,carefully,adv,́kɛəfuli,
-445,careless,adj,́kɛəlis,
-446,carelessly,adv,,
-447,carpet,n,kɑ:pit,
-448,carrot,n,́kærət,
-449,carry,v,ˈkæri,
-450,case,n,keis,
-451,cash,n,kæʃ,
-452,cast,"v, n",kɑ:st,
-453,castle,n,kɑ:sl,
-454,cat,n,kæt,
-455,catch,v,kætʃ,
-456,category,n,kætigəri,
-457,cause,"n, v",kɔ:z,
-458,CD,n,,
-459,cease,v,si:s,
-460,ceiling,n,ˈsilɪŋ,
-461,celebrate,v,selibreit,
-462,celebration,n,",seli'breiʃn",
-463,cell,n,sel,
-464,"cellphone, cellular phone",n,,
-465,cent,,sent,
-466,centimetre,n,"senti,mi:tз",
-467,"centimetre, centimeter",n,,
-468,central,adj,́sentrəl,
-469,centre,n,sentə,
-470,century,n,sentʃuri,
-471,ceremony,n,́seriməni,
-472,certain,"adj, pron",sə:tn,
-473,certainly,adv,́sə:tnli,
-474,certificate,n,sə'tifikit,
-475,chain,"n, v",tʃeɪn,
-476,chair,n,tʃeə,
-477,"chairman, chairwoman",n,"tʃeəmən, 'tʃeə,wumən",
-478,challenge,"n, v",tʃælindʤ,
-479,chamber,n,ˈtʃeɪmbər,
-480,chance,n,"tʃæns , tʃɑ:ns",
-481,change,"v, n",tʃeɪndʒ,
-482,channel,n,tʃænl,
-483,chapter,n,t∫æptə(r),
-484,character,n,kæriktə,
-485,characteristic,"adj, n",̧kærəktə ́ristik,
-486,charge,"n, v",tʃɑ:dʤ,
-487,charity,n,́tʃæriti,
-488,chart,"n, v",tʃa:t,
-489,chase,"v, n",tʃeis,
-490,chat,"v, n",tʃæt,
-491,cheap,adj,tʃi:p,
-492,cheaply,adv,,
-493,cheat,"v, n",tʃit,
-494,check,"v, n",tʃek,
-495,cheek,n,́tʃi:k,
-496,cheerful,adj,́tʃiəful,
-497,cheerfully,adv,,
-498,cheese,n,tʃi:z,
-499,chemical,"adj, n",ˈkɛmɪkəl,
-500,chemist,n,́kemist,
-501,chemist’s,n,,
-502,chemistry,n,́kemistri,
-503,cheque,n,t∫ek,
-504,chest,n,tʃest,
-505,chew,v,tʃu:,
-506,chicken,n,ˈtʃɪkin,
-507,chief,"adj, n",tʃi:f,
-508,child,n,tʃaild,
-509,chin,n,tʃin,
-510,chip,n,tʃip,
-511,chocolate,n,ˈtʃɒklɪt,
-512,choice,n,tʃɔɪs,
-513,choose,v,t∫u:z,
-514,chop,v,tʃɔp,
-515,church,n,tʃə:tʃ,
-516,cigarette,n,̧sigə ́ret,
-517,cinema,n,ˈsɪnəmə,
-518,circle,n,sə:kl,
-519,circumstance,n,ˈsɜrkəmˌstəns,
-520,citizen,n,́sitizən,
-521,city,n,si:ti,
-522,civil,adj,sivl,
-523,claim,"v, n",kleim,
-524,clap,"v, n",klæp,
-525,class,n,klɑ:s,
-526,classic,"adj, n",klæsik,
-527,classroom,n,klα:si,
-528,clean,"adj, v",kli:n,
-529,clear,"adj, v",,
-530,clearly,adv,́kliəli,
-531,clerk,n,kla:k,
-532,clever,adj,klevə,
-533,click,"v, n",klik,
-534,client,n,́klaiənt,
-535,climate,n,klaimit,
-536,climb,v,klaim,
-537,climbing,n,́klaimiη,
-538,clock,n,klɔk,
-539,close,adj,klouz,
-540,closed,adj,klouzd,
-541,closely,adv,́klousli,
-542,closet,n,klozit,
-543,cloth,n,klɔθ,
-544,clothes,n,klouðz,
-545,clothing,n,́klouðiη,
-546,cloud,n,klaud,
-547,club,n,́klʌb,
-548,coach,n,koʊtʃ,
-549,coal,n,koul,
-550,coast,n,koust,
-551,coat,n,koʊt,
-552,code,n,koud,
-553,coffee,n,kɔfi,
-554,coin,n,kɔin,
-555,cold,"adj, n",kould,
-556,coldly,adv,kouldli,
-557,collapse,"v, n",kз'læps,
-558,colleague,n,ˈkɒlig,
-559,collect,v,kə ́lekt,
-560,collection,n,kəˈlɛkʃən,
-561,college,n,kɔlidʤ,
-562,"color, colour","n, v",kʌlə,
-563,coloured,adj,́kʌləd,
-564,column,n,kɔləm,
-565,combination,n,",kɔmbi'neiʃn",
-566,combine,v,kɔmbain,
-567,come,v,kʌm,
-568,comedy,n,́kɔmidi,
-569,comfort,"n, v",kΔmfзt,
-570,comfortable,adj,kΔmfзtзbl,
-571,comfortably,adv,́kʌmfətəbli,
-572,command,"v, n",kə'mɑ:nd,
-573,comment,"n, v",ˈkɒment,
-574,commercial,adj,kə'mə:ʃl,
-575,commission,"n, v",kəˈmɪʃən,
-576,commit,v,kə'mit,
-577,commitment,n,kə'mmənt,
-578,committee,n,kə'miti,
-579,common,adj,kɔmən,
-580,commonly,adv,́kɔmənli,
-581,communicate,v,kə'mju:nikeit,
-582,communication,n,"kə,mju:ni'keiʃn",
-583,community,n,kə'mju:niti,
-584,company,n,́kʌmpəni,
-585,compare,v,kәm'peә(r),
-586,comparison,n,kəm'pærisn,
-587,compete,v,kəm'pi:t,
-588,competition,n,",kɔmpi'tiʃn",
-589,competitive,adj,kəm ́petitiv,
-590,complain,v,kəm ́plein,
-591,complaint,n,kəmˈpleɪnt,
-592,complete,"adj, v",kəm'pli:t,
-593,completely,adv,kзm'pli:tli,
-594,complex,adj,kɔmleks,
-595,complicate,v,komplikeit,
-596,complicated,adj,komplikeitid,
-597,computer,n,kəm'pju:tə,
-598,concentrate,v,kɔnsentreit,
-599,concentration,n,",kɒnsn'trei∫n",
-600,concept,n,ˈkɒnsept,
-601,concern,"v, n",kәn'sз:n,
-602,concerned,adj,kən ́sə:nd,
-603,concerning,n,kən ́sə:niη,
-604,concert,n,kən'sə:t,
-605,conclude,v,kənˈklud,
-606,conclusion,n,kənˈkluʒən,
-607,concrete,"adj, n",kɔnkri:t,
-608,condition,n,kәn'di∫әn,
-609,conduct,"v, n",kən'dʌkt,
-610,conference,n,ˈkɒnfrəns,
-611,confidence,n,konfid(ә)ns,
-612,confident,adj,kɔnfidənt,
-613,confidently,adv,kɔnfidəntli,
-614,confine,v,kən'fain,
-615,confined,adj,kən'faind,
-616,confirm,v,kən'fə:m,
-617,conflict,"n, v",ˈkɒnflɪkt,
-618,confront,v,kən'frʌnt,
-619,confuse,v,,
-620,confused,adj,kən'fju:zd,
-621,confusing,adj,kən'fju:ziη,
-622,confusion,n,kən'fju:ʒn,
-623,congratulations,n,"kən,grætju'lei∫n",
-624,congress,n,kɔɳgres,
-625,connect,v,kə'nekt,
-626,connection,n,"kə ́nekʃən,",
-627,conscious,adj,ˈkɒnʃəs,
-628,consequence,n,kɔnsikwəns,
-629,conservative,adj,kən ́sə:vətiv,
-630,consider,v,kən ́sidə,
-631,considerable,adj,kən'sidərəbl,
-632,considerably,adv,kən'sidərəbly,
-633,consideration,n,kənsidə'reiʃn,
-634,consist of,v,kən'sist,
-635,constant,adj,kɔnstənt,
-636,constantly,adv,kɔnstəntli,
-637,construct,v,kən ́strʌkt,
-638,construction,n,kən'strʌkʃn,
-639,consult,v,kən'sʌlt,
-640,consumer,n,kən'sju:mə,
-641,contact,"n, v",ˈkɒntækt,
-642,contain,v,kәn'tein,
-643,container,n,kən'teinə,
-644,contemporary,adj,kən'tempərəri,
-645,content,n,kən'tent,
-646,contest,n,kən ́test,
-647,context,n,kɔntekst,
-648,continent,n,kɔntinənt,
-649,continue,v,kən ́tinju:,
-650,continuous,adj,kən'tinjuəs,
-651,continuously,adv,kən'tinjuəsli,
-652,contract,"n, v",kɔntrækt,
-653,contrast,"n, v",kən'træst,
-654,contrasting,adj,kən'træsti,
-655,contribute,v,kən'tribju:t,
-656,contribution,n,̧kɔntri ́bju:ʃən,
-657,control,"n, v",kən'troul,
-658,controlled,adj,kən'trould,
-659,convenient,adj,kən ́vi:njənt,
-660,convention,n,kən'ven∫n,
-661,conventional,adj,kən'ven∫ənl,
-662,conversation,n,",kɔnvə'seiʃn",
-663,convert,v,kən'və:t,
-664,convince,v,kən'vins,
-665,cook,"v, n",kʊk,
-666,cooker,n,́kukə,
-667,cookie,n,́kuki,
-668,cooking,n,kʊkiɳ,
-669,cool,"adj, v",ku:l,
-670,cope (+ with),v,koup,
-671,copy,"n, v",kɔpi,
-672,core,n,kɔ:,
-673,corner,n,́kɔ:nə,
-674,correct,"adj, v",kə ́rekt,
-675,correctly,adv,kə ́rektli,
-676,cost,"n, v","kɔst , kɒst",
-677,cottage,n,kɔtidʤ,
-678,cotton,n,ˈkɒtn,
-679,cough,"v, n",kɔf,
-680,coughing,n,́kɔfiη,
-681,could,"modal, v",kud,
-682,council,n,kaunsl,
-683,count,v,kaunt,
-684,counter,n,ˈkaʊntər,
-685,country,n,ˈkʌntri,
-686,countryside,n,kʌntri'said,
-687,county,n,koun'ti,
-688,couple,n,kʌpl,
-689,courage,n,kʌridʤ,
-690,course,n,kɔ:s,
-691,court,n,"kɔrt , koʊrt",
-692,cousin,n,ˈkʌzən,
-693,cover,"v, n",kʌvə,
-694,covered,adj,kʌvərd,
-695,covering,n,́kʌvəriη,
-696,cow,n,kaʊ,
-697,crack,"n, v",kræk,
-698,cracked,adj,krækt,
-699,craft,n,kra:ft,
-700,crash,"n, v",kræʃ,
-701,crazy,adj,kreizi,
-702,cream,n,kri:m,
-703,create,v,kri:'eit,
-704,creature,n,kri:tʃə,
-705,credit,n,ˈkrɛdɪt,
-706,credit card,n,,
-707,crime,n,kraim,
-708,criminal,"adj, n",ˈkrɪmənl,
-709,crisis,n,ˈkraɪsɪs,
-710,crisp,adj,krips,
-711,criterion,n,kraɪˈtɪəriən,
-712,critical,adj,ˈkrɪtɪkəl,
-713,criticism,n,́kriti ̧sizəm,
-714,criticize,v,ˈkrɪtəˌsaɪz,
-715,crop,n,krop,
-716,cross,"n, v",krɔs,
-717,crowd,n,kraud,
-718,crowded,adj,kraudid,
-719,crown,n,kraun,
-720,crucial,adj,́kru:ʃəl,
-721,cruel,adj,kru:ә(l),
-722,crush,v,krᴧ∫,
-723,cry,"v, n",krai,
-724,cultural,adj,ˈkʌltʃərəl,
-725,culture,n,ˈkʌltʃər,
-726,cup,n,kʌp,
-727,cupboard,n,kʌpbəd,
-728,curb,v,kə:b,
-729,cure,"v, n",kjuə,
-730,curious,adj,kjuəriəs,
-731,curiously,adv,kjuəriəsli,
-732,curl,"v, n",kə:l,
-733,curly,adj,́kə:li,
-734,current,"adj, n",kʌrənt,
-735,currently,adv,kʌrəntli,
-736,curtain,n,kə:tn,
-737,curve,"n, v",kə:v,
-738,curved,adj,kə:vd,
-739,custom,n,kʌstəm,
-740,customer,n,́kʌstəmə,
-741,customs,n,́kʌstəmz,
-742,cut,"v, n",kʌt,
-743,cycle,"n, v",saikl,
-744,cycling,n,saikliŋ,
-745,dad,n,dæd,
-746,daily,adj,deili,
-747,damage,"n, v",dæmidʤ,
-748,damp,adj,dæmp,
-749,dance,"n, v",dɑ:ns,
-750,dancer,n,dɑ:nsə,
-751,dancing,n,dɑ:nsiɳ,
-752,danger,n,deindʤə,
-753,dangerous,adj,́deindʒərəs,
-754,dare,v,deər,
-755,dark,"adj, n",dɑ:k,
-756,data,n,́deitə,
-757,date,"n, v",deit,
-758,daughter,n,ˈdɔtər,
-759,day,n,dei,
-760,dead,adj,ded,
-761,deaf,adj,def,
-762,deal,"v, n",di:l,
-763,dear,adj,diə,
-764,death,n,deθ,
-765,debate,"n, v",dɪˈbeɪt,
-766,debt,n,det,
-767,decade,n,dekeid,
-768,decay,"n, v",di'kei,
-769,December (abbr Dec),n,di'sembə,
-770,decide,v,di'said,
-771,decision,n,diˈsiʒn,
-772,declare,v,di'kleə,
-773,decline,"n, v",di'klain,
-774,decorate,v,́dekə ̧reit,
-775,decoration,n,̧dekə ́reiʃən,
-776,decorative,adj,́dekərətiv,
-777,decrease,"v, n",di:kri:s,
-778,deep,"adj, adv",di:p,
-779,deeply,adv,́di:pli,
-780,defeat,"v, n",di'fi:t,
-781,defence,n,di'fens,
-782,defend,v,di'fend,
-783,define,v,di'fain,
-784,definite,adj,dә'finit,
-785,definitely,adv,definitli,
-786,definition,n,defini∫n,
-787,degree,n,dɪˈgri:,
-788,delay,"n, v",dɪˈleɪ,
-789,deliberate,adj,di'libәreit,
-790,deliberately,adv,di ́libəritli,
-791,delicate,adj,delikeit,
-792,delight,"n, v",di'lait,
-793,delighted,adj,di'laitid,
-794,deliver,v,di'livə,
-795,delivery,n,di'livəri,
-796,demand,"n, v",dɪ.ˈmænd,
-797,demonstrate,v,ˈdɛmənˌstreɪt,
-798,dentist,n,dentist,
-799,deny,v,di'nai,
-800,department,n,di'pɑ:tmənt,
-801,departure,n,di'pɑ:tʃə,
-802,depend,"on, v",di'pend,
-803,deposit,"n, v",dɪˈpɒzɪt,
-804,depress,v,di ́pres,
-805,depressed,adj,di-'prest,
-806,depressing,adj,di'presiη,
-807,depth,n,depθ,
-808,derive,v,di ́raiv,
-809,describe,v,dɪˈskraɪb,
-810,description,n,dɪˈskrɪpʃən,
-811,desert,"n, v",ˈdɛzərt,
-812,deserted,adj,di'zз:tid,
-813,deserve,v,di'zз:v,
-814,design,"n, v",di ́zain,
-815,desire,"n, v",di'zaiə,
-816,desk,n,desk,
-817,desperate,adj,despərit,
-818,desperately,adv,despəritli,
-819,despite,prep,dis'pait,
-820,destroy,v,dis'trɔi,
-821,destruction,n,dis'trʌk∫n,
-822,detail,n,(n) ˈditeɪl ; (v)dɪˈteɪl,
-823,detailed,adj,di:teild,
-824,determination,n,"di,tə:mi'neiʃn",
-825,determine,v,di'tз:min,
-826,determined,adj,di ́tə:mind,
-827,develop,v,di'veləp,
-828,development,n,di’velәpmәnt,
-829,device,n,di'vais,
-830,devote,v,di'vout,
-831,devoted,adj,di ́voutid,
-832,diagram,n,ˈdaɪəˌgræm,
-833,diamond,n,́daiəmənd,
-834,diary,n,daiəri,
-835,dictionary,n,dikʃənəri,
-836,die,v,daɪ,
-837,diet,n,daiət,
-838,difference,n,"ˈdɪfərəns , ˈdɪfrəns",
-839,different,adj,difrзnt,
-840,differently,adv,difrзntli,
-841,difficult,adj,difik(ə)lt,
-842,difficulty,n,difikəlti,
-843,dig,v,dɪg,
-844,dinner,n,dinə,
-845,direct,"adj, v",di'rekt; dai'rekt,
-846,direction,n,di'rek∫n,
-847,directly,adv,dai ́rektli,
-848,director,n,di'rektə,
-849,dirt,n,də:t,
-850,dirty,adj,́də:ti,
-851,disabled,adj,dis ́eibld,
-852,disadvantage,n,dɪsədˈvɑntɪdʒ,
-853,disagree,v,̧disə ́gri:,
-854,disagreement,n,̧disəg ́ri:mənt,
-855,disappear,v,disə'piə,
-856,disappoint,v,ˌdɪsəˈpɔɪnt,
-857,disappointed,adj,",disз'pointid",
-858,disappointing,adj,̧disə ́pɔintiη,
-859,disappointment,n,̧disə ́pɔintmənt,
-860,disapproval,n,̧disə ́pru:vl,
-861,disapprove,"of, v",̧disə ́pru:v,
-862,disapproving,adj,̧disə ́pru:viη,
-863,disaster,n,di'zɑ:stə,
-864,"disc, disk",n,disk,
-865,discipline,n,disiplin,
-866,discount,n,diskaunt,
-867,discover,v,dis'kʌvə,
-868,discovery,n,dis'kʌvəri,
-869,discuss,v,dis'kΛs,
-870,discussion,n,dis'kʌʃn,
-871,disease,n,di'zi:z,
-872,disgust,"v, n",dis ́gʌst,
-873,disgusted,adj,dis ́gʌstid,
-874,disgusting,adj,dis ́gʌstiη,
-875,dish,n,diʃ,
-876,dishonest,adj,dis ́ɔnist,
-877,dishonestly,adv,dis'onistli,
-878,disk,n,disk,
-879,dislike,"v, n",dis'laik,
-880,dismiss,v,dis'mis,
-881,display,"v, n",dis'plei,
-882,dissolve,v,dɪˈzɒlv,
-883,distance,n,distəns,
-884,distinguish,v,dis ́tiηgwiʃ,
-885,distribute,v,dis'tribju:t,
-886,distribution,n,",distri'bju:ʃn",
-887,district,n,distrikt,
-888,disturb,v,dis ́tə:b,
-889,disturbing,adj,dis ́tə:biη,
-890,divide,v,di'vaid,
-891,division,n,dɪ'vɪʒn,
-892,divorce,"n, v",di ́vɔ:s,
-893,divorced,adj,di'vo:sd,
-894,do,"vauxiliary, v","du:, du",
-895,doctor (abbr Dr),n,dɔktə,
-896,document,n,dɒkjʊmənt,
-897,dog,n,dɔg,
-898,dollar,n,́dɔlə,
-899,domestic,adj,də'mestik,
-900,dominate,v,ˈdɒməˌneɪt,
-901,door,n,dɔ:,
-902,dot,n,dɔt,
-903,double,"adj, det, adv, n, v",dʌbl,
-904,doubt,"n, v",daut,
-905,down,"adv, prep",daun,
-906,downstairs,"adv, adj, n",daun'steзz,
-907,downward,adj,́daun ̧wəd,
-908,downwards,adv,́daun ̧wədz,
-909,dozen,ndet,dʌzn,
-910,draft,"n, adj, v",dra:ft,
-911,drag,v,drӕg,
-912,drama,n,drɑː.mə,
-913,dramatic,adj,drə ́mætik,
-914,dramatically,adv,drə'mætikəli,
-915,draw,v,dro:,
-916,drawer,n,́drɔ:ə,
-917,drawing,n,dro:iŋ,
-918,dream,"n, v",dri:m,
-919,dress,"n, v",dres,
-920,dressed,adj,,
-921,drink,"n, v",driɳk,
-922,drive,"v, n",draiv,
-923,driver,n,draivә(r),
-924,driving,n,draiviɳ,
-925,drop,"v, n",drɒp,
-926,drug,n,drʌg,
-927,drugstore,n,drʌgstɔ:,
-928,drum,n,drʌm,
-929,drunk,adj,drʌŋk,
-930,dry,"adj, v",drai,
-931,due,adj,"du, dyu",
-932,dull,adj,dʌl,
-933,dump,"v, n",dʌmp,
-934,during,prep,djuəriɳ,
-935,dust,"n, v",dʌst,
-936,duty,n,dju:ti,
-937,DVD,n,,
-938,dying,adj,ˈdaɪɪŋ,
-939,e.g.,abbr,,
-940,each,"det, pron",i:tʃ,
-941,each other,"n, pro",,
-943,ear,n,iə,
-944,early,"adj, adv",́ə:li,
-945,earn,v,ə:n,
-946,earth,n,ə:θ,
-947,ease,"n, v",i:z,
-948,easily,adv,i:zili,
-949,east,"n, adj, adv",i:st,
-950,eastern,adj,i:stən,
-951,easy,adj,i:zi,
-952,eat,v,i:t,
-953,economic,adj,̧i:kə ́nɔmik,
-954,economy,n,ɪˈkɒnəmi,
-955,edge,n,edӡ,
-956,edition,n,i'diʃn,
-957,editor,n,́editə,
-958,educate,v,edju:keit,
-959,educated,adj,edju:keitid,
-960,education,n,",edju:'keiʃn",
-961,effect,n,i'fekt,
-962,effective,adj,ifektiv,
-963,effectively,adv,i'fektivli,
-964,efficient,adj,i'fiʃənt,
-965,efficiently,adv,i'fiʃəntli,
-966,effort,n,́efə:t,
-967,egg,n,eg,
-968,either,"det, pron, adv",́aiðə,
-969,elbow,n,elbou,
-970,elderly,adj,́eldəli,
-971,elect,v,i ́lekt,
-972,election,n,i ́lekʃən,
-973,electric,adj,ɪˈlɛktrɪk,
-974,electrical,adj,i'lektrikəl,
-975,electricity,n,ilek'trisiti,
-976,electronic,adj,"ɪlɛkˈtrɒnɪk ,ˌilɛkˈtrɒnɪk",
-977,elegant,adj,́eligənt,
-978,element,n,ˈɛləmənt,
-979,elevator,n,ˈɛləˌveɪtər,
-980,else,adv,els,
-981,elsewhere,adv,̧els ́wɛə,
-982,"email, e-mail","n, v",imeil,
-983,embarrass,v,im ́bærəs,
-984,embarrassed,adj,im ́bærəst,
-985,embarrassing,adj,im ́bærəsiη,
-986,embarrassment,n,im ́bærəsmənt,
-987,emerge,v,i ́mə:dʒ,
-988,emergency,n,i'mз:dЗensi,
-989,emotion,n,i'moƱʃ(ә)n,
-990,emotional,adj,i ́mouʃənəl,
-991,emotionally,adv,i ́mouʃənəli,
-992,emphasis,n,́emfəsis,
-993,emphasize,v,ˈɛmfəˌsaɪz,
-994,empire,n,empaiə,
-995,employ,v,im'plɔi,
-996,employee,n,̧emplɔi ́i:,
-997,employer,n,em ́plɔiə,
-998,employment,n,im'plɔimənt,
-999,empty,"adj, v",empti,
-1000,enable,v,i'neibl,
-1001,encounter,"v, n",in'kautә,
-1002,encourage,v,in'kΔridЗ,
-1003,encouragement,n,in ́kʌridʒmənt,
-1004,end,"n, v",end,
-1005,ending,n,́endiη,
-1006,enemy,n,enәmi,
-1007,energy,n,ˈɛnərdʒi,
-1008,engage,v,in'geidʤ,
-1009,engaged,adj,in ́geidʒd,
-1010,engine,n,en'ʤin,
-1011,engineer,n,endʒi'niər,
-1012,engineering,n,",enʤɪ'nɪərɪŋ",
-1013,enjoy,v,in'dЗoi,
-1014,enjoyable,adj,in ́dʒɔiəbl,
-1015,enjoyment,n,in ́dʒɔimənt,
-1016,enormous,adj,i'nɔ:məs,
-1017,enough,"det, pron, adv",i'nʌf,
-1018,enquiry,n,in'kwaiәri,
-1019,ensure,v,"ɛnˈʃʊər , ɛnˈʃɜr",
-1020,enter,v,́entə,
+Number,Vietnamese,Type,Prototype,in English
+1,as,,,as
+2,I,,,I
+3,his,,,his
+4,that,,,that
+5,he,,,he
+6,was,,,was
+7,for,,,for
+8,on,,,on
+9,are,,,are
+10,with,,,with
+11,they,,,they
+12,be,,,be
+13,at,,,at
+14,one,,,one
+15,have,,,have
+16,this,,,this
+17,from,,,from
+18,by,,,by
+19,hot,,,hot
+20,word,,,word
+21,but,,,but
+22,what,,,what
+23,some,,,some
+24,is,,,is
+25,it,,,it
+26,you,,,you
+27,or,,,or
+28,had,,,had
+29,the,,,the
+30,of,,,of
+31,to,,,to
+32,and,,,and
+33,a,,,a
+34,in,,,in
+35,we,,,we
+36,can,,,can
+37,out,,,out
+38,other,,,other
+39,were,,,were
+40,which,,,which
+41,do,,,do
+42,their,,,their
+43,time,,,time
+44,if,,,if
+45,will,,,will
+46,how,,,how
+47,said,,,said
+48,an,,,an
+49,each,,,each
+50,tell,,,tell
+51,does,,,does
+52,set,,,set
+53,three,,,three
+54,want,,,want
+55,air,,,air
+56,well,,,well
+57,also,,,also
+58,play,,,play
+59,small,,,small
+60,end,,,end
+61,put,,,put
+62,home,,,home
+63,read,,,read
+64,hand,,,hand
+65,port,,,port
+66,large,,,large
+67,spell,,,spell
+68,add,,,add
+69,even,,,even
+70,land,,,land
+71,here,,,here
+72,must,,,must
+73,big,,,big
+74,high,,,high
+75,such,,,such
+76,follow,,,follow
+77,act,,,act
+78,why,,,why
+79,ask,,,ask
+80,men,,,men
+81,change,,,change
+82,went,,,went
+83,light,,,light
+84,kind,,,kind
+85,off,,,off
+86,need,,,need
+87,house,,,house
+88,picture,,,picture
+89,try,,,try
+90,us,,,us
+91,again,,,again
+92,animal,,,animal
+93,point,,,point
+94,mother,,,mother
+95,world,,,world
+96,near,,,near
+97,build,,,build
+98,self,,,self
+99,earth,,,earth
+100,father,,,father
+101,any,,,any
+102,new,,,new
+103,work,,,work
+104,part,,,part
+105,take,,,take
+106,get,,,get
+107,place,,,place
+108,made,,,made
+109,live,,,live
+110,where,,,where
+111,after,,,after
+112,back,,,back
+113,little,,,little
+114,only,,,only
+115,round,,,round
+116,man,,,man
+117,year,,,year
+118,came,,,came
+119,show,,,show
+120,every,,,every
+121,good,,,good
+122,me,,,me
+123,give,,,give
+124,our,,,our
+125,under,,,under
+126,name,,,name
+127,very,,,very
+128,through,,,through
+129,just,,,just
+130,form,,,form
+131,sentence,,,sentence
+132,great,,,great
+133,think,,,think
+134,say,,,say
+135,help,,,help
+136,low,,,low
+137,line,,,line
+138,differ,,,differ
+139,turn,,,turn
+140,cause,,,cause
+141,much,,,much
+142,mean,,,mean
+143,before,,,before
+144,move,,,move
+145,right,,,right
+146,boy,,,boy
+147,old,,,old
+148,too,,,too
+149,same,,,same
+150,she,,,she
+151,all,,,all
+152,there,,,there
+153,when,,,when
+154,up,,,up
+155,use,,,use
+156,your,,,your
+157,way,,,way
+158,about,,,about
+159,many,,,many
+160,then,,,then
+161,them,,,them
+162,write,,,write
+163,would,,,would
+164,like,,,like
+165,so,,,so
+166,these,,,these
+167,her,,,her
+168,long,,,long
+169,make,,,make
+170,thing,,,thing
+171,see,,,see
+172,him,,,him
+173,two,,,two
+174,has,,,has
+175,look,,,look
+176,more,,,more
+177,day,,,day
+178,could,,,could
+179,go,,,go
+180,come,,,come
+181,did,,,did
+182,number,,,number
+183,sound,,,sound
+184,no,,,no
+185,most,,,most
+186,people,,,people
+187,my,,,my
+188,over,,,over
+189,know,,,know
+190,water,,,water
+191,than,,,than
+192,call,,,call
+193,first,,,first
+194,who,,,who
+195,may,,,may
+196,down,,,down
+197,side,,,side
+198,been,,,been
+199,now,,,now
+200,find,,,find
+201,head,,,head
+202,stand,,,stand
+203,own,,,own
+204,page,,,page
+205,should,,,should
+206,country,,,country
+207,found,,,found
+208,answer,,,answer
+209,school,,,school
+210,grow,,,grow
+211,study,,,study
+212,still,,,still
+213,learn,,,learn
+214,plant,,,plant
+215,cover,,,cover
+216,food,,,food
+217,sun,,,sun
+218,four,,,four
+219,between,,,between
+220,state,,,state
+221,keep,,,keep
+222,eye,,,eye
+223,never,,,never
+224,last,,,last
+225,let,,,let
+226,thought,,,thought
+227,city,,,city
+228,tree,,,tree
+229,cross,,,cross
+230,farm,,,farm
+231,hard,,,hard
+232,start,,,start
+233,might,,,might
+234,story,,,story
+235,saw,,,saw
+236,far,,,far
+237,sea,,,sea
+238,draw,,,draw
+239,left,,,left
+240,late,,,late
+241,run,,,run
+242,don’t,,,don’t
+243,while,,,while
+244,press,,,press
+245,close,,,close
+246,night,,,night
+247,real,,,real
+248,life,,,life
+249,few,,,few
+250,north,,,north
+251,book,,,book
+252,carry,,,carry
+253,took,,,took
+254,science,,,science
+255,eat,,,eat
+256,room,,,room
+257,friend,,,friend
+258,began,,,began
+259,idea,,,idea
+260,fish,,,fish
+261,mountain,,,mountain
+262,stop,,,stop
+263,once,,,once
+264,base,,,base
+265,hear,,,hear
+266,horse,,,horse
+267,cut,,,cut
+268,sure,,,sure
+269,watch,,,watch
+270,color,,,color
+271,face,,,face
+272,wood,,,wood
+273,main,,,main
+274,open,,,open
+275,seem,,,seem
+276,together,,,together
+277,next,,,next
+278,white,,,white
+279,children,,,children
+280,begin,,,begin
+281,got,,,got
+282,walk,,,walk
+283,example,,,example
+284,ease,,,ease
+285,paper,,,paper
+286,group,,,group
+287,always,,,always
+288,music,,,music
+289,those,,,those
+290,both,,,both
+291,mark,,,mark
+292,often,,,often
+293,letter,,,letter
+294,until,,,until
+295,mile,,,mile
+296,river,,,river
+297,car,,,car
+298,feet,,,feet
+299,care,,,care
+300,second,,,second
+301,enough,,,enough
+302,plain,,,plain
+303,girl,,,girl
+304,usual,,,usual
+305,young,,,young
+306,ready,,,ready
+307,above,,,above
+308,ever,,,ever
+309,red,,,red
+310,list,,,list
+311,though,,,though
+312,feel,,,feel
+313,talk,,,talk
+314,bird,,,bird
+315,soon,,,soon
+316,body,,,body
+317,dog,,,dog
+318,family,,,family
+319,direct,,,direct
+320,pose,,,pose
+321,leave,,,leave
+322,song,,,song
+323,measure,,,measure
+324,door,,,door
+325,product,,,product
+326,black,,,black
+327,short,,,short
+328,numeral,,,numeral
+329,class,,,class
+330,wind,,,wind
+331,question,,,question
+332,happen,,,happen
+333,complete,,,complete
+334,ship,,,ship
+335,area,,,area
+336,half,,,half
+337,rock,,,rock
+338,order,,,order
+339,fire,,,fire
+340,south,,,south
+341,problem,,,problem
+342,piece,,,piece
+343,told,,,told
+344,knew,,,knew
+345,pass,,,pass
+346,since,,,since
+347,top,,,top
+348,whole,,,whole
+349,king,,,king
+350,street,,,street
+351,inch,,,inch
+352,multiply,,,multiply
+353,nothing,,,nothing
+354,course,,,course
+355,stay,,,stay
+356,wheel,,,wheel
+357,full,,,full
+358,force,,,force
+359,blue,,,blue
+360,object,,,object
+361,decide,,,decide
+362,surface,,,surface
+363,deep,,,deep
+364,moon,,,moon
+365,island,,,island
+366,foot,,,foot
+367,system,,,system
+368,busy,,,busy
+369,test,,,test
+370,record,,,record
+371,boat,,,boat
+372,common,,,common
+373,gold,,,gold
+374,possible,,,possible
+375,plane,,,plane
+376,stead,,,stead
+377,dry,,,dry
+378,wonder,,,wonder
+379,laugh,,,laugh
+380,thousand,,,thousand
+381,ago,,,ago
+382,ran,,,ran
+383,check,,,check
+384,game,,,game
+385,shape,,,shape
+386,equate,,,equate
+387,hot,,,hot
+388,miss,,,miss
+389,brought,,,brought
+390,heat,,,heat
+391,snow,,,snow
+392,tire,,,tire
+393,bring,,,bring
+394,yes,,,yes
+395,distant,,,distant
+396,fill,,,fill
+397,east,,,east
+398,paint,,,paint
+399,language,,,language
+400,among,,,among
+401,unit,,,unit
+402,power,,,power
+403,town,,,town
+404,fine,,,fine
+405,certain,,,certain
+406,fly,,,fly
+407,fall,,,fall
+408,lead,,,lead
+409,cry,,,cry
+410,dark,,,dark
+411,machine,,,machine
+412,note,,,note
+413,wait,,,wait
+414,plan,,,plan
+415,figure,,,figure
+416,star,,,star
+417,box,,,box
+418,noun,,,noun
+419,field,,,field
+420,rest,,,rest
+421,correct,,,correct
+422,able,,,able
+423,pound,,,pound
+424,done,,,done
+425,beauty,,,beauty
+426,drive,,,drive
+427,stood,,,stood
+428,contain,,,contain
+429,front,,,front
+430,teach,,,teach
+431,week,,,week
+432,final,,,final
+433,gave,,,gave
+434,green,,,green
+435,oh,,,oh
+436,quick,,,quick
+437,develop,,,develop
+438,ocean,,,ocean
+439,warm,,,warm
+440,free,,,free
+441,minute,,,minute
+442,strong,,,strong
+443,special,,,special
+444,mind,,,mind
+445,behind,,,behind
+446,clear,,,clear
+447,tail,,,tail
+448,produce,,,produce
+449,fact,,,fact
+450,space,,,space
+451,heard,,,heard
+452,best,,,best
+453,hour,,,hour
+454,better,,,better
+455,TRUE,,,TRUE
+456,during,,,during
+457,hundred,,,hundred
+458,five,,,five
+459,remember,,,remember
+460,step,,,step
+461,early,,,early
+462,hold,,,hold
+463,west,,,west
+464,ground,,,ground
+465,interest,,,interest
+466,reach,,,reach
+467,fast,,,fast
+468,verb,,,verb
+469,sing,,,sing
+470,listen,,,listen
+471,six,,,six
+472,table,,,table
+473,travel,,,travel
+474,less,,,less
+475,morning,,,morning
+476,ten,,,ten
+477,simple,,,simple
+478,several,,,several
+479,vowel,,,vowel
+480,toward,,,toward
+481,war,,,war
+482,lay,,,lay
+483,against,,,against
+484,pattern,,,pattern
+485,slow,,,slow
+486,center,,,center
+487,love,,,love
+488,person,,,person
+489,money,,,money
+490,serve,,,serve
+491,appear,,,appear
+492,road,,,road
+493,map,,,map
+494,rain,,,rain
+495,rule,,,rule
+496,govern,,,govern
+497,pull,,,pull
+498,cold,,,cold
+499,notice,,,notice
+500,voice,,,voice
+501,energy,,,energy
+502,hunt,,,hunt
+503,probable,,,probable
+504,bed,,,bed
+505,brother,,,brother
+506,egg,,,egg
+507,ride,,,ride
+508,cell,,,cell
+509,believe,,,believe
+510,perhaps,,,perhaps
+511,pick,,,pick
+512,sudden,,,sudden
+513,count,,,count
+514,square,,,square
+515,reason,,,reason
+516,length,,,length
+517,represent,,,represent
+518,art,,,art
+519,subject,,,subject
+520,region,,,region
+521,size,,,size
+522,vary,,,vary
+523,settle,,,settle
+524,speak,,,speak
+525,weight,,,weight
+526,general,,,general
+527,ice,,,ice
+528,matter,,,matter
+529,circle,,,circle
+530,pair,,,pair
+531,include,,,include
+532,divide,,,divide
+533,syllable,,,syllable
+534,felt,,,felt
+535,grand,,,grand
+536,ball,,,ball
+537,yet,,,yet
+538,wave,,,wave
+539,drop,,,drop
+540,heart,,,heart
+541,am,,,am
+542,present,,,present
+543,heavy,,,heavy
+544,dance,,,dance
+545,engine,,,engine
+546,position,,,position
+547,arm,,,arm
+548,wide,,,wide
+549,sail,,,sail
+550,material,,,material
+551,fraction,,,fraction
+552,forest,,,forest
+553,sit,,,sit
+554,race,,,race
+555,window,,,window
+556,store,,,store
+557,summer,,,summer
+558,train,,,train
+559,sleep,,,sleep
+560,prove,,,prove
+561,lone,,,lone
+562,leg,,,leg
+563,exercise,,,exercise
+564,wall,,,wall
+565,catch,,,catch
+566,mount,,,mount
+567,wish,,,wish
+568,sky,,,sky
+569,board,,,board
+570,joy,,,joy
+571,winter,,,winter
+572,sat,,,sat
+573,written,,,written
+574,wild,,,wild
+575,instrument,,,instrument
+576,kept,,,kept
+577,glass,,,glass
+578,grass,,,grass
+579,cow,,,cow
+580,job,,,job
+581,edge,,,edge
+582,sign,,,sign
+583,visit,,,visit
+584,past,,,past
+585,soft,,,soft
+586,fun,,,fun
+587,bright,,,bright
+588,gas,,,gas
+589,weather,,,weather
+590,month,,,month
+591,million,,,million
+592,bear,,,bear
+593,finish,,,finish
+594,happy,,,happy
+595,hope,,,hope
+596,flower,,,flower
+597,clothe,,,clothe
+598,strange,,,strange
+599,gone,,,gone
+600,trade,,,trade
+601,melody,,,melody
+602,trip,,,trip
+603,office,,,office
+604,receive,,,receive
+605,row,,,row
+606,mouth,,,mouth
+607,exact,,,exact
+608,symbol,,,symbol
+609,die,,,die
+610,least,,,least
+611,trouble,,,trouble
+612,shout,,,shout
+613,except,,,except
+614,wrote,,,wrote
+615,seed,,,seed
+616,tone,,,tone
+617,join,,,join
+618,suggest,,,suggest
+619,clean,,,clean
+620,break,,,break
+621,lady,,,lady
+622,yard,,,yard
+623,rise,,,rise
+624,bad,,,bad
+625,blow,,,blow
+626,oil,,,oil
+627,blood,,,blood
+628,touch,,,touch
+629,grew,,,grew
+630,cent,,,cent
+631,mix,,,mix
+632,team,,,team
+633,wire,,,wire
+634,cost,,,cost
+635,lost,,,lost
+636,brown,,,brown
+637,wear,,,wear
+638,garden,,,garden
+639,equal,,,equal
+640,sent,,,sent
+641,choose,,,choose
+642,fell,,,fell
+643,fit,,,fit
+644,flow,,,flow
+645,fair,,,fair
+646,bank,,,bank
+647,collect,,,collect
+648,save,,,save
+649,control,,,control
+650,decimal,,,decimal
+651,ear,,,ear
+652,else,,,else
+653,quite,,,quite
+654,broke,,,broke
+655,case,,,case
+656,middle,,,middle
+657,kill,,,kill
+658,son,,,son
+659,lake,,,lake
+660,moment,,,moment
+661,scale,,,scale
+662,loud,,,loud
+663,spring,,,spring
+664,observe,,,observe
+665,child,,,child
+666,straight,,,straight
+667,consonant,,,consonant
+668,nation,,,nation
+669,dictionary,,,dictionary
+670,milk,,,milk
+671,speed,,,speed
+672,method,,,method
+673,organ,,,organ
+674,pay,,,pay
+675,age,,,age
+676,section,,,section
+677,dress,,,dress
+678,cloud,,,cloud
+679,surprise,,,surprise
+680,quiet,,,quiet
+681,stone,,,stone
+682,tiny,,,tiny
+683,climb,,,climb
+684,cool,,,cool
+685,design,,,design
+686,poor,,,poor
+687,lot,,,lot
+688,experiment,,,experiment
+689,bottom,,,bottom
+690,key,,,key
+691,iron,,,iron
+692,single,,,single
+693,stick,,,stick
+694,flat,,,flat
+695,twenty,,,twenty
+696,skin,,,skin
+697,smile,,,smile
+698,crease,,,crease
+699,hole,,,hole
+700,jump,,,jump
+701,baby,,,baby
+702,eight,,,eight
+703,village,,,village
+704,meet,,,meet
+705,root,,,root
+706,buy,,,buy
+707,raise,,,raise
+708,solve,,,solve
+709,metal,,,metal
+710,whether,,,whether
+711,push,,,push
+712,seven,,,seven
+713,paragraph,,,paragraph
+714,third,,,third
+715,shall,,,shall
+716,held,,,held
+717,hair,,,hair
+718,describe,,,describe
+719,cook,,,cook
+720,floor,,,floor
+721,either,,,either
+722,result,,,result
+723,burn,,,burn
+724,hill,,,hill
+725,safe,,,safe
+726,cat,,,cat
+727,century,,,century
+728,consider,,,consider
+729,type,,,type
+730,law,,,law
+731,bit,,,bit
+732,coast,,,coast
+733,copy,,,copy
+734,phrase,,,phrase
+735,silent,,,silent
+736,tall,,,tall
+737,sand,,,sand
+738,soil,,,soil
+739,roll,,,roll
+740,temperature,,,temperature
+741,finger,,,finger
+742,industry,,,industry
+743,value,,,value
+744,fight,,,fight
+745,lie,,,lie
+746,beat,,,beat
+747,excite,,,excite
+748,natural,,,natural
+749,view,,,view
+750,sense,,,sense
+751,capital,,,capital
+752,won’t,,,won’t
+753,chair,,,chair
+754,danger,,,danger
+755,fruit,,,fruit
+756,rich,,,rich
+757,thick,,,thick
+758,soldier,,,soldier
+759,process,,,process
+760,operate,,,operate
+761,practice,,,practice
+762,separate,,,separate
+763,difficult,,,difficult
+764,doctor,,,doctor
+765,please,,,please
+766,protect,,,protect
+767,noon,,,noon
+768,crop,,,crop
+769,modern,,,modern
+770,element,,,element
+771,hit,,,hit
+772,student,,,student
+773,corner,,,corner
+774,party,,,party
+775,supply,,,supply
+776,whose,,,whose
+777,locate,,,locate
+778,ring,,,ring
+779,character,,,character
+780,insect,,,insect
+781,caught,,,caught
+782,period,,,period
+783,indicate,,,indicate
+784,radio,,,radio
+785,spoke,,,spoke
+786,atom,,,atom
+787,human,,,human
+788,history,,,history
+789,effect,,,effect
+790,electric,,,electric
+791,expect,,,expect
+792,bone,,,bone
+793,rail,,,rail
+794,imagine,,,imagine
+795,provide,,,provide
+796,agree,,,agree
+797,thus,,,thus
+798,gentle,,,gentle
+799,woman,,,woman
+800,captain,,,captain
+801,guess,,,guess
+802,necessary,,,necessary
+803,sharp,,,sharp
+804,wing,,,wing
+805,create,,,create
+806,neighbor,,,neighbor
+807,wash,,,wash
+808,bat,,,bat
+809,rather,,,rather
+810,crowd,,,crowd
+811,corn,,,corn
+812,compare,,,compare
+813,poem,,,poem
+814,string,,,string
+815,bell,,,bell
+816,depend,,,depend
+817,meat,,,meat
+818,rub,,,rub
+819,tube,,,tube
+820,famous,,,famous
+921,dollar,,,dollar
+822,stream,,,stream
+823,fear,,,fear
+284,sight,,,sight
+825,thin,,,thin
+826,triangle,,,triangle
+827,planet,,,planet
+828,hurry,,,hurry
+829,chief,,,chief
+830,colony,,,colony
+831,clock,,,clock
+832,mine,,,mine
+833,tie,,,tie
+834,enter,,,enter
+835,major,,,major
+836,fresh,,,fresh
+837,search,,,search
+838,send,,,send
+839,yellow,,,yellow
+840,gun,,,gun
+841,allow,,,allow
+842,print,,,print
+843,dead,,,dead
+844,spot,,,spot
+845,desert,,,desert
+846,suit,,,suit
+847,current,,,current
+848,lift,,,lift
+840,rose,,,rose
+850,arrive,,,arrive
+851,master,,,master
+852,track,,,track
+853,parent,,,parent
+854,shore,,,shore
+855,division,,,division
+856,sheet,,,sheet
+857,substance,,,substance
+858,favor,,,favor
+859,connect,,,connect
+860,post,,,post
+861,spend,,,spend
+862,chord,,,chord
+863,fat,,,fat
+864,glad,,,glad
+865,original,,,original
+866,share,,,share
+867,station,,,station
+868,dad,,,dad
+869,bread,,,bread
+870,charge,,,charge
+871,proper,,,proper
+872,bar,,,bar
+873,offer,,,offer
+874,segment,,,segment
+875,slave,,,slave
+876,duck,,,duck
+877,instant,,,instant
+878,market,,,market
+879,degree,,,degree
+880,populate,,,populate
+881,chick,,,chick
+882,dear,,,dear
+883,enemy,,,enemy
+884,reply,,,reply
+885,drink,,,drink
+886,occur,,,occur
+887,support,,,support
+888,speech,,,speech
+889,nature,,,nature
+890,range,,,range
+891,steam,,,steam
+892,motion,,,motion
+893,path,,,path
+894,liquid,,,liquid
+895,log,,,log
+896,meant,,,meant
+897,quotient,,,quotient
+898,teeth,,,teeth
+899,shell,,,shell
+900,neck,,,neck
+901,oxygen,,,oxygen
+902,sugar,,,sugar
+903,death,,,death
+904,pretty,,,pretty
+905,skill,,,skill
+906,women,,,women
+907,season,,,season
+908,solution,,,solution
+909,magnet,,,magnet
+910,silver,,,silver
+911,thank,,,thank
+912,branch,,,branch
+913,match,,,match
+914,suffix,,,suffix
+915,especially,,,especially
+916,fig,,,fig
+917,afraid,,,afraid
+918,huge,,,huge
+919,sister,,,sister
+920,steel,,,steel
+921,discuss,,,discuss
+922,forward,,,forward
+923,similar,,,similar
+924,guide,,,guide
+925,experience,,,experience
+926,score,,,score
+927,apple,,,apple
+928,bought,,,bought
+929,led,,,led
+930,pitch,,,pitch
+931,coat,,,coat
+932,mass,,,mass
+933,card,,,card
+934,band,,,band
+935,rope,,,rope
+936,slip,,,slip
+937,win,,,win
+938,dream,,,dream
+939,evening,,,evening
+940,condition,,,condition
+941,feed,,,feed
+942,tool,,,tool
+943,total,,,total
+944,basic,,,basic
+945,smell,,,smell
+946,valley,,,valley
+947,nor,,,nor
+948,double,,,double
+949,seat,,,seat
+950,continue,,,continue
+951,block,,,block
+952,chart,,,chart
+953,hat,,,hat
+954,sell,,,sell
+955,success,,,success
+956,company,,,company
+957,subtract,,,subtract
+958,event,,,event
+959,particular,,,particular
+960,deal,,,deal
+961,swim,,,swim
+962,term,,,term
+963,opposite,,,opposite
+964,wife,,,wife
+965,shoe,,,shoe
+966,shoulder,,,shoulder
+967,spread,,,spread
+968,arrange,,,arrange
+969,camp,,,camp
+970,invent,,,invent
+971,cotton,,,cotton
+972,born,,,born
+973,determine,,,determine
+974,quart,,,quart
+975,nine,,,nine
+976,truck,,,truck
+977,noise,,,noise
+978,level,,,level
+979,chance,,,chance
+980,gather,,,gather
+981,shop,,,shop
+982,stretch,,,stretch
+983,throw,,,throw
+984,shine,,,shine
+985,property,,,property
+986,column,,,column
+987,molecule,,,molecule
+988,select,,,select
+989,wrong,,,wrong
+990,gray,,,gray
+991,repeat,,,repeat
+992,require,,,require
+993,broad,,,broad
+994,prepare,,,prepare
+995,salt,,,salt
+996,nose,,,nose
+997,plural,,,plural
+998,anger,,,anger
+999,claim,,,claim
+1000,continent,,,continent
