@@ -9,6 +9,7 @@ var _global = {
     Card:           'CardCtrl',
     Word:           'WordCtrl',
     WordBuilder:    'WordBuilderCtrl',
+    TopicBuilder:   'TopicBuilderCtrl',
     WordCreate:     'WordCreateCtrl',
     About:          'AboutCtrl',
     Setting:        'SettingCtrl',
@@ -101,6 +102,7 @@ var _global = {
       { route: Routes.Card,           template: 'html/card.html',             ctrl: Ctrl.Card             },
       { route: Routes.Word,           template: 'html/word.html',             ctrl: Ctrl.Word             },
       { route: Routes.WordBuilder,    template: 'html/word-builder.html',     ctrl: Ctrl.WordBuilder      },
+      { route: Routes.TopicBuilder,   template: 'html/topic-builder.html',    ctrl: Ctrl.TopicBuilder     },
       { route: Routes.WordCreate,     template: 'html/word-create.html',      ctrl: Ctrl.WordCreate       },
       { route: Routes.About,          template: 'html/about.html',            ctrl: Ctrl.About            },
       { route: Routes.Setting,        template: 'html/setting.html',          ctrl: Ctrl.Setting          },
@@ -117,7 +119,7 @@ var _global = {
 
     $routeProvider.when('/', {
       //redirectTo: Routes.Home
-      redirectTo: Routes.WordBuilder
+      redirectTo: Routes.TopicBuilder
     }).otherwise({
       redirectTo: Routes.Home
     });

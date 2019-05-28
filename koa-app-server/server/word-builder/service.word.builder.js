@@ -37,7 +37,7 @@
     // 'word_hu1000.csv',
     // 'word_in1000.csv',
     // 'word_it1000.csv',
-    //'word_ja1000.csv',
+    'word_ja1000.csv',
     // 'word_km1000.csv',
     // 'word_ko1000.csv',
     // 'word_nb1000.csv',

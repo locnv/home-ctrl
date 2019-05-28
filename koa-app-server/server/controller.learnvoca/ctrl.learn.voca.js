@@ -77,6 +77,7 @@ let JS = [
   'js/controller/ctrl.learnvoca.card.js',
   'js/controller/ctrl.learnvoca.word.js',
   'js/controller/ctrl.learnvoca.word.builder.js',
+  'js/controller/ctrl.learnvoca.topic.builder.js',
   'js/controller/ctrl.learnvoca.about.js',
   'js/controller/ctrl.learnvoca.setting.js',
   'js/controller/ctrl.learnvoca.test.js',

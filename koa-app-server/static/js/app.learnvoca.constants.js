@@ -19,6 +19,7 @@
       Card:               '/card',
       Word:               '/word',
       WordBuilder:        '/words-builder',
+      TopicBuilder:       '/topic-builder',
       WordCreate:         '/word-create',
       About:              '/about',
       Setting:            '/setting',

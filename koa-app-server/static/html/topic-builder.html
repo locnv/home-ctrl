@@ -1,0 +1,86 @@
+
+<style>
+    ul#lstTopicProperties, ul#lstWordsByTopic {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    #lstTopicProperties li {
+
+    }
+
+    ul#lstWordsByTopic {
+        padding-left: 0;
+    }
+    ul#lstWordsByTopic li {
+        border: 1px solid lightgrey;
+        padding-left: 10px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+</style>
+
+<div class="container">
+
+    <div class="row" style="margin-bottom: 25px;">
+        <div class="col-xs-12" style="clear: both; margin-bottom: 20px;">
+            <div><b>Selected topic:</b> {{ topic.name }}</div>
+            <div><b>Selected word:</b> {{ searchWord.name }}</div>
+            <button class="btn btn-primary btn-sm" ng-click="onBtnAddWordToTopicClicked()">Add word to topic</button>
+            <button class="btn btn-primary btn-sm" ng-click="onBtnRemoveWordFromTopicClicked()">Remove word from topic</button>
+        </div>
+
+        <div class="col-xs-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <input type="text"
+                       class="form-control"
+                       id="txtWordSearch"
+                       ng-model="txtTopicSearch"
+                       placeholder="Enter a topic name">
+                </div>
+                <button type="button" class="btn btn-default"
+                    ng-click="getTopicByName(txtTopicSearch)">Get</button>
+                <button type="button" class="btn btn-default"
+                    ng-click="createTopic(txtTopicSearch, '')">Create</button>
+                <button type="button" class="btn btn-default"
+                    ng-click="deleteTopicByName(txtTopicSearch)">Delete</button>
+            </form>
+            <br>
+
+            <pre>
+                {{ topic | json }}
+            </pre>
+
+            <button class="btn btn-default"
+              ng-click="onBtnGetWordsByTopicClicked()">Get words</button>
+            <br>
+            <ul id="lstWordsByTopic">
+                <li ng-repeat="word in wordsByTopic">
+                    <div><b>{{word.name}}</b></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-xs-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <input type="text"
+                           class="form-control"
+                           ng-model="txtWordSearch"
+                           placeholder="Enter a word">
+                </div>
+                <button
+                    type="button"
+                    class="btn btn-default"
+                    ng-click="getWordByName(txtWordSearch)">Search</button>
+            </form>
+            <br>
+            <pre>
+                {{ searchWord | json }}
+            </pre>
+        </div>
+
+
+    </div>
+</div>

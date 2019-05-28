@@ -37,6 +37,7 @@
       pronunciation: '',
       descriptions: [''],
       examples: [''],
+      //https://images.unsplash.com/photo-1516632664305-eda5d6a5bb99?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3159&q=80
       imageUrl: ''
     };
 
@@ -47,6 +48,7 @@
 
     $scope.onBtnSubmitClicked = onBtnSubmitClicked;
     $scope.onBtnGetAWordClicked = onBtnGetAWordClicked;
+    $scope.getWordByName = getWordByName;
     $scope.onBtnBuildWordClicked = onBtnBuildWordClicked;
     $scope.onBtnUpdateImageClicked = onBtnUpdateImageClicked;
     $scope.onTxtLinkLostFocus = onTxtLinkLostFocus;
@@ -164,6 +166,32 @@
         });
 
       notifier.notify('Request is sent!)');
+    }
+
+    function getWordByName(name) {
+      if(!name || name.length === 0) {
+        notifier.error('Text is empty!');
+        return;
+      }
+
+      http.getWordByName(name)
+      .then(function(resp) {
+        if(!resp || !resp.data) {
+          notifier.error('Failed to get word!');
+          return;
+        }
+
+        let word = resp.data;
+        if(Array.isArray(word)) word = word[0];
+
+        if(word) {
+          $scope.mWord = angular.copy(word);
+          $scope.$digest();
+        } else {
+          notifier.error('Word not found!');
+        }
+
+      });
     }
 
     function onBtnGetAWordClicked() {

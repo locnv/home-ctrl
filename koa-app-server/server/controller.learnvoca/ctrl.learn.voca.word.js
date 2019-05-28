@@ -7,6 +7,7 @@
 
   const CtrlConst = require('../controller/ctrl.constants');
   const dsWord = require('../database/ds.word');
+  const dsTopicWord = require('../database/ds.topic.word');
 
   const Method = CtrlConst.Method;
   const Actions = CtrlConst.Actions;
@@ -35,24 +36,32 @@
       method: 'handleGet',
     };
 
-    let body = req.body;
-
-    console.log(query);
+    //let body = req.body;
+    //console.log(query);
 
     let action = parseInt(query.action);
-    let Fn = null;
     switch(action) {
       case Actions.GetWordsByCard:
-        Fn = getWordsByCard;
+        let cardId = query.card;
+        let wordsByCard = await getWordsByCard(cardId);
+        retObj.data = wordsByCard;
+        break;
+
+      case Actions.GetWordsByTopic:
+        let topicId = query.topicId;
+        let wordsByTopic = await getWordsByTopics(topicId);
+        retObj.data = wordsByTopic;
+        break;
+
+      case Actions.GetWordByName:
+        let name = query.name;
+        let w = await getWordByName(name);
+        retObj.data = w;
         break;
 
       default:
+        retObj.isSuccess = false;
         break;
-    }
-
-    if(typeof Fn === 'function') {
-      let cardId = query.card;
-      retObj = await Fn.call(this, cardId);
     }
 
     return Promise.resolve(retObj);
@@ -90,11 +99,33 @@
     return Promise.resolve(retObj);
   }
 
+  async function getWordByName(name) {
+    return await dsWord.find({ name: name });
+  }
+
   async function getWordsByCard(cardId) {
 
-    console.log('find words > cardId > ' + cardId);
     return await dsWord.findWordsByCard(cardId);
   }
+
+  async function getWordsByTopics(topicId) {
+
+    let topicWords = await dsTopicWord.findWordsByTopic(topicId);
+
+    if(!Array.isArray(topicWords) || topicWords.length === 0) {
+      return null;
+    }
+
+    let wordIds = [];
+    topicWords.forEach(function(tw) {
+      wordIds.push(tw.word);
+    });
+
+    let words = await dsWord.findByIds(wordIds);
+
+    return words;
+  }
+
 
   async function addWord(word) {
     return await dsWord.create(word);

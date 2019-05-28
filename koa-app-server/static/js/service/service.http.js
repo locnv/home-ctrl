@@ -25,10 +25,18 @@
       UpdateCard: 2,
       RemoveCard: 3,
 
+      // Topic -> going to replace for Card
+      CreateTopic: 13,
+      GetTopicByName: 14,
+      AddWordToTopic: 15,
+      RemoveWordFromTopic: 16,
+      GetWordsByTopic: 17,
+
       AddWord: 4,
       UpdateWord: 5,
       RemoveWord: 6,
       GetWordsByCard: 7,
+      GetWordByName: 12,
 
       BuildWords: 9,
       GetUnBuilt: 10,
@@ -61,7 +69,16 @@
       getAllCards: getAllCards,
       addNewCards: addNewCards,
       getWordsByCard: getWordsByCard,
+
+      // Topic shall be used to replace card
+      getTopicByName: getTopicByName,
+      createTopic: createTopic,
+      addWordToTopic: addWordToTopic,
+      getWordsByTopic: getWordsByTopic,
+      removeWordFromTopic: removeWordFromTopic,
+
       getAllWords: getAllWords,
+      getWordByName: getWordByName,
       addNewWord: addNewWord,
       updateWord: updateWord,
       buildWords: buildWords,
@@ -154,6 +171,62 @@
       return sendRequest(RequestType.Post, Host, Api.Card, params);
     }
 
+    function getTopicByName(topicName) {
+
+      var reqParamsObj = {
+        params: {
+          topicName: topicName,
+          action: Actions.GetTopicByName,
+        }
+      };
+
+      var promise = new Promise(function(resolve) {
+        sendRequest(RequestType.Get, Host, Api.Card, reqParamsObj)
+        .then(function(resp) {
+          resolve(resp.data);
+        });
+      });
+
+      return promise;
+
+    }
+
+    function createTopic(topicName, description) {
+      var params = {
+        data: {
+          name: topicName,
+          description: description
+        },
+        action: Actions.CreateTopic,
+      };
+
+      return sendRequest(RequestType.Post, Host, Api.Card, params);
+    }
+
+    function addWordToTopic(topicId, wordId) {
+      var params = {
+        data: {
+          topicId: topicId,
+          wordId: wordId
+        },
+        action: Actions.AddWordToTopic,
+      };
+
+      return sendRequest(RequestType.Post, Host, Api.Card, params);
+    }
+
+    function removeWordFromTopic(topicId, wordId) {
+      var params = {
+        data: {
+          topicId: topicId,
+          wordId: wordId
+        },
+        action: Actions.RemoveWordFromTopic,
+      };
+
+      return sendRequest(RequestType.Post, Host, Api.Card, params);
+    }
+
     function getWordsByCard(cardId) {
       var reqParamsObj = {
         params: {
@@ -173,8 +246,40 @@
 
     }
 
+    function getWordsByTopic(topicId) {
+
+      var reqParamsObj = {
+        params: {
+          topicId: topicId,
+          action: Actions.GetWordsByTopic,
+        }
+      };
+
+      var promise = new Promise(function(resolve) {
+        sendRequest(RequestType.Get, Host, Api.Word, reqParamsObj)
+          .then(function(resp) {
+            resolve(resp.data);
+          });
+      });
+
+      return promise;
+
+    }
+
     function getAllWords() {
       return sendRequest(RequestType.Get, Host, Api.Word);
+    }
+
+    function getWordByName(name) {
+
+      var reqParamsObj = {
+        params: {
+          action: Actions.GetWordByName,
+          name: name
+        }
+      };
+
+      return sendRequest(RequestType.Get, Host, Api.Word, reqParamsObj);
     }
 
     function addNewWord(cardId, word, explain, example) {

@@ -3,20 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="bc036ef2-d765-49de-b293-b0a96b2706d6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeElecCtrl/app.constant.js" beforeDir="false" afterPath="$PROJECT_DIR$/HomeElecCtrl/app.constant.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeElecCtrl/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/HomeElecCtrl/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koa-app-server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koa-app-server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koa-app-server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.card.js" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.js" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.word.builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.word.builder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.word.js" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.word.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koa-app-server/server/database/model/word.js" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/server/database/model/word.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koa-app-server/server/word-builder/base/en-1000.csv" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/server/word-builder/base/en-1000.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koa-app-server/server/controller/ctrl.constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/server/controller/ctrl.constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koa-app-server/server/database/mongoose/ds.base.js" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/server/database/mongoose/ds.base.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/koa-app-server/server/word-builder/service.word.builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/server/word-builder/service.word.builder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/koa-app-server/static/html/word-builder.html" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/static/html/word-builder.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koa-app-server/static/js/app.learnvoca.constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/static/js/app.learnvoca.constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koa-app-server/static/js/app.learnvoca.js" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/static/js/app.learnvoca.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.learnvoca.word.builder.js" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.learnvoca.word.builder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/koa-app-server/static/js/service/service.http.js" beforeDir="false" afterPath="$PROJECT_DIR$/koa-app-server/static/js/service/service.http.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-tutorial/tut-1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-tutorial/tut-1/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,23 +29,14 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/koa-app-server/server/word-builder/service.word.builder.js">
+        <entry file="file://$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.card.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
+            <state relative-caret-position="157">
+              <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
               <folding>
-                <element signature="e#4801#5932#0" />
-                <element signature="e#6127#6308#0" />
+                <element signature="n#!!block;n#addCard#0" />
+                <element signature="n#!!block;n#updateCard#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.word.builder.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -54,30 +44,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.word.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="77" column="29" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
+            <state relative-caret-position="156">
+              <caret line="98" column="35" lean-forward="true" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/koa-app-server/static/html/word-builder.html">
+        <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.learnvoca.topic.builder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#label#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#label#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#pre#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#pre#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="260">
+              <caret line="185" column="35" selection-start-line="185" selection-start-column="35" selection-end-line="185" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -85,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/service/service.http.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="197" column="8" selection-start-line="197" selection-start-column="8" selection-end-line="197" selection-end-column="8" />
+            <state relative-caret-position="229">
+              <caret line="281" column="18" selection-start-line="281" selection-start-column="18" selection-end-line="281" selection-end-column="18" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -94,20 +71,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.learnvoca.word.builder.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/koa-app-server/static/html/topic-builder.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/koa-app-server/server/database/model/word.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="10" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="10" />
+            <state relative-caret-position="150">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,36 +97,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ng-app=&quot;Adm</find>
-      <find>ng-app=&quot;Admin</find>
-      <find>container</find>
-      <find>notifier.</find>
-      <find>light</find>
-      <find>activ</find>
-      <find>bootstr</find>
-      <find>file</find>
-      <find>speechReco</find>
-      <find>plugin</find>
-      <find>socket</find>
-      <find>speech</find>
-      <find>.css</find>
-      <find>find</find>
-      <find>findGwById</find>
-      <find>WordController</find>
-      <find>dsWordDb.find</find>
-      <find>http</find>
-      <find>CreateCard</find>
-      <find>http.</find>
       <find>buildWords</find>
       <find>.add</find>
       <find>BuildWords</find>
-      <find>DsWord</find>
       <find>handleGet</find>
       <find>wrong</find>
       <find>word_</find>
       <find>1000.csv</find>
       <find>logger.</find>
       <find>logger</find>
+      <find>fair</find>
+      <find>drop</find>
+      <find>born</find>
+      <find>could</find>
+      <find>unknown</find>
+      <find>DsWord</find>
+      <find>log</find>
+      <find>wordB</find>
+      <find>TopicBuilder</find>
+      <find>create</find>
+      <find>createTopic</find>
+      <find>addWordToTopic</find>
+      <find>.remove</find>
+      <find>delete =</find>
+      <find>delete</find>
+      <find>getWordBy</find>
+      <find>findBy</find>
+      <find>getWordByName</find>
+      <find>removeWordFromTopic</find>
+      <find>getWordsByTopics</find>
+      <find>addWordTo</find>
     </findStrings>
     <replaceStrings>
       <replace>nodeUtil</replace>
@@ -178,6 +150,8 @@
       <replace>'word_</replace>
       <replace>1000.csv',</replace>
       <replace>log</replace>
+      <replace>DsTopic</replace>
+      <replace>DsTopicWord</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -186,13 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.voice-ctrl.js" />
-        <option value="$PROJECT_DIR$/koa-app-server/static/html/voice-ctrl.html" />
-        <option value="$PROJECT_DIR$/koa-app-server/static/js/app.test.js" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/LightControl/package.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/koa-app-server/server/socket-io/app.socket.js" />
         <option value="$PROJECT_DIR$/koa-app-server/static/js/app.admin.js" />
         <option value="$PROJECT_DIR$/koa-app-server/static/html/admin.html" />
         <option value="$PROJECT_DIR$/koa-app-server/server/layout/app.admin.lte.html" />
@@ -213,30 +180,37 @@
         <option value="$PROJECT_DIR$/koa-app-server/server/database/ds.word.db.js" />
         <option value="$PROJECT_DIR$/koa-app-server/server/word-builder/service.api.dic.js" />
         <option value="$PROJECT_DIR$/koa-app-server/server/word-builder/resp.json" />
-        <option value="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.card.js" />
         <option value="$PROJECT_DIR$/koa-app-server/app-router.js" />
         <option value="$PROJECT_DIR$/koa-app-server/static/js/service/service.dic.js" />
-        <option value="$PROJECT_DIR$/koa-app-server/static/js/app.learnvoca.constants.js" />
         <option value="$PROJECT_DIR$/koa-app-server/static/html/home.html" />
-        <option value="$PROJECT_DIR$/koa-app-server/static/js/app.learnvoca.js" />
         <option value="$PROJECT_DIR$/koa-app-server/server/word-builder/resp1.json" />
         <option value="$PROJECT_DIR$/koa-app-server/server/word-builder/service.api.oxford-dic.js" />
         <option value="$PROJECT_DIR$/koa-app-server/server/word-builder/base/en-100.csv" />
-        <option value="$PROJECT_DIR$/koa-app-server/server/database/mongoose/ds.base.js" />
-        <option value="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.js" />
         <option value="$PROJECT_DIR$/koa-app-server/server/database/model/image.js" />
         <option value="$PROJECT_DIR$/koa-app-server/server/database/ds.image.js" />
-        <option value="$PROJECT_DIR$/koa-app-server/server/controller/ctrl.constants.js" />
         <option value="$PROJECT_DIR$/koa-app-server/server/database/model/word.js" />
-        <option value="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.word.builder.js" />
         <option value="$PROJECT_DIR$/web-tutorial/tut-1/index.html" />
         <option value="$PROJECT_DIR$/koa-app-server/server/word-builder/base/vn-en.1000.csv" />
         <option value="$PROJECT_DIR$/koa-app-server/app.js" />
-        <option value="$PROJECT_DIR$/koa-app-server/server/word-builder/service.word.builder.js" />
-        <option value="$PROJECT_DIR$/koa-app-server/static/js/service/service.http.js" />
-        <option value="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.word.js" />
-        <option value="$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.learnvoca.word.builder.js" />
         <option value="$PROJECT_DIR$/koa-app-server/static/html/word-builder.html" />
+        <option value="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.word.builder.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/server/word-builder/base/common-out-1000/word_en1000.csv" />
+        <option value="$PROJECT_DIR$/koa-app-server/server/database/model/topic.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/server/database/model/topic.word.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/app.learnvoca.constants.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.learnvoca.word.builder.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/app.learnvoca.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/server/word-builder/service.word.builder.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/server/database/ds.topic.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/server/database/ds.topic.word.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.card.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/service/service.http.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/server/controller/ctrl.constants.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/server/database/mongoose/ds.base.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.word.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.learnvoca.topic.builder.js" />
+        <option value="$PROJECT_DIR$/koa-app-server/static/html/topic-builder.html" />
       </list>
     </option>
   </component>
@@ -293,6 +267,13 @@
               <item name="koa-app" type="462c0819:PsiDirectoryNode" />
               <item name="koa-app-server" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="koa-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="koa-app" type="462c0819:PsiDirectoryNode" />
+              <item name="koa-app-server" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="controller.learnvoca" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -301,6 +282,21 @@
               <item name="koa-app-server" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="koa-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="koa-app" type="462c0819:PsiDirectoryNode" />
+              <item name="koa-app-server" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="mongoose" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="koa-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="koa-app" type="462c0819:PsiDirectoryNode" />
+              <item name="koa-app-server" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="word-builder" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="koa-app" type="b2602c69:ProjectViewProjectNode" />
@@ -333,6 +329,14 @@
             <path>
               <item name="koa-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="koa-app" type="462c0819:PsiDirectoryNode" />
+              <item name="koa-app-server" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="koa-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="koa-app" type="462c0819:PsiDirectoryNode" />
               <item name="web-tutorial" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -355,7 +359,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.11.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/koa-app-server/static/html" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -376,11 +380,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/koa-app-server/server/word-builder/base/common-1000" />
-      <recent name="$PROJECT_DIR$/koa-app-server/server/word-builder/base" />
+      <recent name="$PROJECT_DIR$/koa-app-server/static/html" />
+      <recent name="$PROJECT_DIR$/koa-app-server/static/js/controller" />
       <recent name="$PROJECT_DIR$/koa-app-server/server/database" />
       <recent name="$PROJECT_DIR$/koa-app-server/server/database/model" />
-      <recent name="$PROJECT_DIR$/koa-app-server/static/html" />
+      <recent name="$PROJECT_DIR$/koa-app-server/server/word-builder/base/common-1000" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -439,7 +443,7 @@
       <workItem from="1558789512845" duration="3342000" />
       <workItem from="1558837541906" duration="7749000" />
       <workItem from="1558881519975" duration="831000" />
-      <workItem from="1558925071206" duration="8344000" />
+      <workItem from="1558925071206" duration="23547000" />
     </task>
     <task id="LOCAL-00001" summary="dev: add word builder.">
       <created>1558776038500</created>
@@ -448,14 +452,22 @@
       <option name="project" value="LOCAL" />
       <updated>1558776038501</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="dev: add word builder.">
+      <created>1558967864813</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1558967864813</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284416000" />
+    <option name="totallyTimeSpent" value="299619000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="23" width="1204" height="777" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3123924" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -531,72 +543,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="dev: add word builder." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LightControl/www/js/service/service.http.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="144" column="19" selection-start-line="144" selection-start-column="19" selection-end-line="144" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3043">
-          <caret line="467" column="14" selection-start-line="467" selection-start-column="14" selection-end-line="467" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/service/service.dic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/service/service.csf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-55">
-          <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/app-router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="35" column="21" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/server/word-builder/service.api.dic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/server/word-builder/resp.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding>
-            <element signature="e#543#989#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/server/word-builder/resp1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/server/word-builder/base/en-100.csv" />
     <entry file="file://$PROJECT_DIR$/koa-app-server/static/html/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -611,27 +557,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/app.learnvoca.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="260" column="33" selection-start-line="260" selection-start-column="33" selection-end-line="260" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/app.util.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="266" column="13" selection-start-line="266" selection-start-column="13" selection-end-line="266" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/app.learnvoca.constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -649,30 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.card.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
-          <caret line="34" column="23" lean-forward="true" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="135" column="38" lean-forward="true" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
-          <folding>
-            <element signature="n#!!doc;n#AppController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/server/database/ds.word.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/koa-app-server/server/database/ds.image.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -684,13 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.learnvoca.card.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="74" column="27" lean-forward="true" selection-start-line="73" selection-start-column="10" selection-end-line="74" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -762,20 +660,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/koa-app-server/server/word-builder/base/common-out-1000/word_de1000.csv" />
     <entry file="file://$PROJECT_DIR$/koa-app-server/server/word-builder/base/common-out-1000/word_da1000.csv" />
-    <entry file="file://$PROJECT_DIR$/koa-app-server/server/controller/ctrl.constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/koa-app-server/server/word-builder/base/common-out-1000/word_zh1000.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
@@ -783,16 +667,6 @@
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="-5280">
           <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/server/word-builder/base/common-out-1000/word_ja1000.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -816,13 +690,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/server/word-builder/base/common-1000/word_en1000.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/database/model/word.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -831,8 +702,18 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="236">
-          <caret line="127" column="25" selection-start-line="127" selection-start-column="25" selection-end-line="127" selection-end-column="25" />
+        <state relative-caret-position="-1863">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/word-builder/base/common-1000/word_en1000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="114">
+          <caret line="539" column="8" selection-start-line="539" selection-start-column="4" selection-end-line="539" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -841,84 +722,201 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        <state relative-caret-position="174">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/server/database/mongoose/ds.base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-417">
-          <caret line="78" column="8" lean-forward="true" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/word-builder/base/common-out-1000/word_ja1000.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="1815">
+          <caret line="121" column="41" selection-start-line="121" selection-start-column="41" selection-end-line="121" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/server/word-builder/service.word.builder.js">
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.word.builder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
+        <state relative-caret-position="301">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/app.learnvoca.constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="79" column="50" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
           <folding>
-            <element signature="e#4801#5932#0" />
-            <element signature="e#6127#6308#0" />
+            <element signature="n#!!doc;n#AppController#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.word.js">
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.learnvoca.word.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="77" column="29" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
-        </state>
+        <state relative-caret-position="-133" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/service/service.http.js">
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/app.learnvoca.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="197" column="8" selection-start-line="197" selection-start-column="8" selection-end-line="197" selection-end-column="8" />
+        <state relative-caret-position="174">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/server/database/model/word.js">
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/word-builder/service.word.builder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="10" />
+        <state relative-caret-position="-220">
+          <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/database/ds.topic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.learnvoca.card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.learnvoca.word.builder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+        <state relative-caret-position="279">
+          <caret line="195" column="5" selection-start-line="171" selection-start-column="4" selection-end-line="195" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/app-router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/database/model/word.db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/koa-app-server/static/html/word-builder.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="276">
+          <caret line="53" column="23" selection-start-line="41" selection-start-column="16" selection-end-line="53" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/database/ds.topic.word.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/database/model/topic.word.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/database/model/topic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/controller/ctrl.constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/database/ds.word.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/database/mongoose/ds.base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="154" column="8" selection-start-line="154" selection-start-column="8" selection-end-line="154" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#label#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#label#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#pre#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#pre#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#!!block;n#addCard#0" />
+            <element signature="n#!!block;n#updateCard#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.word.builder.js">
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/service/service.http.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+        <state relative-caret-position="229">
+          <caret line="281" column="18" selection-start-line="281" selection-start-column="18" selection-end-line="281" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/server/controller.learnvoca/ctrl.learn.voca.word.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="98" column="35" lean-forward="true" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/js/controller/ctrl.learnvoca.topic.builder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="185" column="35" selection-start-line="185" selection-start-column="35" selection-end-line="185" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koa-app-server/static/html/topic-builder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

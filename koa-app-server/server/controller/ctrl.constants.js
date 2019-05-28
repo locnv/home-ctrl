@@ -14,10 +14,20 @@ const CtrlConstants = {
     UpdateCard: 2,
     RemoveCard: 3,
 
+    // Topic -> going to replace for Card
+    CreateTopic: 13,
+    GetTopicByName: 14,
+    AddWordToTopic: 15,
+    RemoveWordFromTopic: 16,
+    GetWordsByTopic: 17,
+    DeleteTopic: 18,
+
+    // Word
     AddWord: 4,
     UpdateWord: 5,
     RemoveWord: 6,
     GetWordsByCard: 7,
+    GetWordByName: 12,
 
     // Word Builder
     BuildWords: 9,

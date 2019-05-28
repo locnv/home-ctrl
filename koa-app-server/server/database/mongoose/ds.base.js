@@ -6,9 +6,14 @@
   "use strict";
 
   const mongoose = require('mongoose');
+  const ObjectId = mongoose.Types.ObjectId;
   const logger = require('../../util/logger');
 
   function DsBase() { }
+
+  DsBase.prototype.toObjectId = function(stringId) {
+    return new ObjectId(stringId);
+  };
 
   DsBase.prototype.load = function(modelName, modelSchema) {
 
@@ -137,6 +142,26 @@
         logger.error(err);
         resolve(new Error('Find error.'));
       });
+    });
+
+    return promise;
+  };
+
+  DsBase.prototype.findByIds = function(ids) {
+    let model = this.model;
+    let promise = new Promise(function(resolve) {
+      let criteria = {
+        _id: { $in: ids }
+      };
+
+      model.find(criteria)
+        .then(function(docs) {
+          resolve(docs);
+        })
+        .catch(function(err) {
+          logger.error(err);
+          resolve(new Error('Find error.'));
+        });
     });
 
     return promise;

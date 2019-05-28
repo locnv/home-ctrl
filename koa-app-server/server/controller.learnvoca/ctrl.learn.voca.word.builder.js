@@ -57,8 +57,6 @@
 
   }
 
-  //setTimeout(getUnbuiltWord, 1000);
-
   function getUnbuiltWord() {
 
     let promise = new Promise(async function(resolve, reject) {
