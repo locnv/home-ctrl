@@ -131,23 +131,23 @@
             return;
           }
 
-          if(word === null) {
-            logger.warn(`[word-builder] -> exportDic -> not found base definition in English for : ${wEnglish}.`);
-          } else {
-            let wOut = {
-              number: counter++,
-              name: wTarget,
-              type: getWordType(word, isEnglish),
-              pronounce: getPronunciation(word, isEnglish),
-              description: getDefinition(word, isEnglish),
-              example: getExamples(word, isEnglish),
-              url: word.imageUrl
-            };
+          // if(word === null) {
+          //   logger.warn(`[word-builder] -> exportDic -> not found base definition in English for : ${wEnglish}.`);
+          // } else {
+          let wOut = {
+            number: counter++,
+            name: wTarget,
+            type: getWordType(word, isEnglish),
+            pronounce: getPronunciation(word, isEnglish),
+            description: getDefinition(word, isEnglish),
+            example: getExamples(word, isEnglish),
+            url: word.imageUrl
+          };
 
-            logger.info(`[word-builder] -> exporting: ${wTarget} -> ${wEnglish}`);
+          logger.info(`[word-builder] -> exporting: ${wTarget} -> ${wEnglish}`);
 
-            csvWriter.write(wOut);
-          }
+          csvWriter.write(wOut);
+          //}
 
         } catch (e) {
           logger.error(`word-builder -> failed to export dictionary -> ${e.message}`);

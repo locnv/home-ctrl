@@ -31,6 +31,7 @@
       AddWordToTopic: 15,
       RemoveWordFromTopic: 16,
       GetWordsByTopic: 17,
+      ExportTopic: 18,
 
       AddWord: 4,
       UpdateWord: 5,
@@ -76,6 +77,7 @@
       addWordToTopic: addWordToTopic,
       getWordsByTopic: getWordsByTopic,
       removeWordFromTopic: removeWordFromTopic,
+      exportTopic: exportTopic,
 
       getAllWords: getAllWords,
       getWordByName: getWordByName,
@@ -222,6 +224,15 @@
           wordId: wordId
         },
         action: Actions.RemoveWordFromTopic,
+      };
+
+      return sendRequest(RequestType.Post, Host, Api.Card, params);
+    }
+
+    function exportTopic(topicId) {
+      var params = {
+        data: { topicId: topicId },
+        action: Actions.ExportTopic,
       };
 
       return sendRequest(RequestType.Post, Host, Api.Card, params);

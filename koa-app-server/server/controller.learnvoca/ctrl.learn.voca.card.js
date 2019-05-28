@@ -83,6 +83,12 @@ async function handlePost(req, params) {
       retObj.data = createdTW;
       break;
 
+    case Actions.ExportTopic:
+      let topicIdToExport = reqData.topicId;
+      let exportRs = await exportTopic(topicIdToExport);
+      retObj.data = exportRs;
+      break;
+
     case Actions.CreateCard:
       let card = body.data;
       let isOk = addCard(card);
@@ -97,6 +103,14 @@ async function handlePost(req, params) {
   }
 
   return Promise.resolve(retObj);
+}
+
+async function exportTopic(topicId) {
+
+  //TODO implement
+  logger.info(`[topic] Going to export ${topicId}`);
+
+  return Promise.resolve(true);
 }
 
 async function createTopic(name, description) {

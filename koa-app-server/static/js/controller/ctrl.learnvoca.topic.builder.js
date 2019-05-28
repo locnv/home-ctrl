@@ -46,6 +46,7 @@
     $scope.onBtnGetWordsByTopicClicked = onBtnGetWordsByTopicClicked;
     $scope.onBtnAddWordToTopicClicked = addWordToTopic;
     $scope.onBtnRemoveWordFromTopicClicked = removeWordFromTopic;
+    $scope.onBtnExportTopicClicked = onBtnExportTopicClicked;
 
     /* Extend from base controller */
     $controller('BaseCtrl', { $scope: $scope });
@@ -76,6 +77,17 @@
     }
 
     function onLanguageChanged() { }
+
+    /**
+     * Remove word from the current wordByTopic (locally)
+     * @param word
+     */
+    function removeWordInCurrentList(word) {
+      let idx = $scope.wordsByTopic.indexOf(word);
+      if(idx !== -1) {
+        $scope.wordsByTopic.splice(idx, 1);
+      }
+    }
 
     function getTopicByName(topicName) {
       log.info('[topic-builder][get-topic-by-name] -> ' + topicName);
@@ -161,8 +173,6 @@
           $scope.$digest();
           notifier.notify('Get words by topic returned');
         });
-
-      notifier.notify('Request is sent!');
     }
 
     function addWordToTopic() {
@@ -186,19 +196,17 @@
         //var respData = resp.data;
         notifier.notify('Added word into topic.');
       });
-
-      notifier.notify('Request is sent!');
     }
 
-    function removeWordFromTopic() {
+    function removeWordFromTopic(word) {
 
-      if(!$scope.topic || !$scope.searchWord) {
+      if(!$scope.topic || !word) {
         notifier.error('Please select a topic and a word.');
         return;
       }
 
       var topicId = $scope.topic._id;
-      var wordId = $scope.searchWord._id;
+      var wordId = word._id;
 
       log.info('[topic-builder][remove-word] -> word = ' + wordId +'; topic = ' + topicId);
       http.removeWordFromTopic(topicId, wordId)
@@ -214,10 +222,38 @@
           return;
         }
 
+        removeWordInCurrentList(word);
+        $scope.$digest();
+
         notifier.notify('Removed word from topic.');
       });
+    }
 
-      notifier.notify('Request is sent!');
+    function onBtnExportTopicClicked() {
+      if(!$scope.topic) {
+        notifier.error('Please select a topic to export.');
+        return;
+      }
+
+      var topicId = $scope.topic._id;
+
+      log.info('[topic-builder][exporting] -> topic = ' + topicId);
+      http.exportTopic(topicId)
+      .then(function(resp) {
+        if(!resp || !resp.data) {
+          notifier.error('An error occurred!');
+          return;
+        }
+
+        var respData = resp.data;
+        if(!respData.isSuccess) {
+          notifier.error('An error occurred *!');
+          return;
+        }
+
+        notifier.notify('Exported ... going to download!');
+
+      });
     }
 
   }

@@ -20,7 +20,8 @@ const CtrlConstants = {
     AddWordToTopic: 15,
     RemoveWordFromTopic: 16,
     GetWordsByTopic: 17,
-    DeleteTopic: 18,
+    ExportTopic: 18,
+    DeleteTopic: 19,
 
     // Word
     AddWord: 4,

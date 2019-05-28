@@ -181,7 +181,9 @@
           return;
         }
 
-        let word = resp.data;
+        let respData = resp.data;
+
+        let word = respData.data;
         if(Array.isArray(word)) word = word[0];
 
         if(word) {

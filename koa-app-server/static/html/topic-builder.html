@@ -1,15 +1,15 @@
 
 <style>
-    ul#lstTopicProperties, ul#lstWordsByTopic {
+    ul#lstTopicProperties {
         list-style-type: none;
         padding-left: 0;
     }
-    #lstTopicProperties li {
-
-    }
+    #lstTopicProperties li { }
 
     ul#lstWordsByTopic {
-        padding-left: 0;
+        list-style-type: decimal;
+        padding-left: 12px;
+        margin-top: 15px;
     }
     ul#lstWordsByTopic li {
         border: 1px solid lightgrey;
@@ -27,7 +27,7 @@
             <div><b>Selected topic:</b> {{ topic.name }}</div>
             <div><b>Selected word:</b> {{ searchWord.name }}</div>
             <button class="btn btn-primary btn-sm" ng-click="onBtnAddWordToTopicClicked()">Add word to topic</button>
-            <button class="btn btn-primary btn-sm" ng-click="onBtnRemoveWordFromTopicClicked()">Remove word from topic</button>
+            <button class="btn btn-primary btn-sm" ng-click="onBtnRemoveWordFromTopicClicked(searchWord)">Remove word from topic</button>
         </div>
 
         <div class="col-xs-6">
@@ -48,16 +48,24 @@
             </form>
             <br>
 
-            <pre>
-                {{ topic | json }}
+            <pre>{{ topic | json }}
             </pre>
 
             <button class="btn btn-default"
               ng-click="onBtnGetWordsByTopicClicked()">Get words</button>
+
+            <button class="btn btn-default"
+              ng-click="onBtnExportTopicClicked()">Export</button>
+
             <br>
             <ul id="lstWordsByTopic">
-                <li ng-repeat="word in wordsByTopic">
-                    <div><b>{{word.name}}</b></div>
+                <li ng-repeat="word in wordsByTopic" class="item-word" style="position: relative;">
+                    <div class="item-word-container">
+                        <b>{{word.name}}</b>
+                    </div>
+
+                    <span style="position: absolute; top: 0; right: 4px;"
+                      ng-click="onBtnRemoveWordFromTopicClicked(word)">x</span>
                 </li>
             </ul>
         </div>
@@ -76,8 +84,7 @@
                     ng-click="getWordByName(txtWordSearch)">Search</button>
             </form>
             <br>
-            <pre>
-                {{ searchWord | json }}
+            <pre>{{ searchWord | json }}
             </pre>
         </div>
 
