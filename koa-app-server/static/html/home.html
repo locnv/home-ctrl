@@ -8,21 +8,16 @@
     </div>
     <h2>Learn Voca 1.0!</h2>
 
-    <a href="/#/words-builder" class="btn btn-link pull-right">Word builder</a>
     <a href="/authen" class="btn btn-link pull-right">Login</a>
 
     <ul class="lst-card">
         <li class="btn btn-link"
-            nav-button nav-target="/card" nav-param="{ cardId:'{{card.id}}'}"
-            ng-repeat="card in cards track by $index">
-            {{ card.name }}
+            nav-button nav-target="/card" nav-param="{ topicId:'{{topic._id}}'}"
+            ng-repeat="topic in allTopics track by topic._id">
+            {{ topic.name }}
         </li>
-        <li class="btn btn-link" ng-click="toggleFormCreateCard()">Add card</li>
     </ul>
-    <div class="frm-create-card" ng-show="formCreateCard.show">
-        <h3>Form create new Card!</h3>
-    </div>
-    <add-card></add-card>
 
     <button class="btn btn-link" nav-button nav-target="/about">About</button>
+
 </div>

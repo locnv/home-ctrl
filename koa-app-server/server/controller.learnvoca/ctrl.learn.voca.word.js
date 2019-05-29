@@ -53,6 +53,12 @@
         retObj.data = wordsByTopic;
         break;
 
+      case Actions.GetWordById:
+        let wordId = query.wordId;
+        let wById = await getWordById(wordId);
+        retObj.data = wById;
+        break;
+
       case Actions.GetWordByName:
         let name = query.name;
         let w = await getWordByName(name);
@@ -101,6 +107,10 @@
 
   async function getWordByName(name) {
     return await dsWord.find({ name: name });
+  }
+
+  async function getWordById(wordId) {
+    return await dsWord.find({ _id: wordId });
   }
 
   async function getWordsByCard(cardId) {

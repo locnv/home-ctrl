@@ -1,13 +1,14 @@
 <style>
 </style>
 <div class="container">
-    <h2>{{word.name}}</h2>
+    <h2>{{word.name}}</h2><small>{{ word.pronunciation }}</small>
 
-    <div>Description: {{word.description}}</div>
-    <div>Example: {{word.example}}</div>
+    <div>Description: {{ word.descriptions | json }}</div>
+    <div>Example: {{ word.example | json }}</div>
 
     <br/>
     <div>
       <button class="btn btn-link pull-left" nav-button nav-back="true">Back</button>
     </div>
+
 </div>

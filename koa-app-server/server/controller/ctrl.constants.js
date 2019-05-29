@@ -17,6 +17,8 @@ const CtrlConstants = {
     // Topic -> going to replace for Card
     CreateTopic: 13,
     GetTopicByName: 14,
+    GetTopicById: 21,
+    GetAllTopics: 20,
     AddWordToTopic: 15,
     RemoveWordFromTopic: 16,
     GetWordsByTopic: 17,
@@ -29,6 +31,7 @@ const CtrlConstants = {
     RemoveWord: 6,
     GetWordsByCard: 7,
     GetWordByName: 12,
+    GetWordById: 22,
 
     // Word Builder
     BuildWords: 9,

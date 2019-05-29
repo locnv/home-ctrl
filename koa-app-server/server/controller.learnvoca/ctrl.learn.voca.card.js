@@ -6,6 +6,7 @@ const CtrlConst = require('../controller/ctrl.constants');
 const dsCard = require('../database/ds.card');
 const dsTopic = require('../database/ds.topic');
 const dsTopicWord = require('../database/ds.topic.word');
+const vocabHelper = require('./ctrl.learn.voca.helper');
 
 const logger = require('../util/logger');
 
@@ -37,13 +38,23 @@ async function handleGet(req, query) {
   };
 
   let action = parseInt(query.action);
-  
+  let topic;
   switch (action) {
-    case Actions.GetTopicByName:
-      let name = query.topicName;
-      let topic = await getTopicByName(name);
+    case Actions.GetTopicById:
+      let topicId = query.topicId;
+      topic = await getTopicById(topicId);
       retObj.data = topic;
       break;
+    case Actions.GetTopicByName:
+      let name = query.topicName;
+      topic = await getTopicByName(name);
+      retObj.data = topic;
+      break;
+    case Actions.GetAllTopics:
+      let topics = await getAllTopics();
+      retObj.data = topics;
+      break;
+
     default:
         retObj.isSuccess = false;
         break;
@@ -107,10 +118,10 @@ async function handlePost(req, params) {
 
 async function exportTopic(topicId) {
 
-  //TODO implement
   logger.info(`[topic] Going to export ${topicId}`);
+  let exportRs = await vocabHelper.exportTopic(topicId);
 
-  return Promise.resolve(true);
+  return Promise.resolve(exportRs);
 }
 
 async function createTopic(name, description) {
@@ -130,13 +141,25 @@ async function createTopic(name, description) {
   return createdTopic;
 }
 
+async function getTopicById(topicId) {
+  logger.warn(`[topic] [get-topic] -> topic id = ${topicId} `);
+
+  let dbTopics = await dsTopic.find({ _id: topicId });
+
+  return (dbTopics.length > 0 ? dbTopics[0] : null);
+}
+
 async function getTopicByName(topicName) {
   logger.warn(`[topic] [get-topic] -> topic name = ${topicName} `);
 
   let dbTopics = await dsTopic.find({ name: topicName });
-  let topic = dbTopics.length > 0 ? dbTopics[0] : null;
+  return (dbTopics.length > 0 ? dbTopics[0] : null);
+}
 
-  return topic;
+async function getAllTopics() {
+  logger.warn(`[topic] [get-topics] -> get all`);
+
+  return await dsTopic.find({});
 }
 
 async function addWordToTopic(topicId, wordId) {

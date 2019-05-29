@@ -28,16 +28,20 @@
       // Topic -> going to replace for Card
       CreateTopic: 13,
       GetTopicByName: 14,
+      GetTopicById: 21,
+      GetAllTopics: 20,
       AddWordToTopic: 15,
       RemoveWordFromTopic: 16,
       GetWordsByTopic: 17,
       ExportTopic: 18,
+      DeleteTopic: 19,
 
       AddWord: 4,
       UpdateWord: 5,
       RemoveWord: 6,
       GetWordsByCard: 7,
       GetWordByName: 12,
+      GetWordById: 22,
 
       BuildWords: 9,
       GetUnBuilt: 10,
@@ -73,6 +77,8 @@
 
       // Topic shall be used to replace card
       getTopicByName: getTopicByName,
+      getTopicById: getTopicById,
+      getAllTopics: getAllTopics,
       createTopic: createTopic,
       addWordToTopic: addWordToTopic,
       getWordsByTopic: getWordsByTopic,
@@ -81,6 +87,7 @@
 
       getAllWords: getAllWords,
       getWordByName: getWordByName,
+      getWordById: getWordById,
       addNewWord: addNewWord,
       updateWord: updateWord,
       buildWords: buildWords,
@@ -193,6 +200,43 @@
 
     }
 
+    function getTopicById(topicId) {
+
+      var reqParamsObj = {
+        params: {
+          topicId: topicId,
+          action: Actions.GetTopicById,
+        }
+      };
+
+      var promise = new Promise(function(resolve) {
+        sendRequest(RequestType.Get, Host, Api.Card, reqParamsObj)
+          .then(function(resp) {
+            resolve(resp.data);
+          });
+      });
+
+      return promise;
+
+    }
+
+    function getAllTopics() {
+
+      var reqParamsObj = {
+        params: { action: Actions.GetAllTopics }
+      };
+
+      var promise = new Promise(function(resolve) {
+        sendRequest(RequestType.Get, Host, Api.Card, reqParamsObj)
+          .then(function(resp) {
+            resolve(resp.data);
+          });
+      });
+
+      return promise;
+
+    }
+
     function createTopic(topicName, description) {
       var params = {
         data: {
@@ -287,6 +331,18 @@
         params: {
           action: Actions.GetWordByName,
           name: name
+        }
+      };
+
+      return sendRequest(RequestType.Get, Host, Api.Word, reqParamsObj);
+    }
+
+    function getWordById(wordId) {
+
+      var reqParamsObj = {
+        params: {
+          action: Actions.GetWordById,
+          wordId: wordId
         }
       };
 

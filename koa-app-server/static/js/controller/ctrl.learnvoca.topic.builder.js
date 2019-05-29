@@ -31,7 +31,7 @@
     $scope.PageTitle = 'Topic Builder';
 
     // Working topic
-    $scope.topic = {};
+    $scope.selectedTopic = {};
     $scope.wordsByTopic = [];
 
     $scope.onEntering = onEntering;
@@ -47,6 +47,8 @@
     $scope.onBtnAddWordToTopicClicked = addWordToTopic;
     $scope.onBtnRemoveWordFromTopicClicked = removeWordFromTopic;
     $scope.onBtnExportTopicClicked = onBtnExportTopicClicked;
+    $scope.onBtnNewTopicClicked = onBtnNewTopicClicked;
+    $scope.onTopicSelectionChanged = onTopicSelectionChanged;
 
     /* Extend from base controller */
     $controller('BaseCtrl', { $scope: $scope });
@@ -74,6 +76,19 @@
      */
     function initialize() {
       log.info('topic-builder -> initialized!');
+
+      http.getAllTopics()
+      .then(function(resp) {
+        if(!resp || !resp.data) return;
+
+        var respData = resp.data;
+        if(Array.isArray(respData) && respData.length > 0) {
+          $scope.allTopics = angular.copy(respData);
+          $scope.$digest();
+        }
+
+        //log.info(respData);
+      });
     }
 
     function onLanguageChanged() { }
@@ -98,12 +113,22 @@
           return;
         }
 
-        $scope.topic = angular.copy(respData.data);
+        $scope.selectedTopic = angular.copy(respData.data);
         $scope.$digest();
         if(!respData.data) {
           notifier.error('Topic not found!');
         }
       });
+    }
+
+    function onBtnNewTopicClicked() {
+      var topicName = prompt('Enter topic name:');
+      log.info('Going to create -> ' + topicName);
+      if(topicName === undefined || topicName.length === 0) {
+        return;
+      }
+
+      createTopic(topicName, '');
     }
 
     function createTopic(name, description) {
@@ -152,37 +177,24 @@
     }
 
     function onBtnGetWordsByTopicClicked() {
-      if(!$scope.topic) {
+      if(!$scope.selectedTopic) {
         notifier.error('Please select a topic.');
         return;
       }
 
-      var topicId = $scope.topic._id;
+      var topicId = $scope.selectedTopic._id;
 
-      log.info('[topic-builder][get-words] -> topic = ' + topicId);
-
-      http.getWordsByTopic(topicId)
-        .then(function(resp) {
-          if(!resp || !resp.data) {
-            notifier.error('An error occurred!');
-            return;
-          }
-
-          var words = resp.data;
-          $scope.wordsByTopic = angular.copy(words);
-          $scope.$digest();
-          notifier.notify('Get words by topic returned');
-        });
+      loadWordsForTopic(topicId);
     }
 
     function addWordToTopic() {
 
-      if(!$scope.topic || !$scope.searchWord) {
+      if(!$scope.selectedTopic || !$scope.searchWord) {
         notifier.error('Please select a topic and a word.');
         return;
       }
 
-      var topicId = $scope.topic._id;
+      var topicId = $scope.selectedTopic._id;
       var wordId = $scope.searchWord._id;
 
       log.info('[topic-builder][add-word] -> word = ' + wordId +'; topic = ' + topicId);
@@ -200,12 +212,12 @@
 
     function removeWordFromTopic(word) {
 
-      if(!$scope.topic || !word) {
+      if(!$scope.selectedTopic || !word) {
         notifier.error('Please select a topic and a word.');
         return;
       }
 
-      var topicId = $scope.topic._id;
+      var topicId = $scope.selectedTopic._id;
       var wordId = word._id;
 
       log.info('[topic-builder][remove-word] -> word = ' + wordId +'; topic = ' + topicId);
@@ -230,12 +242,12 @@
     }
 
     function onBtnExportTopicClicked() {
-      if(!$scope.topic) {
+      if(!$scope.selectedTopic) {
         notifier.error('Please select a topic to export.');
         return;
       }
 
-      var topicId = $scope.topic._id;
+      var topicId = $scope.selectedTopic._id;
 
       log.info('[topic-builder][exporting] -> topic = ' + topicId);
       http.exportTopic(topicId)
@@ -254,6 +266,31 @@
         notifier.notify('Exported ... going to download!');
 
       });
+    }
+
+    function onTopicSelectionChanged() {
+      let topicId = $scope.selectedTopic._id;
+      if(!topicId) return;
+
+      loadWordsForTopic(topicId);
+
+    }
+
+    function loadWordsForTopic(topicId) {
+      log.info('[topic-builder][get-words] -> topic = ' + topicId);
+
+      http.getWordsByTopic(topicId)
+        .then(function(resp) {
+          if(!resp || !resp.data) {
+            notifier.error('An error occurred!');
+            return;
+          }
+
+          var words = resp.data;
+          $scope.wordsByTopic = angular.copy(words);
+          $scope.$digest();
+          notifier.notify('Get words by topic returned');
+        });
     }
 
   }

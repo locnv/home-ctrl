@@ -23,11 +23,15 @@
     var util = AppCsf.util;
     var fileStorage = AppCsf.fileStorage;
     var i18n = AppCsf.i18n;
+    var notifier = AppCsf.notifier;
+    var http = AppCsf.http;
     var CtrlName = _global.Controllers.Word;
 
     /* Scope variables */
     $scope.CtrlName = CtrlName;
     $scope.PageTitle = 'Word';
+
+    $scope.word = {};
 
     $scope.onEntering = onEntering;
     $scope.onLeaving = onLeaving;
@@ -61,14 +65,26 @@
      * Page initialization
      */
     function initialize() {
-      var cardId = $scope.getUrlParam('cardId');
-      var name = $scope.getUrlParam('word');
+      var topicId = $scope.getUrlParam('topic');
+      var wordId = $scope.getUrlParam('word');
 
-      $scope.word = dic.getWord(cardId, name);
+      http.getWordById(wordId)
+        .then(function(resp) {
+          if(!resp || !resp.data) {
+            notifier.error('Failed to get word!');
+            return;
+          }
 
-      //$scope.setFooterButton(btnFooterLeft, mConst.Footer.Left);
-      //$scope.setFooterButton(btnFooterRight, mConst.Footer.Right);
+          let respData = resp.data;
+          let word = respData.data;
+          if(Array.isArray(word)) word = word[0];
 
+          if(word) {
+            $scope.word = angular.copy(word);
+            $scope.$digest();
+          }
+
+        });
     }
 
     function onLanguageChanged() {

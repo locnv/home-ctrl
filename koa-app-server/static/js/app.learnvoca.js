@@ -118,8 +118,8 @@ var _global = {
     }
 
     $routeProvider.when('/', {
-      //redirectTo: Routes.Home
-      redirectTo: Routes.TopicBuilder
+      redirectTo: Routes.Home
+      // redirectTo: Routes.TopicBuilder
     }).otherwise({
       redirectTo: Routes.Home
     });
