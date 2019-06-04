@@ -6,16 +6,27 @@
     }
     #lstTopicProperties li { }
 
-    ul#lstWordsByTopic {
+    ul#lstWordsByTopic, ul#lstSearchWords, ul#lstSmartSelect, ul#lstSmartAll {
         list-style-type: decimal;
-        padding-left: 12px;
+        padding-left: 0px;
         margin-top: 15px;
     }
-    ul#lstWordsByTopic li {
+    ul#lstWordsByTopic li, ul#lstSearchWords li {
         border: 1px solid lightgrey;
-        padding-left: 10px;
         border-radius: 5px;
         margin-bottom: 5px;
+        display: grid;
+        padding: 5px;
+    }
+    .btn-ctrl {
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        margin-right: 5px;
+        padding: 5px;
+    }
+
+    .txtAreaInput {
+        width: 100%;
     }
 
 </style>
@@ -23,7 +34,7 @@
 <div class="container">
 
     <div class="row" style="margin-bottom: 25px;">
-        <div class="col-xs-6">
+        <div class="col-xs-12 col-sm-6">
             <form class="form-inline">
                 <label for="selTopic">Select a topic</label>
                 <select id="selTopic" class="form-control" ng-model="selectedTopic"
@@ -47,13 +58,16 @@
             <button class="btn btn-default" ng-disabled="!selectedTopic._id"
               ng-click="onBtnExportTopicClicked()">Export</button>
             <button class="btn btn-default"
-                    ng-click="onBtnNewTopicClicked()">New topic</button>
+                    ng-click="onBtnNewTopicClicked()">New</button>
+            <button class="btn btn-danger"
+                    ng-click="onBtnDeleteTopicClicked()">Delete</button>
+            <span class="btn-link" ng-click="onBtnDownloadClicked(exportedFileName)">Download ({{exportedFileName}})</span>
 
             <br>
             <ul id="lstWordsByTopic">
                 <li ng-repeat="word in wordsByTopic" class="item-word" style="position: relative;">
                     <div class="item-word-container">
-                        <b>{{word.name}}</b>
+                        {{$index}}. <b ng-click="onBtnWordClicked(word)">{{word.name}}</b>
                     </div>
 
                     <span style="position: absolute; top: 0; right: 4px;"
@@ -62,7 +76,7 @@
             </ul>
         </div>
 
-        <div class="col-xs-6">
+        <div class="col-xs-12 col-sm-6">
             <form class="form-inline">
                 <div class="form-group">
                     <label for="txtTxtWordSearch">Search word</label>
@@ -74,19 +88,72 @@
                 <button
                     type="button"
                     class="btn btn-default"
-                    ng-click="getWordByName(txtWordSearch)">Search</button>
-                <button
-                    class="btn btn-primary btn-sm"
-                    ng-click="onBtnAddWordToTopicClicked()">Add to topic</button>
+                    ng-click="searchWordByName(txtWordSearch)">Search</button>
                 <!--<button
                     class="btn btn-primary btn-sm"
                     ng-click="onBtnRemoveWordFromTopicClicked(searchWord)">Remove word from topic</button>-->
             </form>
-            <br>
-            <pre>{{ searchWord | json }}
-            </pre>
+            <ul id="lstSearchWords">
+                <li ng-repeat="word in searchWords track by word._id">
+                    <div class="">
+                        {{$index}}. <span ng-click="onBtnWordClicked(word)">{{ word.name }} ({{word.descriptions.length}})</span>
+                        <span class="pull-right btn-ctrl"
+                          ng-click="onBtnBuildWordClicked(word)">build</span>
+                        <span class="pull-right btn-ctrl"
+                         ng-click="onBtnAddWordToTopicClicked(word)">add</span>
+                    </div>
+
+                </li>
+            </ul>
+            <!--<pre>{{ searchWords | json }}
+            </pre>-->
         </div>
 
+    </div>
 
+    <hr>
+    <div class="row">
+        <div class="row col-xs-12">
+            <label>Create topic from text</label><br>
+            <textarea class="txtAreaInput" ng-model="txtAreaInput"></textarea><br/>
+            <button
+              class="btn btn-default"
+              ng-click="onBtnCreateTopicFromTextClicked(txtAreaInput)">Make</button>
+            <br>
+        </div>
+        <div class="row col-xs-6">
+            <ul id="lstSmartAll">
+                <li ng-repeat="w in smartTopicCtx.baseWords track by $index">
+                    <div>
+                        <input type="checkbox" ng-change="smartTopicCtx.onWordChange(w)" id="chkWord-{{$index}}" ng-model="w.selected">
+                        <label for="chkWord-{{$index}}">{{w.name}}</label>
+                    </div>
+                    <div><small>{{w.description}}</small></div>
+                </li>
+            </ul>
+        </div>
+        <div class="row col-xs-6">
+            <ul id="lstSmartSelect">
+                <li ng-repeat="w1 in smartTopicCtx.selectedWords track by $index">
+                    <div>
+                        <input type="checkbox" ng-change="smartTopicCtx.onWordChange(w1)" id="chkWordSel-{{$index}}" ng-model="w1.selected">
+                        <label for="chkWordSel-{{$index}}">{{w1.name}}</label>
+                    </div>
+                    <div><small>{{w1.description}}</small></div>
+                </li>
+            </ul>
+
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="txtTxtTopicName">Topic name</label>
+                    <input type="text" id="txtTxtTopicName" class="form-control"
+                      ng-model="txtTopicNameCreation">
+                </div>
+
+                <button class="btn btn-default" ng-click="smartTopicCtx.onBtnMakeTopicClick(txtTopicNameCreation)">Ok, make it!</button>
+            </form>
+
+
+        </div>
     </div>
 </div>

@@ -105,8 +105,24 @@
     return Promise.resolve(retObj);
   }
 
+  // setTimeout(async function() {
+  //   let words = await getWordByName('tea');
+  //   console.log(words);
+  // }, 1000);
+
+  /**
+   * This this function actually do search by name .... regex /.*{name}.* ...
+   * @param name
+   * @returns {Promise<*>}
+   */
   async function getWordByName(name) {
-    return await dsWord.find({ name: name });
+
+    let proj = {
+      //name: true,
+      //descriptions: true,
+    };
+
+    return await dsWord.find({ name: { $regex: '.*'+name+'.*' } }, proj);
   }
 
   async function getWordById(wordId) {

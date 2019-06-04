@@ -124,8 +124,14 @@ AppController.prototype.load = async function (ctx) {
 AppController.prototype.cards = async function (ctx, next) {
 
   let retData = await cardCtrl.handle(ctx.request, ctx.params, ctx.query);
-  retData.serverTime = new Date();
-  ctx.body = retData;
+  if(retData.isStream) {
+    ctx.body = retData.data;
+    ctx.set('Content-disposition', 'attachment; filename=topic-5cecc4d04950e65b22618e05.csv');
+    //ctx.set('Content-type', mimetype);
+  } else {
+    retData.serverTime = new Date();
+    ctx.body = retData;
+  }
 };
 
 AppController.prototype.words = async function (ctx, next) {

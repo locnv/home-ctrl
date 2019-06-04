@@ -5,8 +5,11 @@
 const CtrlConst = require('../controller/ctrl.constants');
 const dsCard = require('../database/ds.card');
 const dsTopic = require('../database/ds.topic');
+const dsWord = require('../database/ds.word');
 const dsTopicWord = require('../database/ds.topic.word');
 const vocabHelper = require('./ctrl.learn.voca.helper');
+const fs = require('fs');
+const path = require('path');
 
 const logger = require('../util/logger');
 
@@ -72,16 +75,27 @@ async function handlePost(req, params) {
   let reqData = body.data;
   let action = body.action;
 
+  let topicId;
   switch(action) {
 
     case Actions.CreateTopic:
       let topicName = reqData.name;
       let description = reqData.description;
-      let createdTopic = await createTopic(topicName, description);
-      retObj.data = createdTopic;
+      let baseWords = reqData.baseWords;
+      let createdRs = await createTopic(topicName, description, baseWords);
+      retObj.isSuccess = createdRs.isOk;
+      retObj.data = createdRs.data;
+      retObj.message = createdRs.message;
+      break;
+    case Actions.DeleteTopic:
+      topicId = reqData.topicId;
+      let deleteRs = await deleteTopicById(topicId);
+      retObj.isSuccess = deleteRs.isOk;
+      retObj.data = deleteRs.data;
+      retObj.message = deleteRs.message;
       break;
     case Actions.AddWordToTopic:
-      let topicId = reqData.topicId;
+      topicId = reqData.topicId;
       let wordId = reqData.wordId;
       let rs = await addWordToTopic(topicId, wordId);
       retObj.data = rs;
@@ -92,6 +106,12 @@ async function handlePost(req, params) {
       let wordId1 = reqData.wordId;
       let createdTW = await removeWordFromTopic(topicId1, wordId1);
       retObj.data = createdTW;
+      break;
+
+    case Actions.DownloadTopic:
+      let readableStream = fs.createReadStream('/Users/locnv/Documents/projects/koa-app/koa-app-server/server/word-builder/base/topic/topic-5cecc4d04950e65b22618e05.csv');
+      retObj.data = readableStream;
+      retObj.isStream = true;
       break;
 
     case Actions.ExportTopic:
@@ -121,16 +141,30 @@ async function exportTopic(topicId) {
   logger.info(`[topic] Going to export ${topicId}`);
   let exportRs = await vocabHelper.exportTopic(topicId);
 
+  if(exportRs.isOk) {
+    let outPath = exportRs.data;
+    exportRs.fileName = path.basename(outPath);
+  }
+
   return Promise.resolve(exportRs);
 }
 
-async function createTopic(name, description) {
+async function createTopic(name, description, baseWords) {
   logger.warn(`[topic] [create-topic] -> topic name = ${name}`);
+
+  let rs = {
+    isOk: true,
+    data: null,
+    message: ''
+  };
 
   let dbTopic = await dsTopic.find({ name: name });
   if(dbTopic.length > 0) {
     logger.info(`Topic already existed -> ${JSON.stringify(dbTopic[0])}`);
-    return dbTopic;
+    rs.isOk = false;
+    rs.data = dbTopic;
+    rs.message = 'Topic is already existed.';
+    return rs;
   }
 
   let createdTopic = await dsTopic.create({
@@ -138,7 +172,56 @@ async function createTopic(name, description) {
     description: description
   });
 
-  return createdTopic;
+  logger.info('Created topic -> ' +JSON.stringify(createdTopic));
+  rs.data = createdTopic;
+
+  if(baseWords && baseWords.length > 0) {
+    for(var i = 0; i < baseWords.length; i++) {
+      let w = baseWords[i];
+      logger.info('Going to add word -> ' +w +' into topic -> ' + createdTopic._id);
+      let wDb = await dsWord.find({ name: w });
+      if(Array.isArray(wDb)) {
+        wDb = wDb[0];
+      }
+
+      if(!wDb) {
+        logger.info(`word ${w} is not exit in db -> going to create.`);
+        wDb = await dsWord.create({ name: w });
+        logger.info(`Create new word -> ${JSON.stringify(wDb)}`);
+      } else {
+        logger.info(`word ${w} is already exit in db -> ${JSON.stringify(wDb)}`);
+      }
+
+      await addWordToTopic(createdTopic._id, wDb._id);
+
+      logger.info(`Create topic-word -> ${createdTopic._id} / ${wDb._id}`);
+
+    }
+  }
+
+  return rs;
+}
+
+async function deleteTopicById(topicId) {
+  logger.warn(`[topic] [delete-topic] -> topic id = ${topicId}`);
+
+  let rs = {
+    isOk: true,
+    data: null,
+    message: ''
+  };
+
+  let dbTopic = await dsTopic.find({ _id: dsTopic.toObjectId(topicId) });
+  if(!dbTopic) {
+    rs.isOk = false;
+    rs.message = `Topic ${topicId} does not exist.`;
+    return rs;
+  }
+
+  // TODO implement
+  rs.message = 'TODO: Implement';
+
+  return rs;
 }
 
 async function getTopicById(topicId) {

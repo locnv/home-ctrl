@@ -35,6 +35,7 @@
       GetWordsByTopic: 17,
       ExportTopic: 18,
       DeleteTopic: 19,
+      DownloadTopic: 23,
 
       AddWord: 4,
       UpdateWord: 5,
@@ -76,14 +77,16 @@
       getWordsByCard: getWordsByCard,
 
       // Topic shall be used to replace card
+      createTopic: createTopic,
+      deleteTopic: deleteTopic,
       getTopicByName: getTopicByName,
       getTopicById: getTopicById,
       getAllTopics: getAllTopics,
-      createTopic: createTopic,
       addWordToTopic: addWordToTopic,
       getWordsByTopic: getWordsByTopic,
       removeWordFromTopic: removeWordFromTopic,
       exportTopic: exportTopic,
+      getDownloadTopic: getDownloadTopic,
 
       getAllWords: getAllWords,
       getWordByName: getWordByName,
@@ -237,13 +240,34 @@
 
     }
 
-    function createTopic(topicName, description) {
+    /**
+     *
+     * @param topicName
+     * @param description
+     * @param baseWords
+     * @returns {Promise}
+     */
+    function createTopic(topicName, description, baseWords) {
       var params = {
         data: {
           name: topicName,
-          description: description
+          description: description,
+          baseWords: baseWords
         },
         action: Actions.CreateTopic,
+      };
+
+      return sendRequest(RequestType.Post, Host, Api.Card, params);
+    }
+
+    /**
+     * Delete a topic by id
+     * @param topicId
+     */
+    function deleteTopic(topicId) {
+      var params = {
+        data: { topicId: topicId },
+        action: Actions.DeleteTopic,
       };
 
       return sendRequest(RequestType.Post, Host, Api.Card, params);
@@ -277,6 +301,15 @@
       var params = {
         data: { topicId: topicId },
         action: Actions.ExportTopic,
+      };
+
+      return sendRequest(RequestType.Post, Host, Api.Card, params);
+    }
+
+    function getDownloadTopic(fileName) {
+      var params = {
+        data: { fileName: fileName },
+        action: Actions.DownloadTopic,
       };
 
       return sendRequest(RequestType.Post, Host, Api.Card, params);

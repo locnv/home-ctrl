@@ -42,13 +42,53 @@
     $scope.getTopicByName = getTopicByName;
     $scope.createTopic = createTopic;
     $scope.deleteTopicByName = deleteTopicByName;
-    $scope.getWordByName = getWordByName;
+    $scope.searchWordByName = searchWordByName;
     $scope.onBtnGetWordsByTopicClicked = onBtnGetWordsByTopicClicked;
     $scope.onBtnAddWordToTopicClicked = addWordToTopic;
+    $scope.onBtnWordClicked = onBtnWordClicked;
+    $scope.onBtnBuildWordClicked = onBtnBuildWordClicked;
     $scope.onBtnRemoveWordFromTopicClicked = removeWordFromTopic;
     $scope.onBtnExportTopicClicked = onBtnExportTopicClicked;
     $scope.onBtnNewTopicClicked = onBtnNewTopicClicked;
+    $scope.onBtnDeleteTopicClicked = onBtnDeleteTopicClicked;
     $scope.onTopicSelectionChanged = onTopicSelectionChanged;
+    $scope.onBtnDownloadClicked = onBtnDownloadClicked;
+    $scope.onBtnCreateTopicFromTextClicked = onBtnCreateTopicFromTextClicked;
+
+    $scope.smartTopicCtx = {
+      baseWords: [],
+      selectedWords: [],
+      onWordChange: function(w) {
+        var baseList = w.selected ? this.baseWords : this.selectedWords;
+        var targetList = w.selected ? this.selectedWords : this.baseWords;
+
+        var idx = baseList.indexOf(w);
+        if(idx !== -1) {
+          baseList.splice(idx, 1);
+          targetList.push(w);
+        }
+      },
+      onBtnMakeTopicClick: function(topicName) {
+        if(!topicName || topicName.length === 0) {
+          notifier.error('Topic name cannot be empty!');
+          return;
+        }
+
+        if(this.selectedWords.length === 0) {
+          notifier.error('Please select at least one word to make a topic.');
+          return;
+        }
+
+        var words = [];
+        this.selectedWords.forEach(function(w) {
+          words.push(w.name);
+        });
+        createTopic(topicName, '', words);
+        //log.info(topicName);
+        //log.info(this.selectedWords);
+      }
+    };
+    $scope.txtAreaInput = 'Over the next few weeks, as I travelled the length and breadth of the country, wherever I went I found locals who knew the poem well and were happy to educate me about its significance: the peasant women with their income-generation project out in the jungle, the rice farmer in his paddy field, the government officials up in Hanoi. And there in Hanoi I picked up a bilingual copy of Kieu for myself, and began to decipher it, line by line. I was delighted with the text’s freshness and its modernity, with how its sense of fun leavened the telling of its tragedy. And it struck me that foreign powers might have thought twice before invading a country whose population is fortified by this story, whose message is that you must keep going, no matter what life throws at you. Stay true to yourself and you will come through the worst torments. And those cruel ones who consider themselves powerful will wither and fade, like the best and the rest of us.';
 
     /* Extend from base controller */
     $controller('BaseCtrl', { $scope: $scope });
@@ -131,13 +171,57 @@
       createTopic(topicName, '');
     }
 
-    function createTopic(name, description) {
+    function onBtnDeleteTopicClicked() {
+      if(!$scope.selectedTopic.name) {
+        notifier.error('Please select a topic.');
+        return;
+      }
 
-      log.info('[topic-builder][delete-topic-by-name] -> ' + name + '; Desc -> ' + description);
-
-      http.createTopic(name, description)
+      notifier.notify('To be implemented: Deleting topic -> ' + $scope.selectedTopic.name);
+      var topicId = $scope.selectedTopic._id;
+      http.deleteTopic(topicId)
       .then(function(resp) {
-        log.info(resp);
+        if(!resp || !resp.data) {
+          notifier.error('An unexpected error occurs while deleting topic.');
+          return;
+        }
+
+        var respData = resp.data;
+        if(respData.isSuccess) {
+          notifier.notify('Deleted topic ' + $scope.selectedTopic.name);
+        } else {
+          notifier.error('An error occurs while deleting topic.');
+        }
+      })
+    }
+
+    function createTopic(name, description, baseWords) {
+
+      log.info(
+        '[topic-builder][delete-topic-by-name] -> '
+        + name + '; Desc -> ' + description + '; baseWords -> ' + JSON.stringify(baseWords));
+
+      http.createTopic(name, description, baseWords || [])
+      .then(function(resp) {
+        if(!resp || !resp.data) {
+          notifier.error('Failed to create topic!');
+          return;
+        }
+
+        let respData = resp.data;
+        log.info(respData);
+        if(!respData.isSuccess) {
+          if(respData.message) {
+            notifier.error(respData.message);
+          } else {
+            notifier.error('An error occurs while creating topic.');
+          }
+
+          return;
+        }
+
+        notifier.notify('Created new topic.');
+
       });
     }
 
@@ -149,7 +233,7 @@
       });
     }
 
-    function getWordByName(name) {
+    function searchWordByName(name) {
       if(!name || name.length === 0) {
         notifier.error('Text is empty!');
         return;
@@ -163,16 +247,15 @@
           }
 
           let respData = resp.data;
-          let word = respData.data;
-          if(Array.isArray(word)) word = word[0];
-
-          if(word) {
-            $scope.searchWord = angular.copy(word);
-            $scope.$digest();
-          } else {
+          let words = respData.data;
+          if(!words) {
             notifier.error('Word not found!');
+            return;
           }
 
+          if(!Array.isArray(words)) words = words[words];
+            $scope.searchWords = angular.copy(words);
+            $scope.$digest();
         });
     }
 
@@ -187,15 +270,36 @@
       loadWordsForTopic(topicId);
     }
 
-    function addWordToTopic() {
+    function onBtnBuildWordClicked(word) {
+      var parts = [ word.name ];
+      http.buildWords(parts)
+        .then(function(resp) {
+          var respData = resp.data;
+          if(respData.isOk) {
+            var ret = respData.data;
+            if(Array.isArray(ret)) ret = ret[0];
 
-      if(!$scope.selectedTopic || !$scope.searchWord) {
-        notifier.error('Please select a topic and a word.');
+            notifier.notify(JSON.stringify(ret));
+          }
+
+        });
+
+      notifier.notify('Request is sent!)');
+    }
+
+    function onBtnWordClicked(word) {
+      log.info(word);
+    }
+
+    function addWordToTopic(word) {
+
+      if(!$scope.selectedTopic._id || !word) {
+        notifier.error('Please select a topic.');
         return;
       }
 
       var topicId = $scope.selectedTopic._id;
-      var wordId = $scope.searchWord._id;
+      var wordId = word._id;
 
       log.info('[topic-builder][add-word] -> word = ' + wordId +'; topic = ' + topicId);
       http.addWordToTopic(topicId, wordId)
@@ -206,6 +310,9 @@
         }
 
         //var respData = resp.data;
+        var w = angular.copy(word);
+        $scope.wordsByTopic.push(w);
+        $scope.$digest();
         notifier.notify('Added word into topic.');
       });
     }
@@ -252,6 +359,9 @@
       log.info('[topic-builder][exporting] -> topic = ' + topicId);
       http.exportTopic(topicId)
       .then(function(resp) {
+
+        log.info(resp.data);
+
         if(!resp || !resp.data) {
           notifier.error('An error occurred!');
           return;
@@ -262,6 +372,9 @@
           notifier.error('An error occurred *!');
           return;
         }
+
+        $scope.exportedFileName = respData.data.fileName;
+        $scope.$digest();
 
         notifier.notify('Exported ... going to download!');
 
@@ -274,6 +387,49 @@
 
       loadWordsForTopic(topicId);
 
+    }
+
+    function onBtnDownloadClicked(fileName) {
+      log.info('Going to download file -> ' + fileName);
+
+      http.getDownloadTopic(fileName)
+        .then(function(resp) {
+          if(!resp || !resp.data) {
+            notifier.error('An error occurred!');
+            return;
+          }
+
+          notifier.notify('Download responded!');
+        });
+    }
+
+    function onBtnCreateTopicFromTextClicked(text) {
+      if(!text || text.length === 0) {
+        notifier.error('Text is empty!');
+        return;
+      }
+
+      var desired = text.replace(/[^\w\s]/gi, '');
+      var words = desired.split(' ');
+      var baseWords = [];
+      var i, j;
+      for(i = 0; i < words.length; i++) {
+        var w = words[i].toLowerCase();
+        if(baseWords.indexOf(w) === -1) {
+          baseWords.push(w);
+        }
+      }
+
+      baseWords.forEach(function(word) {
+        $scope.smartTopicCtx.baseWords.push({
+          name: word,
+          selected: false,
+          description: ''
+        });
+      });
+
+      log.info('Going to build topic from text -> ');
+      log.info($scope.baseWords);
     }
 
     function loadWordsForTopic(topicId) {

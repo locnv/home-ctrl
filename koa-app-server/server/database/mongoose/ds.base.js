@@ -131,10 +131,11 @@
 
   };
 
-  DsBase.prototype.find = function(criteria) {
+  DsBase.prototype.find = function(criteria, projections) {
+    let proj = projections || {};
     let model = this.model;
     let promise = new Promise(function(resolve) {
-      model.find(criteria)
+      model.find(criteria, proj)
       .then(function(docs) {
         resolve(docs);
       })
