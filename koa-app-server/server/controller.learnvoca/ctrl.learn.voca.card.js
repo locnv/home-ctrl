@@ -218,8 +218,13 @@ async function deleteTopicById(topicId) {
     return rs;
   }
 
-  // TODO implement
-  rs.message = 'TODO: Implement';
+  await dsTopicWord.deleteMany({
+    topic: dsTopicWord.toObjectId(topicId)
+  });
+
+  await dsTopic.delete(topicId);
+
+  rs.message = 'Deleted topic and linked words';
 
   return rs;
 }

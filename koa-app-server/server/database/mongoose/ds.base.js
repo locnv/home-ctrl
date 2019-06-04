@@ -69,6 +69,23 @@
     return promise;
   };
 
+  DsBase.prototype.deleteMany = function(filter) {
+    let model = this.model;
+
+    let promise = new Promise(function(resolve) {
+      model.deleteMany(filter)
+        .then(function(obj) {
+          resolve(obj);
+        })
+        .catch(function(err) {
+          logger.error(err);
+          resolve(new Error('Failed to remove entry'));
+        });
+    });
+
+    return promise;
+  };
+
   /**
    *
    * @param id
