@@ -307,12 +307,14 @@
     }
 
     function getDownloadTopic(fileName) {
-      var params = {
-        data: { fileName: fileName },
-        action: Actions.DownloadTopic,
+      var reqParamsObj = {
+        params: {
+          data: { fileName: fileName },
+          action: Actions.DownloadTopic,
+        }
       };
 
-      return sendRequest(RequestType.Post, Host, Api.Card, params);
+      return sendRequest(RequestType.Get, Host, Api.Card, reqParamsObj);
     }
 
     function getWordsByCard(cardId) {

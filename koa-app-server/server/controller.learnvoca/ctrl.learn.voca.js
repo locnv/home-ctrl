@@ -125,9 +125,11 @@ AppController.prototype.cards = async function (ctx, next) {
 
   let retData = await cardCtrl.handle(ctx.request, ctx.params, ctx.query);
   if(retData.isStream) {
-    ctx.body = retData.data;
-    ctx.set('Content-disposition', 'attachment; filename=topic-5cecc4d04950e65b22618e05.csv');
+    // retData.data must be a readable stream
+    ctx.statusCode = 200;
+    ctx.set('Content-disposition', `attachment; filename=${retData.filePath}`);
     //ctx.set('Content-type', mimetype);
+    ctx.body = retData.data;
   } else {
     retData.serverTime = new Date();
     ctx.body = retData;

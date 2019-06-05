@@ -57,6 +57,13 @@ async function handleGet(req, query) {
       let topics = await getAllTopics();
       retObj.data = topics;
       break;
+    case Actions.DownloadTopic:
+      let filePath = '/Users/locnv/Documents/projects/koa-app/koa-app-server/server/word-builder/base/topic/topic-5cecc4d04950e65b22618e05.csv';
+      let readableStream = fs.createReadStream(filePath);
+      retObj.data = readableStream;
+      retObj.isStream = true;
+      retObj.filePath = filePath;
+      break;
 
     default:
         retObj.isSuccess = false;
@@ -106,12 +113,6 @@ async function handlePost(req, params) {
       let wordId1 = reqData.wordId;
       let createdTW = await removeWordFromTopic(topicId1, wordId1);
       retObj.data = createdTW;
-      break;
-
-    case Actions.DownloadTopic:
-      let readableStream = fs.createReadStream('/Users/locnv/Documents/projects/koa-app/koa-app-server/server/word-builder/base/topic/topic-5cecc4d04950e65b22618e05.csv');
-      retObj.data = readableStream;
-      retObj.isStream = true;
       break;
 
     case Actions.ExportTopic:
@@ -203,26 +204,40 @@ async function createTopic(name, description, baseWords) {
 }
 
 async function deleteTopicById(topicId) {
-  logger.warn(`[topic] [delete-topic] -> topic id = ${topicId}`);
 
   let rs = {
-    isOk: true,
+    isOk: false,
     data: null,
     message: ''
   };
 
-  let dbTopic = await dsTopic.find({ _id: dsTopic.toObjectId(topicId) });
+  let dbTopic = await dsTopic.findById(topicId);
   if(!dbTopic) {
-    rs.isOk = false;
+    logger.warn(`[delete-topic] Failed to delete a topic. Topic not found [${topicId}]`);
     rs.message = `Topic ${topicId} does not exist.`;
     return rs;
   }
 
-  await dsTopicWord.deleteMany({
-    topic: dsTopicWord.toObjectId(topicId)
-  });
+  try {
+    await dsTopicWord.deleteMany({ topic: dsTopicWord.toObjectId(topicId) });
+    logger.info(`[delete-topic] Deleted all words linked to topic ${dbTopic.name}`);
+  } catch(err) {
+    logger.error('An error occurs while deleting topic -> delete linked words.', err);
+    rs.data = err;
+    rs.message = 'Unexpected error occurs while deleting linked words.';
+    return rs;
+  }
 
-  await dsTopic.delete(topicId);
+  try {
+    await dsTopic.delete(topicId);
+    rs.isOk = true;
+    logger.info(`[delete-topic] Deleted a topic -> ${dbTopic.name}`);
+  } catch(err1) {
+    logger.error('An error occurs while deleting topic.', err1);
+    rs.data = err1;
+    rs.message = 'Unexpected error occurs while deleting topic.';
+    return rs;
+  }
 
   rs.message = 'Deleted topic and linked words';
 

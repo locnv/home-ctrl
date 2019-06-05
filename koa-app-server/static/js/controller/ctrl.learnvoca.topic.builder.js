@@ -54,6 +54,7 @@
     $scope.onTopicSelectionChanged = onTopicSelectionChanged;
     $scope.onBtnDownloadClicked = onBtnDownloadClicked;
     $scope.onBtnCreateTopicFromTextClicked = onBtnCreateTopicFromTextClicked;
+    $scope.showWordDetail = showWordDetail;
 
     $scope.smartTopicCtx = {
       baseWords: [],
@@ -117,6 +118,10 @@
     function initialize() {
       log.info('topic-builder -> initialized!');
 
+      reloadAllTopics();
+    }
+
+    function reloadAllTopics() {
       http.getAllTopics()
       .then(function(resp) {
         if(!resp || !resp.data) return;
@@ -124,10 +129,10 @@
         var respData = resp.data;
         if(Array.isArray(respData) && respData.length > 0) {
           $scope.allTopics = angular.copy(respData);
+          $scope.selectedTopic = {};
+          $scope.wordsByTopic = [];
           $scope.$digest();
         }
-
-        //log.info(respData);
       });
     }
 
@@ -171,6 +176,9 @@
       createTopic(topicName, '');
     }
 
+    /**
+     * Delete selected topic
+     */
     function onBtnDeleteTopicClicked() {
       if(!$scope.selectedTopic.name) {
         notifier.error('Please select a topic.');
@@ -189,6 +197,7 @@
         var respData = resp.data;
         if(respData.isSuccess) {
           notifier.notify('Deleted topic ' + $scope.selectedTopic.name);
+          reloadAllTopics();
         } else {
           notifier.error('An error occurs while deleting topic.');
         }
@@ -221,7 +230,7 @@
         }
 
         notifier.notify('Created new topic.');
-
+        reloadAllTopics();
       });
     }
 
@@ -430,6 +439,11 @@
 
       log.info('Going to build topic from text -> ');
       log.info($scope.baseWords);
+    }
+
+    function showWordDetail(word) {
+      $scope.wordDetailSelected = word;
+      $('#modalWordDetail').modal();
     }
 
     function loadWordsForTopic(topicId) {

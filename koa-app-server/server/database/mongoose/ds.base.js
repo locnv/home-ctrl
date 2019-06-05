@@ -165,6 +165,33 @@
     return promise;
   };
 
+  DsBase.prototype.findById = function(id) {
+    let model = this.model;
+    if(typeof id === 'string') {
+      id = this.toObjectId(id);
+    }
+
+    let promise = new Promise(function(resolve) {
+
+      let criteria = { _id: id };
+
+      model.find(criteria)
+      .then(function(docs) {
+        if(Array.isArray(docs)) {
+          docs = docs[0];
+        }
+
+        resolve(docs);
+      })
+      .catch(function(err) {
+        logger.error(err);
+        resolve(new Error('Find error.'));
+      });
+    });
+
+    return promise;
+  };
+
   DsBase.prototype.findByIds = function(ids) {
     let model = this.model;
     let promise = new Promise(function(resolve) {
