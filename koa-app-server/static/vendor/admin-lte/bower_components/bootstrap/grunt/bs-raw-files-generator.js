@@ -40,5 +40,5 @@ module.exports = function generateRawFilesJs(grunt, banner) {
   } catch (err) {
     grunt.fail.warn(err);
   }
-  grunt.log.writeln('File ' + rawFilesJs.cyan + ' created.');
+  Game.log.writeln('File ' + rawFilesJs.cyan + ' created.');
 };

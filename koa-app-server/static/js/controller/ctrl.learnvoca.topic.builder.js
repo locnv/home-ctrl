@@ -401,7 +401,9 @@
     function onBtnDownloadClicked(fileName) {
       log.info('Going to download file -> ' + fileName);
 
-      http.getDownloadTopic(fileName)
+      http.getDownloadTopic(fileName);
+
+      /*http.getDownloadTopic(fileName)
         .then(function(resp) {
           if(!resp || !resp.data) {
             notifier.error('An error occurred!');
@@ -409,7 +411,7 @@
           }
 
           notifier.notify('Download responded!');
-        });
+        });*/
     }
 
     function onBtnCreateTopicFromTextClicked(text) {

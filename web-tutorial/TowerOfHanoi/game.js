@@ -8,12 +8,14 @@ class Game {
     return true;
   }
 
-  constructor(canvas) {
+  constructor(canvas, nbPiece) {
     Game.log('Game constructor.');
 
     this.gameId = new Date().getTime();
     this.canvas = canvas;
     this.plates = [];
+    this.nbPiece = nbPiece;
+    this.isFinished = false;
     this.selectedAPiece = false;
     this.selectedPiece = null;
     this.selectedPlate1 = null;
@@ -33,7 +35,7 @@ class Game {
     let plate1 = new Plate(1, rect1);
     this.plates.push(plate1);
 
-    let n = 5;
+    let n = this.nbPiece;
     for(let i = 0; i < n; i++) {
       let piece = new Piece(n - i);
       //piece.initialize(rect1, i);
@@ -60,6 +62,10 @@ class Game {
 
   static handleClickEvent(e) {
 
+    if(this.isFinished) {
+      return;
+    }
+
     let plate = null;
     for(let i = 0; i < this.plates.length; i++) {
       if(this.plates[i].test(e.x, e.y) === true) {
@@ -73,11 +79,13 @@ class Game {
     }
 
     // not yet selected
-    if(this.selectedPlate1 == null){
-      this.selectedPlate1 = plate;
-      plate.selectPiece();
+    if(this.selectedPlate1 === null){
+      if(!plate.isClear()) {
+        this.selectedPlate1 = plate;
+        plate.selectPiece();
 
-      console.log('Select plate -> ' + plate.id);
+        console.log('Select plate -> ' + plate.id);
+      }
     }
 
     // un-select
@@ -122,6 +130,7 @@ class Game {
   }
 
   update() {
+    this.checkGameFinish();
     this.draw();
     if(this.updateThread) {
       clearTimeout(this.updateThread);
@@ -129,6 +138,12 @@ class Game {
     this.updateThread = setTimeout(this.update.bind(this), 5000);
 
     console.log('update game -> ' + this.gameId);
+  }
+
+  checkGameFinish() {
+    let idx = this.plates.length - 1;
+    let targetPlate = this.plates[idx];
+    this.isFinished = (targetPlate.pieces.length === this.nbPiece);
   }
 
   draw() {
@@ -144,6 +159,14 @@ class Game {
 
     for(let i = 0; i < this.plates.length; i++) {
       this.plates[i].draw(ctx);
+    }
+
+    if(this.isFinished) {
+      ctx.font = "32px Arial";
+      ctx.fillStyle = 'blue';
+      ctx.textBaseline = 'middle';
+      ctx.textAlign = 'center';
+      ctx.fillText('You Win!', box.width / 2, box.height / 2);
     }
 
     //Game.drawSelectedPiece(ctx);
@@ -167,5 +190,51 @@ class Game {
     ctx.beginPath();
     ctx.rect(box.x, box.y, box.width, box.height);
     ctx.stroke();
+  }
+
+  resolveGame(ulContainer) {
+    let steps = [];
+    this.movePieces(this.nbPiece, 0, 2, 1, steps);
+    console.log('Game over -> ', steps);
+
+    this.simulateGameSolution(steps, ulContainer);
+  }
+
+  simulateGameSolution(steps, ulContainer) {
+    if(steps.length === 0) {
+      return;
+    }
+
+    let step = steps.shift();
+
+    let li = document.createElement('li');
+    ulContainer.appendChild(li);
+    li.innerHTML = `Move ${step.id} from ${step.from + 1} --> ${step.to + 1}`;
+
+    let srcIdx = step.from;
+    let destIdx = step.to;
+
+    let p = this.plates[srcIdx].popPiece();
+    this.plates[destIdx].pushPiece(p);
+    this.update();
+
+    setTimeout(this.simulateGameSolution.bind(this, steps, ulContainer), 500);
+
+  }
+
+  movePieces(n, src, dest, mid, arr) {
+    if(n === 0) {
+      return;
+    }
+
+    this.movePieces(n-1, src, mid, dest, arr);
+    arr.push({
+      id: n,
+      from: src,
+      to: dest
+    });
+    console.log(`Move ${n} from ${src} -> ${dest}`);
+
+    this.movePieces(n-1, mid, dest, src, arr);
   }
 }

@@ -6,6 +6,8 @@ const Model = {
 
   username: String,
   password: String,
+  email: String,
+  dob: Date,
   firstName: String,
   lastName: String
 

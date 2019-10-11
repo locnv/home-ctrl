@@ -57,12 +57,14 @@ async function handleGet(req, query) {
       let topics = await getAllTopics();
       retObj.data = topics;
       break;
+
     case Actions.DownloadTopic:
-      let filePath = '/Users/locnv/Documents/projects/koa-app/koa-app-server/server/word-builder/base/topic/topic-5cecc4d04950e65b22618e05.csv';
+      let fileName = 'topic-5cecc4d04950e65b22618e05.csv';
+      let filePath = `/Users/locnv/Documents/projects/koa-app/koa-app-server/server/word-builder/base/topic/${fileName}`;
       let readableStream = fs.createReadStream(filePath);
       retObj.data = readableStream;
       retObj.isStream = true;
-      retObj.filePath = filePath;
+      retObj.filePath = fileName;
       break;
 
     default:

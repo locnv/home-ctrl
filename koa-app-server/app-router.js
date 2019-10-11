@@ -7,12 +7,13 @@
 
   /* One entry Controller per app */
 
-  const CtrlAppDemo = require('./server/controller.learnvoca/ctrl.learn.voca');
-  const CtrlAuthen  = require('./server/controller.authen/ctrl.authen');
-  const CtrlAdmin   = require('./server/controller.admin/ctrl.admin');
-  const CtrlChat    = require('./server/controller.chat/ctrl.chat');
-  const CtrlTest    = require('./server/controller.test/ctrl.test');
-  const CtrlElec    = require('./server/controller.elec-control/ctrl.elec.control');
+  const CtrlAppDemo   = require('./server/controller.learnvoca/ctrl.learn.voca');
+  const CtrlAuthen    = require('./server/controller.authen/ctrl.authen');
+  const CtrlAdmin     = require('./server/controller.admin/ctrl.admin');
+  const CtrlUserAdmin = require('./server/controller.admin/ctrl.admin.user');
+  const CtrlChat      = require('./server/controller.chat/ctrl.chat');
+  const CtrlTest      = require('./server/controller.test/ctrl.test');
+  const CtrlElec      = require('./server/controller.elec-control/ctrl.elec.control');
 
   function AppRouter() {
 
@@ -37,7 +38,8 @@
 
       '/authen':      { Fn: GET,                handle: CtrlAuthen.load           },
 
-      '/admin':       { Fn: GET,                handle: CtrlAdmin.load            }
+      '/admin':       { Fn: GET,                handle: CtrlAdmin.load            },
+      '/user-admin':  { Fn: '*',                handle: CtrlUserAdmin.handle      }
 
     };
 

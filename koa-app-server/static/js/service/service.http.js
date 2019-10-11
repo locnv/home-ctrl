@@ -307,6 +307,21 @@
     }
 
     function getDownloadTopic(fileName) {
+
+      // Make the POST request
+      /*window.fetch('/cards', request)
+      .then(res => {
+        var text = res.text();
+        logger.info('res.text -> ' + text);
+        return text;
+      })
+      .then(content => {
+        //var uriContent = "data:application/octet-stream," + encodeURIComponent(content);
+        //var newWindow = window.open(uriContent, 'topic-xxx.csv');
+        logger.info('content');
+        logger.info(content);
+      });*/
+
       var reqParamsObj = {
         params: {
           data: { fileName: fileName },
@@ -314,7 +329,20 @@
         }
       };
 
-      return sendRequest(RequestType.Get, Host, Api.Card, reqParamsObj);
+      /*return */
+      sendRequest(RequestType.Get, Host, Api.Card, reqParamsObj)
+      .then(res => {
+        logger.info('res -> ' + res);
+        return res;
+      })
+      .then(content => {
+        logger.info('content');
+        logger.info(content.data);
+        //var uriContent = "data:application/octet-stream," + encodeURIComponent(content);
+        var uriContent = "data:application/octet-stream," + content.data;
+        var newWindow = window.open(uriContent, 'topic-xxx.csv');
+
+      });
     }
 
     function getWordsByCard(cardId) {

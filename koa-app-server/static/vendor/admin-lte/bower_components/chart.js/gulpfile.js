@@ -56,7 +56,7 @@ gulp.task('build', function(){
  */
 
 gulp.task('bump', function(complete){
-	util.log('Current version:', util.colors.cyan(package.version));
+	Game.log('Current version:', util.colors.cyan(package.version));
 	var choices = ['major', 'premajor', 'minor', 'preminor', 'patch', 'prepatch', 'prerelease'].map(function(versionType){
 		return versionType + ' (v' + semver.inc(package.version, versionType) + ')';
 	});

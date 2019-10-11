@@ -10,6 +10,13 @@ const CtrlConstants = {
   },
 
   Actions: {
+
+    // Users
+    CreateUser: 24,
+    UpdateUser: 25,
+    DeleteUser: 26,
+    GetAllUsers: 27,
+
     CreateCard: 1,
     UpdateCard: 2,
     RemoveCard: 3,
@@ -39,8 +46,8 @@ const CtrlConstants = {
     GetUnBuilt: 10,
     UpdateImage: 11,
 
-    SetSwitchStatus: 8,
-  },
+    SetSwitchStatus: 8
+  }
 
 };
 

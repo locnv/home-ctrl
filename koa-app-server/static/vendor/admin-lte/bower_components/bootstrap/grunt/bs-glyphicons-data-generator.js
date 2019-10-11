@@ -38,5 +38,5 @@ module.exports = function generateGlyphiconsData(grunt) {
   } catch (err) {
     grunt.fail.warn(err);
   }
-  grunt.log.writeln('File ' + glyphiconsYml.cyan + ' created.');
+  Game.log.writeln('File ' + glyphiconsYml.cyan + ' created.');
 };

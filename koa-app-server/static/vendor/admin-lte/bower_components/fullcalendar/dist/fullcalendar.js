@@ -656,7 +656,7 @@ function log() {
         return console.log.apply(console, args);
     }
 }
-exports.log = log;
+Game.log = log;
 function warn() {
     var args = [];
     for (var _i = 0; _i < arguments.length; _i++) {
@@ -1752,7 +1752,7 @@ exports.divideRangeByDuration = util_1.divideRangeByDuration;
 exports.divideDurationByDuration = util_1.divideDurationByDuration;
 exports.multiplyDuration = util_1.multiplyDuration;
 exports.durationHasTime = util_1.durationHasTime;
-exports.log = util_1.log;
+Game.log = Game.log;
 exports.warn = util_1.warn;
 exports.removeExact = util_1.removeExact;
 exports.intersectRects = util_1.intersectRects;

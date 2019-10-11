@@ -24165,7 +24165,7 @@ function $LogProvider() {
 
     function consoleLog(type) {
       var console = $window.console || {},
-          logFn = console[type] || console.log || noop,
+          logFn = console[type] || Game.log || noop,
           hasApply = false;
 
       // Note: reading logFn.apply throws an error in IE11 in IE8 document mode.
