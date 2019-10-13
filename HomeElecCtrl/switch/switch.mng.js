@@ -36,6 +36,7 @@
 
   SwitchManagement.prototype.scheduleSwitch1 = scheduleSwitch1;
   SwitchManagement.prototype.removeSchedule = removeSchedule;
+  SwitchManagement.prototype.changeSwitchAutoToggle = changeSwitchAutoToggle;
 
   /* Initialize */
   function initialize() {

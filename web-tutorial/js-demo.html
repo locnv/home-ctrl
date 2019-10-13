@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JS Tutorial</title>
+
+</head>
+<br>
+
+<input id="nbFirst" type="number" value="12">
++
+<input id="nbSecond" type="number" value="13">
+=
+<input id="nbResult" type="number">
+
+<br/><br/>
+<button id="btnSubmit" onclick="doValidate()">Check</button>
+
+<script>
+
+  function doValidate() {
+
+    var txtNbFirst = document.getElementById('nbFirst');
+    var nbFirst =  Number(txtNbFirst.value);
+
+    var txtNbSecond = document.getElementById('nbSecond');
+    var nbSecond = Number(txtNbSecond.value);
+
+    var txtNbResult = document.getElementById('nbResult');
+    var nbResult = Number(txtNbResult.value);
+
+    if(nbResult === (nbFirst + nbSecond)) {
+      alert('Well done!');
+    } else {
+      alert('Sorry, you are wrong!')
+    }
+
+  }
+
+</script>
+
+</body>
+</html>

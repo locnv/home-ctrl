@@ -1,11 +1,19 @@
 [
   {
-    "id": "switch-lamp",
-    "name": "Lamp",
+    "id": "pump-1",
+    "name": "Pump",
     "pin": 24
   }, {
-    "id": "switch-fan",
-    "name": "Fan",
+    "id": "valve-1",
+    "name": "valve-1",
     "pin": 23
+  }, {
+    "id": "valve-2",
+    "name": "valve-2",
+    "pin": 22
+  }, {
+    "id": "valve-3",
+    "name": "valve-3",
+    "pin": 21
   }
 ]
