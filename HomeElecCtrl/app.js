@@ -13,6 +13,8 @@
   const logger = require('./util/logger');
   const util = require('./util/util');
 
+  const WebSerer = require('./app-web');
+
   const DeviceTypes = AppConst.DeviceType;
 
   let socketIo,
@@ -37,6 +39,8 @@
 
     let LedEvent = ledManagement.constants.Event;
     ledManagement.on(LedEvent.LedStatusChanged, onLedStatusChanged);
+
+    new WebSerer();
 
   }
 
