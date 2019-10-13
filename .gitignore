@@ -3,15 +3,22 @@ download/
 node-sample/
 gimp/
 RnD/
-.idea/
+tmp/
+.idea/*
+*.log
+.DS_Store
 
 # Embedded app
 HomeElecCtrl/node_modules/
+HomeElecCtrl/.DS_Store
+HomeElecCtrl/app.log
 
 # Web app
 koa-app-server/.idea
+koa-app-server/server/.DS_Store
 koa-app-server/bower_components
 koa-app-server/node_modules
+koa-app-server/.36faee8862d0fa38fdfae4e47c37e0bb78f29eae-audit.json
 koa-samples/
 
 # Mobile app
@@ -19,3 +26,5 @@ LightControl/.idea
 LightControl/node_modules/
 LightControl/platforms/
 LightControl/plugins/
+
+web-tutorial/.DS_Store
