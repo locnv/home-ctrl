@@ -11,6 +11,7 @@
         <th>Id</th>
         <th>Name</th>
         <th>Status</th>
+        <th>Toggle</th>
       </tr>
       </thead>
       <tbody>
@@ -18,7 +19,15 @@
         <td>{{ $index }}</td>
         <td>{{ dev.id }}</td>
         <td>{{ dev.name }}</td>
-        <td>{{ dev.status }}</td>
+        <td
+          ng-class="{'text-success': dev.status === SwitchStatus.On, 'text-danger': dev.status === SwitchStatus.Off }">
+          {{ dev.status | SwitchStatusDisp }}
+        </td>
+        <td>
+          <button class="btn btn-sm btn-outline-success" ng-click="toggleSwitch(dev)">
+            {{ dev.status === SwitchStatus.On ? 'Turn Off' : 'Turn On' }}
+          </button>
+        </td>
       </tr>
       </tbody>
     </table>

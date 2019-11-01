@@ -6,14 +6,16 @@
   "use strict";
 
   let Styles = [
-    'vendor/bootstrap/css/bootstrap.min.css',
+    'vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css',
     'vendor/animate.css/animate.min.css',
     'css/style.css',
   ];
 
   let JS = [
     'vendor/jquery/jquery.min.js',
-    'vendor/bootstrap/js/bootstrap.min.js',
+    'vendor/bootstrap-4.3.1-dist/js/bootstrap.min.js',
+    'vendor/bootstrap-toggle/js/bootstrap-toggle.min.js',
+    'vendor/bootstrap-notifier/bootstrap-notify.min.js',
     'vendor/moment/min/moment.min.js',
     'vendor/angular/angular.min.js',
     'vendor/angular/angular-cookies.min.js',
@@ -50,6 +52,9 @@
     'js/directive/directive.app-footer.js',
     'js/directive/directive.simple-json.js',
     'js/directive/directive.button-navigator.js',
+
+    // Filter -->
+    'js/filter/common.filter.js',
 
     // Controller
     'js/controller/ctrl.base.js',
