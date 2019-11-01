@@ -15,14 +15,14 @@
   // }
 
   angular
-    .module(_global.AppName)
-    .factory('Util', Util);
+  .module(_global.AppName)
+  .factory('Util', Util);
 
   Util.$inject = [ ];
   function Util() {
     let mPlatform = null;
 
-    let services = {
+    return {
       Remote: {
         Host: 'http://localhost:1337',
       },

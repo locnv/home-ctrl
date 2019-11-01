@@ -9,6 +9,14 @@ let _global = {
   }
 };
 
+String.prototype.format = function () {
+  let a = this;
+  for (let k in arguments) {
+    a = a.replace(new RegExp("\\{" + k + "\\}", 'g'), arguments[k]);
+  }
+  return a;
+};
+
 /* global angular */
 /* global Materialize */
 /* global device */

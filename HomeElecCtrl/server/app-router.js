@@ -19,7 +19,9 @@
     let Routes = {
       '/': { Fn: GET, handle: CtrlHome.load },
 
-      '/api/dev/list': { Fn: GET, handle: DevApi.getDevices }
+      '/api/dev/list': { Fn: GET, handle: DevApi.getDevices },
+      '/api/dev/:id/:status': { Fn: POST, handle: DevApi.setSwitchStatus }
+
       // '/api': { Fn: POST, handle: CtrlHome.handle }
     };
 

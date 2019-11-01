@@ -4,13 +4,14 @@
   </div>
   <div class="table-responsive">
 
-    <table class="table table-striped table-hover">
+    <table id="tbl-devices" class="table table-striped table-hover">
       <thead class="alert alert-success">
       <tr>
         <th></th>
         <th>Id</th>
         <th>Name</th>
         <th>Status</th>
+        <th>Configure</th>
         <th>Toggle</th>
       </tr>
       </thead>
@@ -24,12 +25,22 @@
           {{ dev.status | SwitchStatusDisp }}
         </td>
         <td>
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="switch-{{dev.id}}">
+            <label class="custom-control-label" for="switch-{{dev.id}}"></label>
+          </div>
+        </td>
+        <td>
           <button class="btn btn-sm btn-outline-success" ng-click="toggleSwitch(dev)">
             {{ dev.status === SwitchStatus.On ? 'Turn Off' : 'Turn On' }}
           </button>
         </td>
       </tr>
       </tbody>
+
     </table>
+
+    <button class="btn btn-outline-danger" ng-click="applySystemConfig()">Update</button>
+
   </div>
 </div>

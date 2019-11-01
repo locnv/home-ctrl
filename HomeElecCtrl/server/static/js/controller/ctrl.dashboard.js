@@ -49,6 +49,7 @@
     $scope.onLanguageChanged = onLanguageChanged;
 
     $scope.toggleSwitch = toggleSwitch;
+    $scope.applySystemConfig = applySystemConfig;
 
     /* Extend from base controller */
     $controller('BaseCtrl', { $scope: $scope });
@@ -82,11 +83,17 @@
       .then(devices => {
         $scope.devices = devices;
         $scope.safeApply();
+
+        // $('.btn-toggle').bootstrapToggle({
+        //   on: 'On',
+        //   off: 'Off'
+        // });
       })
       .catch(err => {
         log.error('Failed to get all devices', err);
         notifier.error('Failed to load device. See log for detail.');
       });
+
     }
 
     function toggleSwitch(dev) {
@@ -94,13 +101,24 @@
       if(nextStatus === dev.status) {
         nextStatus = $scope.SwitchStatus.Off;
       }
-      dev.status = nextStatus;
 
-      notifier.error(`Toggle dev ->  ${dev.name} (Not implemented yet!)`);
+      devService.sendSwitchCommand(dev.id, nextStatus)
+      .then(rs => {
+        dev.status = nextStatus;
+        notifier.notify('Command is sent.');
+
+        $scope.safeApply();
+      })
+      .catch(err => {
+        log.error('Failed to send switch status command', err);
+        notifier.error('Failed to send switch status. See log for detail.');
+      });
     }
 
-    function onLanguageChanged() {
-
+    function applySystemConfig() {
+      notifier.error(`Function not implemented -> applySystemConfig.`);
     }
+
+    function onLanguageChanged() { }
   }
 })();

@@ -31,6 +31,25 @@
     };
   };
 
+  DeviceApi.prototype.setSwitchStatus = async function(ctx, next) {
+
+    let devId = ctx.params['id'];
+    let status = parseInt(ctx.params['status']);
+
+    let rs = switchManagement.setSwitchStatus(devId, status);
+
+    // await next();
+
+    ctx.body = {
+      status: rs ? 'ok' : 'nok',
+      data: {
+        devId: devId,
+        status: status
+      },
+      serverTime: new Date()
+    };
+  };
+
   module.exports = new DeviceApi();
 
 })();

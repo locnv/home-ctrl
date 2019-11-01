@@ -7,6 +7,8 @@
 
   let Styles = [
     'vendor/bootstrap-4.3.1-dist/css/bootstrap.min.css',
+    // 'vendor/bootstrap/css/bootstrap.min.css',
+    // 'vendor/bootstrap-toggle/css/bootstrap-toggle.min.css',
     'vendor/animate.css/animate.min.css',
     'css/style.css',
   ];
@@ -14,7 +16,8 @@
   let JS = [
     'vendor/jquery/jquery.min.js',
     'vendor/bootstrap-4.3.1-dist/js/bootstrap.min.js',
-    'vendor/bootstrap-toggle/js/bootstrap-toggle.min.js',
+    // 'vendor/bootstrap/js/bootstrap.min.js',
+    // 'vendor/bootstrap-toggle/js/bootstrap-toggle.min.js',
     'vendor/bootstrap-notifier/bootstrap-notify.min.js',
     'vendor/moment/min/moment.min.js',
     'vendor/angular/angular.min.js',
