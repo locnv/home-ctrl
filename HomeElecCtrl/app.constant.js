@@ -21,6 +21,14 @@
     DeviceType: {
       Led: 'led',
       Switch: 'switch'
+    },
+
+    // As server
+    Server: {
+      RespStatus: {
+        Ok: 'ok',
+        Nok: 'nok'
+      }
     }
 
   };

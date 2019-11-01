@@ -7,6 +7,7 @@
 
   const switchManagement = require('../../switch').SwitchManagement;
   const DevTypes = require('../../app.constant').DeviceType;
+  const RespStatus = require('../../app.constant').Server.RespStatus;
 
   function DeviceApi() { }
 
@@ -25,7 +26,7 @@
     // await next();
 
     ctx.body = {
-      status: 'ok',
+      status: RespStatus.Ok,
       data: allDevs,
       serverTime: new Date()
     };
@@ -41,11 +42,30 @@
     // await next();
 
     ctx.body = {
-      status: rs ? 'ok' : 'nok',
+      status: rs ? RespStatus.Ok : RespStatus.Nok,
       data: {
         devId: devId,
         status: status
       },
+      serverTime: new Date()
+    };
+  };
+
+  DeviceApi.prototype.setSwitchesStatus = async function(ctx, next) {
+
+    let devices = ctx.request.body;
+    devices.forEach(dev => {
+      // console.log(` --- --- >>> ${JSON.stringify(dev)}`);
+      switchManagement.setSwitchStatus(dev.id, dev.status);
+    });
+
+    // await next();
+
+    ctx.body = {
+      status: RespStatus.Ok,
+      message: 'Not implemented.',
+      // data: {},
+      data: ctx.request.body,
       serverTime: new Date()
     };
   };

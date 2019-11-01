@@ -50,6 +50,7 @@
 
     $scope.toggleSwitch = toggleSwitch;
     $scope.applySystemConfig = applySystemConfig;
+    $scope.configCheckboxToggle = configCheckboxToggle;
 
     /* Extend from base controller */
     $controller('BaseCtrl', { $scope: $scope });
@@ -70,9 +71,7 @@
       return Promise.resolve(true);
     }
 
-    function onResume() {
-
-    }
+    function onResume() { }
 
     /**
      * Page initialization
@@ -83,11 +82,6 @@
       .then(devices => {
         $scope.devices = devices;
         $scope.safeApply();
-
-        // $('.btn-toggle').bootstrapToggle({
-        //   on: 'On',
-        //   off: 'Off'
-        // });
       })
       .catch(err => {
         log.error('Failed to get all devices', err);
@@ -116,7 +110,27 @@
     }
 
     function applySystemConfig() {
-      notifier.error(`Function not implemented -> applySystemConfig.`);
+      let devConf = $scope.devices.map(dev => {
+        return {
+          id: dev.id,
+          status: dev.status1 ? $scope.SwitchStatus.On : $scope.SwitchStatus.Off }
+      });
+
+      devService.sendSwitchesCommand(devConf)
+      .then(rs => {
+        notifier.notify('Command is sent.');
+        // $scope.safeApply();
+      })
+      .catch(err => {
+        log.error('Failed to send switches status command', err);
+        notifier.error('Failed to send switches status. See log for detail.');
+      });
+    }
+
+    function configCheckboxToggle($event, dev) {
+      log.info('Checkbox change.');
+      log.info($event);
+      log.info(dev);
     }
 
     function onLanguageChanged() { }

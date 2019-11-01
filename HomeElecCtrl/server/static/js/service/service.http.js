@@ -30,6 +30,11 @@
     return {
       Errors: Errors,
 
+      ResponseStatus: {
+        Ok: 'ok',
+        Nok: 'nok'
+      },
+
       initialize: initialize,
       isInitialized: isInitialized,
 

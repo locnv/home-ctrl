@@ -11,10 +11,13 @@
 
   function ServiceImpl( http, util, logger ) {
 
+    const RespStatus = http.ResponseStatus;
+
     let Api = {
       ListDevice: '/api/dev/list',
 
-      SwitchStatus: '/api/dev/{0}/{1}' // /api/dev/:id/:status
+      SwitchStatus: '/api/dev/{0}/{1}', // /api/dev/:id/:status
+      SwitchesStatus: '/api/dev/config'
     };
 
     let mInitialized = false;
@@ -24,7 +27,8 @@
       isInitialized: isInitialized,
 
       getAllDevices: getAllDevices,
-      sendSwitchCommand: sendSwitchCommand
+      sendSwitchCommand: sendSwitchCommand,
+      sendSwitchesCommand: sendSwitchesCommand,
     };
 
     /**
@@ -56,7 +60,7 @@
 
       return new Promise((resolve, reject) => {
         http.sendGetRequest(Api.ListDevice, {})
-        .then(resp => resp.status === 'ok' ? resolve(resp.data) : reject(new Error(resp.message)))
+        .then(resp => resp.status === RespStatus.Ok ? resolve(resp.data) : reject(new Error(resp.message)))
         .catch(err => {
           logger.error('Failed to get devices list', err);
           reject.bind(null, new Error('Server error. See log for more detail.'));
@@ -70,7 +74,7 @@
       return new Promise((resolve, reject) => {
         let path = Api.SwitchStatus.format(switchId, status);
         http.sendPostRequest(path, {})
-        .then(resp => resp.status === 'ok' ? resolve(resp.data) : reject(new Error(resp.message)))
+        .then(resp => resp.status === RespStatus.Ok ? resolve(resp.data) : reject(new Error(resp.message)))
         .catch(err => {
           logger.error('Failed to get devices list', err);
           reject.bind(null, new Error('Server error. See log for more detail.'));
@@ -78,6 +82,23 @@
       });
 
     }
+
+    function sendSwitchesCommand(switchesConf) {
+
+      logger.debug(`[http] > sendSwitchesCommand: configuration ${JSON.stringify(switchesConf)}`);
+
+      return new Promise((resolve, reject) => {
+
+        http.sendPostRequest(Api.SwitchesStatus, switchesConf)
+        .then(resp => resp.status === RespStatus.Ok ? resolve(resp.data) : reject(new Error(resp.message)))
+        .catch(err => {
+          logger.error('Failed to configure', err);
+          reject.bind(null, new Error('Server error. See log for more detail.'));
+        });
+      });
+
+    }
+
 
   }
 })();
