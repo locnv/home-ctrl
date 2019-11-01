@@ -7,7 +7,9 @@
 
   /* One entry Controller per app */
 
-  const CtrlHome   = require('./controller/ctrl.home');
+  const CtrlHome = require('./controller/ctrl.home');
+
+  const DevApi = require('./api/api.device');
 
   function AppRouter() {
 
@@ -16,7 +18,9 @@
 
     let Routes = {
       '/': { Fn: GET, handle: CtrlHome.load },
-      '/api': { Fn: POST, handle: CtrlHome.handle }
+
+      '/api/dev/list': { Fn: GET, handle: DevApi.getDevices }
+      // '/api': { Fn: POST, handle: CtrlHome.handle }
     };
 
     for(let path in Routes) {

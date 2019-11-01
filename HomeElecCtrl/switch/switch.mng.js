@@ -401,6 +401,6 @@
     return found;
   }
 
-  module.exports = SwitchManagement;
+  module.exports = new SwitchManagement();
 
 })();

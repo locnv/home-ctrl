@@ -3,10 +3,10 @@
 
   const SocketIO = require('./socket/app.socketio');
 
-  const LedManagement = require('./led').LedManagement;
+  const ledManagement = require('./led').LedManagement;
   const LedCommands = require('./led').Led.constant.Commands;
 
-  const SwitchManagement = require('./switch').SwitchManagement;
+  const switchManagement = require('./switch').SwitchManagement;
   const SwitchCommands = require('./switch/switch').constant.Commands;
 
   const AppConst = require('./app.constant');
@@ -17,9 +17,9 @@
 
   const DeviceTypes = AppConst.DeviceType;
 
-  let socketIo,
-    switchManagement = new SwitchManagement(),
-    ledManagement = new LedManagement();
+  let socketIo;
+    // switchManagement = new SwitchManagement();
+    // ledManagement = new LedManagement();
 
   setTimeout(runApp, 1);
 

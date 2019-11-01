@@ -158,6 +158,6 @@
     return found;
   }
 
-  module.exports = LedManagement;
+  module.exports = new LedManagement();
 
 })();

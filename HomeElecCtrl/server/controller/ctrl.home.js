@@ -40,6 +40,7 @@
     'js/service/service.speech.js',
     'js/service/service.navigator.js',
     'js/service/service.http.js',
+    'js/service/service.device.js',
     'js/service/service.socket-io.js',
 
     // Animation -->

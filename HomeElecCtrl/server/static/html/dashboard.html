@@ -1,3 +1,26 @@
 <div class="container">
-  Dashboard
+  <div>
+    <h2>Dashboard</h2>
+  </div>
+  <div class="table-responsive">
+
+    <table class="table table-striped table-hover">
+      <thead class="alert alert-success">
+      <tr>
+        <th></th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="dev in devices">
+        <td>{{ $index }}</td>
+        <td>{{ dev.id }}</td>
+        <td>{{ dev.name }}</td>
+        <td>{{ dev.status }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

@@ -13,14 +13,7 @@
 
     let Host = util.Remote.Host;
 
-    let Api = {
-      ElecCtrl: '/elec_ctrl'
-    };
-    let Actions = {
-      CmdSwitch: 8,
-    };
-
-    let RequestType = {
+    let Methods = {
       Get: 'get',
       Post: 'post',
       Put: 'put',
@@ -34,28 +27,27 @@
 
     let mInitialized = false;
 
-    let inst = {
+    return {
       Errors: Errors,
 
       initialize: initialize,
       isInitialized: isInitialized,
 
-      // Home Elec Control
-      sendSwitchCommand: sendSwitchCommand,
-      scheduleSwitch: scheduleSwitch,
-
+      sendGetRequest: sendGetRequest,
+      sendPostRequest: sendPostRequest,
       sendRequest: sendRequest,
     };
 
-    return inst;
-
+    ///////////////////////////////////////////////
+    ///////////////  Implementation ///////////////
+    ///////////////////////////////////////////////
     /**
      * Initialization
      *
      * @return {Promise}
      */
     function initialize() {
-      let promise = new Promise(function(resolve, reject) {
+      return new Promise((resolve, reject) => {
         internal_initialize(resolve, reject);
       });
 
@@ -69,69 +61,43 @@
         setTimeout(_resolve, 1);
       }
 
-      return promise;
     }
 
     function isInitialized() {
       return mInitialized;
     }
 
-
-    // Home Elec Control
-    function sendSwitchCommand(target, switchId, command) {
-      logger.debug('[http] > sendSwitchCommand: switch ' + switchId + ' > ' + command);
-      let params = {
-        data: {
-          target: target,
-          switchId: switchId,
-          command: command
-        },
-        Action: Actions.CmdSwitch
-      };
-
-      return sendRequest(RequestType.Post, Host, Api.ElecCtrl, params);
+    function sendGetRequest(api, param) {
+      return this.sendRequest(Methods.Get, api, param);
     }
 
-    // Not done yet!
-    function scheduleSwitch(target, switchId, command, delay) {
-      logger.debug('[http] > scheduleSwitch: switch ' + switchId + ' > ' + command + '>' + delay);
-      let params = {
-        data: {
-          target: target,
-          switchId: switchId,
-          command: 'schedule',
-          subCommand: command,
-          delay: delay
-        },
-        Action: Actions.CmdSwitch
-      };
-
-      return sendRequest(RequestType.Post, Host, Api.ElecCtrl, params);
+    function sendPostRequest(api, param) {
+      return this.sendRequest(Methods.Post, api, param);
     }
 
     /**
      *
-     * @param reqType
-     * @param host
+     * @param method
      * @param api
+     * @param param
      * @return {Promise}
      */
-    function sendRequest(reqType, host, api, param) {
+    function sendRequest(method, api, param) {
       let Fn = $http.get;
 
-      switch (reqType) {
-        case RequestType.Get:
+      switch (method) {
+        case Methods.Get:
           break;
 
-        case RequestType.Post:
+        case Methods.Post:
           Fn = $http.post;
           break;
 
-        case RequestType.Put:
+        case Methods.Put:
           Fn = $http.put;
           break;
 
-        case RequestType.Delete:
+        case Methods.Delete:
           Fn = $http.delete;
           break;
 
@@ -139,8 +105,8 @@
           break;
       }
 
-      let promise = new Promise(function(resolve, reject) {
-        let url = host + api;
+      return new Promise(function(resolve, reject) {
+        let url = Host + api;
         logger.debug('url > ' + url);
 
         let args = [url];
@@ -150,12 +116,16 @@
 
         Fn.apply($http, args)
         .then(function(resp) {
-          resolve(resp);
+          if(resp.status !== 200) {
+            logger.error('En error occurs while sending request to server', resp);
+            reject(new Error('Server error.'));
+          } else {
+            resolve(resp.data);
+          }
         })
         .catch(handleError.bind(null, reject));
       });
 
-      return promise;
     }
 
     function handleError(next, err) {
