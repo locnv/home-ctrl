@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
@@ -15,7 +15,16 @@
 
 <body data-ng-app="AppTest">
 <div class="container">
-  <h2>Welcome to configuration page.</h2>
+  <!-- App's view -->
+  <div ng-view id="app-view" class=""></div>
+
+  <!-- L O A D E R ++ -->
+  <div class="loader loader-bar"
+       ng-class="{'is-active': pageLoading }"
+       data-text="contacting to devices ..."
+       data-rounded>
+  </div>
+  <!-- L O A D E R -- -->
 
 </div>
 

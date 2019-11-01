@@ -15,8 +15,8 @@
     let POST = router.post.bind(router);
 
     let Routes = {
-
-      '/': { Fn: GET, handle: CtrlHome.load }
+      '/': { Fn: GET, handle: CtrlHome.load },
+      '/api': { Fn: POST, handle: CtrlHome.handle }
     };
 
     for(let path in Routes) {

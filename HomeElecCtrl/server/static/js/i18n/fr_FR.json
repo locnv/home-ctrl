@@ -1,0 +1,60 @@
+{
+  "static": {
+    "SCAN": "Balayage",
+    "STOP": "Arrêtez",
+    "FILTER": "Filtre",
+    "CONNECT": "Relier",
+    "DISCONNECT": "Déconnecter",
+    "ADDRESS": "Adresse",
+    "RSSI": "Rssi",
+    "RAW": "RAW",
+    "REMOVE": "Supprimer",
+    "DEVICE": "Dispositif",
+    "FLAGS": "Flags",
+    "COMPLETE_LOCAL_NAME": "Complete Local Name",
+    "MANUFACTURER_SPEC_DATA": "Manufacturer Specific Data",
+    "TEST_PAGE": "Page de test",
+    "DEV_NAME": "Nom de l'appareil",
+    "BLE_MANU": "Fabricant Bluetooth (id)",
+    "APPLY": "Appliquer",
+    "FAV_DEV": "Appareils favoris",
+    "THE_LST_EMPTY": "La liste est vide!",
+    "CONNECTING": "de liaison...",
+    "DISCOVERING": "découverte ...",
+    "DISCONNECTING": "déconnecter ...",
+    "DISCONNECTED": "débranché!",
+    "READY": "prêt!",
+    "FAIL_TO_CONNECT": "échec de la connexion!",
+    "READ": "Read",
+    "WRITE": "Write",
+    "NOTIFY": "Notify",
+    "NOTIFY_ON": "Notify (on)",
+    "NOTIFY_OFF": "Notify (off)",
+
+    "BACK": "Arrière",
+
+    "SCAN_DESC": "Appuyez sur le bouton 'Scan' pour trouver les appareils à proximité!",
+    "FILTER_EMPTY_DESC": "Les appareils non trouvés correspondent au matériau filtrant!",
+    "SCANNING": "Scansion",
+
+    "SETTING": "Réglage",
+    "LANGUAGE": "La langue",
+    "ENGLISH": "Anglais",
+    "FRENCH": "Français",
+    "VIETNAMESE": "Vietnamese",
+    "ABOUT_THIS_APP": "À propos de cette application!"
+  },
+
+  "template": {
+    "WELCOME": "Bonjour {{name}}!",
+    "CONNECTING": "Connecting to {{devName}} ...",
+    "DISCONNECTED": "Disconnected from {{devName}}"
+  },
+
+  "HELLO": "Bonjour Eugene!!",
+  "HELLO_PARAM": "Bonjour {{name}}!",
+
+  "TEXT_OK": "OK",
+  "TEXT_YES": "Oui",
+  "TEXT_NO": "Non"
+}
