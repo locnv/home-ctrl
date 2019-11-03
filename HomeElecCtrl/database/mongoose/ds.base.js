@@ -35,7 +35,7 @@
    */
   DsBase.prototype.create = function(data) {
     let model = this.model;
-    let promise = new Promise(function(resolve) {
+    return new Promise(function(resolve) {
 
       let dbObject = new model(data);
 
@@ -49,7 +49,6 @@
       });
     });
 
-    return promise;
   };
 
   DsBase.prototype.deleteBy = function(filter) {
@@ -72,7 +71,7 @@
   DsBase.prototype.deleteMany = function(filter) {
     let model = this.model;
 
-    let promise = new Promise(function(resolve) {
+    return new Promise(function(resolve) {
       model.deleteMany(filter)
         .then(function(obj) {
           resolve(obj);
@@ -83,7 +82,6 @@
         });
     });
 
-    return promise;
   };
 
   /**
@@ -94,7 +92,7 @@
   DsBase.prototype.delete = function(id) {
     let model = this.model;
 
-    let promise = new Promise(function(resolve) {
+    return new Promise(function(resolve) {
       model.deleteOne({ _id: id })
       .then(function(obj) {
         resolve(obj);
@@ -104,8 +102,6 @@
         resolve(new Error('Failed to remove entry'));
       });
     });
-
-    return promise;
 
   };
 
@@ -133,7 +129,7 @@
 
     let model = this.model;
 
-    let promise = new Promise(function(resolve) {
+    return new Promise(function(resolve) {
       model.updateOne(criteria, newValues)
       .then(function(updatedDoc) {
         resolve(updatedDoc);
@@ -144,14 +140,12 @@
       });
     });
 
-    return promise;
-
   };
 
   DsBase.prototype.find = function(criteria, projections) {
     let proj = projections || {};
     let model = this.model;
-    let promise = new Promise(function(resolve) {
+    return new Promise(function(resolve) {
       model.find(criteria, proj)
       .then(function(docs) {
         resolve(docs);
@@ -162,7 +156,6 @@
       });
     });
 
-    return promise;
   };
 
   DsBase.prototype.findById = function(id) {
@@ -171,7 +164,7 @@
       id = this.toObjectId(id);
     }
 
-    let promise = new Promise(function(resolve) {
+    return new Promise(function(resolve) {
 
       let criteria = { _id: id };
 
@@ -189,12 +182,11 @@
       });
     });
 
-    return promise;
   };
 
   DsBase.prototype.findByIds = function(ids) {
     let model = this.model;
-    let promise = new Promise(function(resolve) {
+    return new Promise(function(resolve) {
       let criteria = {
         _id: { $in: ids }
       };
@@ -209,12 +201,11 @@
         });
     });
 
-    return promise;
   };
 
   DsBase.prototype.count = function() {
     let model = this.model;
-    let promise = new Promise(function(resolve) {
+    return new Promise(function(resolve) {
       model.count()
       .then(function(nb) {
         resolve(nb);
@@ -225,12 +216,11 @@
       });
     });
 
-    return promise;
   };
 
   DsBase.prototype.getAt = function(idx) {
     let model = this.model;
-    let promise = new Promise(function(resolve) {
+    return new Promise(function(resolve) {
       model
         //.where('field1').gte(25)
         // .where().in([])
@@ -244,12 +234,11 @@
         });
     });
 
-    return promise;
   };
 
   DsBase.prototype.findOne = function(criteria) {
     let model = this.model;
-    let promise = new Promise(function(resolve) {
+    return new Promise(function(resolve) {
       model.findOne(criteria)
         .then(function(doc) {
           resolve(doc);
@@ -260,12 +249,11 @@
         });
     });
 
-    return promise;
   };
 
   DsBase.prototype.findAll = function() {
     let model = this.model;
-    let promise = new Promise(function(resolve) {
+    return new Promise(function(resolve) {
       model.find()
       .then(function(docs) {
         resolve(docs);
@@ -276,7 +264,6 @@
       });
     });
 
-    return promise;
   };
 
   DsBase.prototype.filter = function(cretial) {

@@ -5,9 +5,9 @@
 (function() {
   "use strict";
 
-  const switchManagement = require('../../switch').SwitchManagement;
-  const DevTypes = require('../../app.constant').DeviceType;
-  const RespStatus = require('../../app.constant').Server.RespStatus;
+  const switchManagement = require('../switch').SwitchManagement;
+  const DevTypes = require('../app.constant').DeviceType;
+  const RespStatus = require('../app.constant').Server.RespStatus;
 
   function DeviceApi() { }
 

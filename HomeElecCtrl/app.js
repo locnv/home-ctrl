@@ -1,6 +1,9 @@
 (function() {
   "use strict";
 
+  require('./util/inheristancable');
+  require('./bootstrap');
+
   const SocketIO = require('./socket/app.socketio');
 
   const ledManagement = require('./led').LedManagement;

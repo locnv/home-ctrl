@@ -9,7 +9,7 @@
 
   const CtrlHome = require('./controller/ctrl.home');
 
-  const DevApi = require('./api/api.device');
+  const DevApi = require('../api/api.device');
 
   function AppRouter() {
 

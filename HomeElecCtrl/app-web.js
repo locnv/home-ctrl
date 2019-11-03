@@ -15,7 +15,8 @@ const _ = require('lodash');
 const Koa = require('koa');
 
 const PORT = 1337;
-const HOST = 'localhost';
+// const HOST = 'localhost';
+const HOST = '';
 
 function KoaApp() {
 
