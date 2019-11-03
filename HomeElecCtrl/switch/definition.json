@@ -5,15 +5,15 @@
     "pin": 24
   }, {
     "id": "valve-1",
-    "name": "valve-1",
+    "name": "Valve 1",
     "pin": 23
   }, {
     "id": "valve-2",
-    "name": "valve-2",
+    "name": "Valve 2",
     "pin": 22
   }, {
     "id": "valve-3",
-    "name": "valve-3",
+    "name": "Valve 3",
     "pin": 21
   }
 ]
