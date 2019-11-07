@@ -14,7 +14,7 @@
 
   angular
   .module(_global.AppName)
-  .controller(_global.Controllers.Dashboard, ControllerImpl);
+  .controller(_global.Controllers.AddDevice, ControllerImpl);
 
   ControllerImpl.$inject = ['$scope', '$controller', 'DevService', 'AppCsf'];
 
@@ -37,11 +37,10 @@
     let i18n = AppCsf.i18n;
     let notifier = AppCsf.notifier;
     /* Scope variables */
-    $scope.CtrlName = _global.Controllers.Dashboard;
-    $scope.PageTitle = 'Dashboard';
+    $scope.CtrlName = _global.Controllers.AddDevice;
+    $scope.PageTitle = 'Add new device';
 
     $scope.SwitchStatus = mConst.SwitchStatus;
-    $scope.devices = [];
 
     //*//*/#* Adding new device *#\\*\\
     /**
@@ -66,9 +65,8 @@
     $scope.onResume = onResume;
     $scope.onLanguageChanged = onLanguageChanged;
 
-    $scope.toggleSwitch = toggleSwitch;
-    $scope.applySystemConfig = applySystemConfig;
-    $scope.configCheckboxToggle = configCheckboxToggle;
+    $scope.addNewPin = addNewPin;
+    $scope.sendAddDevice = sendAddDevice;
 
     /* Extend from base controller */
     $controller('BaseCtrl', { $scope: $scope });
@@ -95,63 +93,30 @@
      * Page initialization
      */
     function initialize() {
-
-      devService.getAllDevices()
-      .then(devices => {
-        $scope.devices = devices;
-        $scope.safeApply();
-      })
-      .catch(err => {
-        log.error('Failed to get all devices', err);
-        notifier.error('Failed to load device. See log for detail.');
-      });
-
-    }
-
-    function toggleSwitch(dev) {
-      let nextStatus = $scope.SwitchStatus.On;
-      if(nextStatus === dev.status) {
-        nextStatus = $scope.SwitchStatus.Off;
-      }
-
-      devService.sendSwitchCommand(dev.id, nextStatus)
-      .then(rs => {
-        dev.status = nextStatus;
-        notifier.notify('Command is sent.');
-
-        $scope.safeApply();
-      })
-      .catch(err => {
-        log.error('Failed to send switch status command', err);
-        notifier.error('Failed to send switch status. See log for detail.');
-      });
-    }
-
-    function applySystemConfig() {
-      let devConf = $scope.devices.map(dev => {
-        return {
-          id: dev.id,
-          status: dev.status1 ? $scope.SwitchStatus.On : $scope.SwitchStatus.Off }
-      });
-
-      devService.sendSwitchesCommand(devConf)
-      .then(rs => {
-        notifier.notify('Command is sent.');
-        // $scope.safeApply();
-      })
-      .catch(err => {
-        log.error('Failed to send switches status command', err);
-        notifier.error('Failed to send switches status. See log for detail.');
-      });
-    }
-
-    function configCheckboxToggle($event, dev) {
-      log.info('Checkbox change.');
-      log.info($event);
-      log.info(dev);
     }
 
     function onLanguageChanged() { }
 
+    function addNewPin() {
+      let idx = $scope.nDevice.pins.length + 1;
+      $scope.nDevice.pins.push({
+        name: `pin-${idx}`,
+        pinNb: 0,
+        type: '',
+        level: 0
+      });
+    }
+
+    function sendAddDevice() {
+
+      devService.addDevice($scope.nDevice)
+      .then(() => {
+        notifier.notify('Request was sent.');
+      })
+      .catch(err => {
+        log.error('Failed to add device', err);
+        notifier.error('Failed to add device. See log for detail.');
+      });
+    }
   }
 })();

@@ -1,0 +1,66 @@
+<div class="container">
+  <div>
+    <h2>Add device</h2>
+  </div>
+  <div class="table-responsive">
+
+    <form class="frm-signup needs-validation" novalidate>
+
+      <fieldset>
+        <legend>Add new device</legend>
+
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <!-- Id -->
+            <div class="form-group">
+              <label for="txtId">Device Id</label>
+              <input type="text" class="form-control" id="txtId" ng-model="nDevice.id" required placeholder="Enter unique identifier" >
+              <div class="invalid-feedback">This field is required.</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+            <!-- Name -->
+            <div class="form-group">
+              <label for="txtDevName">Name</label>
+              <input type="text" class="form-control" id="txtDevName" ng-model="nDevice.name" required placeholder="Device name">
+              <div class="invalid-feedback">This field is required.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="selDevType">Device Type</label>
+          <select id="selDevType" class="form-control">
+            <option>Switch</option>
+            <option>LED</option>
+          </select>
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+
+        <div class="form-group">
+          <label>Pins</label>
+
+          <ul id="lsNewPins">
+            <li ng-repeat="pin in nDevice.pins"><pin-config pin="pin"></pin-config></li>
+          </ul>
+
+          <button class="btn btn-sm btn-success" ng-click="addNewPin()">Add</button>
+          <span class="btn btn-link" nav-button nav-target="/pi-gpio">&nbsp;(See pins map)</span>
+        </div>
+
+
+
+        <button type="reset" class="btn btn-outline-primary">Reset</button>
+        <button type="submit" class="btn btn-outline-danger" ng-click="sendAddDevice()">Save</button>
+
+      </fieldset>
+    </form>
+
+    <p>
+      <label>New Device:</label>
+      {{ nDevice | json }}
+    </p>
+
+  </div>
+</div>

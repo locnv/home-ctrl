@@ -1,0 +1,30 @@
+<style>
+  .pin {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid darkgray;
+  }
+  .pin .row:not(:last-child) { margin-bottom: 1em; }
+</style>
+<div class="pin">
+  <input type="hidden" id="pinId" value="{{id}}">
+  <div class="row">
+    <div class="col-md-3 col-xm-4 text-right">
+      <label for="{{id}}_txtDevName">Name</label>
+    </div>
+    <div class="col-md-9 col-xm-8">
+      <input type="text" class="form-control" id="{{id}}_txtDevName" ng-model="pin.name" required placeholder="Pin name">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 col-xm-4 text-right">
+      <label for="{{id}}_txtPinNb">Pin Number</label>
+    </div>
+    <div class="col-md-9 col-xm-8">
+      <input type="number" class="form-control" id="{{id}}_txtPinNb" ng-model="pin.pinNb" required placeholder="Pin number">
+    </div>
+  </div>
+
+</div>

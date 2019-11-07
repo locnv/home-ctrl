@@ -17,6 +17,8 @@
       /* Routes */
       Routes: {
         Dashboard: '/dashboard',
+        AddDevice: '/add-dev',
+        PiPinout: '/pi-gpio',
         SignIn: '/sign-in',
         Test: '/test'
       },

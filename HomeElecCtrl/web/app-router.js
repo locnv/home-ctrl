@@ -20,6 +20,7 @@
       '/': { Fn: GET, handle: CtrlHome.load },
 
       '/api/dev/list': { Fn: GET, handle: DevApi.getDevices },
+      '/api/dev/add': { Fn: POST, handle: DevApi.addDevice },
       '/api/dev/:id/:status': { Fn: POST, handle: DevApi.setSwitchStatus },
       '/api/dev/config': { Fn: POST, handle: DevApi.setSwitchesStatus }
 

@@ -9,8 +9,8 @@
   NavigatorButtonDirective.$inject = [ 'AppNavigator', 'LogService' ];
   function NavigatorButtonDirective(AppNavigator, LogService) {
 
-    var navigator = AppNavigator;
-    var log = LogService;
+    let navigator = AppNavigator;
+    let log = LogService;
 
     return {
       restrict: 'AE',
@@ -89,7 +89,7 @@
     }
 
     function execute() {
-      //var target = $scope.navTarget;
+      //let target = $scope.navTarget;
     }
 
   }

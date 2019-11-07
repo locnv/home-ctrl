@@ -55,6 +55,7 @@
     'js/directive/directive.app-footer.js',
     'js/directive/directive.simple-json.js',
     'js/directive/directive.button-navigator.js',
+    'js/directive/directive.pin-config.js',
 
     // Filter -->
     'js/filter/common.filter.js',
@@ -63,7 +64,8 @@
     'js/controller/ctrl.base.js',
     'js/controller/ctrl.signin.js',
     'js/controller/ctrl.test.js',
-    'js/controller/ctrl.dashboard.js'
+    'js/controller/ctrl.dashboard.js',
+    'js/controller/ctrl.dev.add.js'
 
   ];
 

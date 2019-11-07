@@ -3,6 +3,23 @@ body {
     background-image: radial-gradient(circle, rgba(0, 0, 0, 0.16) 1px, rgba(0, 0, 0, 0) 1px);
 }
 
+.hidden {
+    display: none;
+}
+
+table#tbl-devices {
+    margin-top: 1em;
+}
 table#tbl-devices td {
     padding: .45rem;
+}
+ul#lsNewPins {
+    list-style-type: none;
+}
+
+/* Grid */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-column-gap: 2%;
 }

@@ -21,7 +21,7 @@
 
     let mongooseDs = new MongooseDS();
     mongooseDs.initialize()
-    .then(addDefaultDevices)
+    // .then(addDefaultDevices)
     .then(() => logger.debug('[bootstrap] finished!'));
 
   }

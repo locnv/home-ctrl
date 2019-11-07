@@ -63,9 +63,20 @@
 
     ctx.body = {
       status: RespStatus.Ok,
-      message: 'Not implemented.',
-      // data: {},
       data: ctx.request.body,
+      serverTime: new Date()
+    };
+  };
+
+  DeviceApi.prototype.addDevice = async function(ctx, next) {
+    let device = ctx.request.body;
+
+    // await next();
+
+    ctx.body = {
+      status: RespStatus.Ok,
+      message: 'Not implemented.',
+      data: device,
       serverTime: new Date()
     };
   };

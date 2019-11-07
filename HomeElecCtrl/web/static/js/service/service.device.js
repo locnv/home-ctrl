@@ -15,6 +15,7 @@
 
     let Api = {
       ListDevice: '/api/dev/list',
+      AddDevice: '/api/dev/add',
 
       SwitchStatus: '/api/dev/{0}/{1}', // /api/dev/:id/:status
       SwitchesStatus: '/api/dev/config'
@@ -27,6 +28,8 @@
       isInitialized: isInitialized,
 
       getAllDevices: getAllDevices,
+      addDevice: addDevice,
+
       sendSwitchCommand: sendSwitchCommand,
       sendSwitchesCommand: sendSwitchesCommand,
     };
@@ -63,6 +66,17 @@
         .then(resp => resp.status === RespStatus.Ok ? resolve(resp.data) : reject(new Error(resp.message)))
         .catch(err => {
           logger.error('Failed to get devices list', err);
+          reject.bind(null, new Error('Server error. See log for more detail.'));
+        });
+      });
+    }
+
+    function addDevice(dev) {
+      return new Promise((resolve, reject) => {
+        http.sendPostRequest(Api.AddDevice, dev)
+        .then(resp => resp.status === RespStatus.Ok ? resolve(resp.data) : reject(new Error(resp.message)))
+        .catch(err => {
+          logger.error('Failed to add device', err);
           reject.bind(null, new Error('Server error. See log for more detail.'));
         });
       });

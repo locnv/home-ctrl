@@ -5,6 +5,7 @@ let _global = {
     Base: 'BaseCtrl',
     SignIn: 'SignInCtrl',
     Dashboard: 'DashboardCtrl',
+    AddDevice: 'AddDevCtrl',
     Test: 'TestCtrl'
   }
 };
@@ -70,6 +71,8 @@ String.prototype.format = function () {
 
     let Views = [
       { route: Routes.Dashboard, template: 'html/dashboard.html', ctrl: Ctrl.Dashboard },
+      { route: Routes.AddDevice, template: 'html/dev-add.html', ctrl: Ctrl.AddDevice },
+      { route: Routes.PiPinout, template: 'html/pigpio-map.html', ctrl: function() {} },
       { route: Routes.SignIn, template: 'html/signin.html', ctrl: Ctrl.Schedule  },
       { route: Routes.Test, template: 'html/test.html', ctrl: Ctrl.Test },
     ];
@@ -83,7 +86,8 @@ String.prototype.format = function () {
     }
 
     $routeProvider.when('/', {
-      redirectTo: Routes.Dashboard
+      // redirectTo: Routes.Dashboard
+      redirectTo: Routes.AddDevice
     }).otherwise({
       redirectTo: Routes.Dashboard
     });
