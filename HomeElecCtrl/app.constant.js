@@ -23,6 +23,13 @@
       Switch: 'switch'
     },
 
+    DeviceError: {
+      NoError: 0,     // OK
+
+      DevExist: 1,    // Register device
+      Unknown: 1001,  // Unknown error
+    },
+
     // As server
     Server: {
       RespStatus: {

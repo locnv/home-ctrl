@@ -86,8 +86,7 @@ String.prototype.format = function () {
     }
 
     $routeProvider.when('/', {
-      // redirectTo: Routes.Dashboard
-      redirectTo: Routes.AddDevice
+      redirectTo: Routes.Dashboard
     }).otherwise({
       redirectTo: Routes.Dashboard
     });

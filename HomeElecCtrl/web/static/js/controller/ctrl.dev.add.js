@@ -57,6 +57,7 @@
     $scope.nDevice = {
       id: '100-0000-123',
       name: 'Eugene',
+      devType: 'switch',
       pins: []
     };
 
@@ -109,13 +110,16 @@
 
     function sendAddDevice() {
 
-      devService.addDevice($scope.nDevice)
+      let dev = $scope.nDevice;
+
+      devService.addDevice(dev)
       .then(() => {
         notifier.notify('Request was sent.');
       })
       .catch(err => {
         log.error('Failed to add device', err);
-        notifier.error('Failed to add device. See log for detail.');
+        let errMessage = err.message || 'Failed to add device. See log for detail.';
+        notifier.error(errMessage);
       });
     }
   }

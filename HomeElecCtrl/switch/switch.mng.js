@@ -13,6 +13,11 @@
   const SwitchCommands = Switch.constant.Commands;
   const util = require('util');
 
+  const DevError = require('../app.constant').DeviceError;
+
+  const devDbService = require('../database/ds.device');
+
+
   const Constants = {
     Event: {
       SwitchStatusChanged: 'switch-status-changed'
@@ -30,6 +35,7 @@
   SwitchManagement.prototype.constants = Constants;
   SwitchManagement.prototype.initialize = initialize;
   SwitchManagement.prototype.getAllSwitches = getAllSwitches;
+  SwitchManagement.prototype.addSwitch = addSwitch;
   SwitchManagement.prototype.handleRemoteMessage = handleRemoteMessage;
   SwitchManagement.prototype.setSwitchStatus = setSwitchStatus;
   SwitchManagement.prototype.scheduleSwitch = scheduleSwitch;
@@ -112,6 +118,20 @@
    */
   function getAllSwitches() {
     return this.switches;
+  }
+
+  async function addSwitch(dev) {
+
+    if(dev.pins && dev.pins.length > 1) {
+      throw new Error('Too many pins. Switch device accepts 1 and onely 1 pin.');
+    }
+
+    try {
+      return await devDbService.create(dev);
+    } catch (e) {
+      throw new Error('An error occurs while adding new switch. See log for more detail.');
+    }
+
   }
 
   function handleRemoteMessage(message) {

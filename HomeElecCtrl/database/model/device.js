@@ -8,7 +8,8 @@ let ObjectId = mongoose.Schema.Types.ObjectId;
 const Model = {
   id: String,
   name: String,
-  devType: String
+  devType: String,
+  pins: Array
 };
 
 module.exports = Model;

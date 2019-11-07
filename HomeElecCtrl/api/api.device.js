@@ -9,6 +9,7 @@
   const DevTypes = require('../app.constant').DeviceType;
   const RespStatus = require('../app.constant').Server.RespStatus;
 
+  const logger = require('../util/logger');
   function DeviceApi() { }
 
   DeviceApi.prototype.getDevices = async function(ctx, next) {
@@ -69,14 +70,23 @@
   };
 
   DeviceApi.prototype.addDevice = async function(ctx, next) {
+    let respStatus = RespStatus.Ok;
+    let errMessage = '';
     let device = ctx.request.body;
 
-    // await next();
+    let createdDev = null;
+    try {
+      createdDev = await switchManagement.addSwitch(device);
+    } catch (e) {
+      respStatus = RespStatus.Nok;
+      errMessage = e.message;
+    }
+
 
     ctx.body = {
-      status: RespStatus.Ok,
-      message: 'Not implemented.',
-      data: device,
+      status: respStatus,
+      message: errMessage,
+      data: createdDev,
       serverTime: new Date()
     };
   };

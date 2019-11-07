@@ -29,11 +29,12 @@
           </div>
         </div>
 
+        <!-- Device Type: led | switch | ... -->
         <div class="form-group">
           <label for="selDevType">Device Type</label>
-          <select id="selDevType" class="form-control">
-            <option>Switch</option>
-            <option>LED</option>
+          <select id="selDevType" ng-model="nDevice.devType" class="form-control">
+            <option value="switch">Switch</option>
+            <option value="led">LED</option>
           </select>
           <div class="invalid-feedback">This field is required.</div>
         </div>
@@ -45,11 +46,9 @@
             <li ng-repeat="pin in nDevice.pins"><pin-config pin="pin"></pin-config></li>
           </ul>
 
-          <button class="btn btn-sm btn-success" ng-click="addNewPin()">Add</button>
+          <button class="btn btn-sm btn-success" ng-click="addNewPin()">Add pin</button>
           <span class="btn btn-link" nav-button nav-target="/pi-gpio">&nbsp;(See pins map)</span>
         </div>
-
-
 
         <button type="reset" class="btn btn-outline-primary">Reset</button>
         <button type="submit" class="btn btn-outline-danger" ng-click="sendAddDevice()">Save</button>
