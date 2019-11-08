@@ -126,6 +126,16 @@
       throw new Error('Too many pins. Switch device accepts 1 and onely 1 pin.');
     }
 
+    let exitDev = null;
+    try {
+      exitDev = await devDbService.find({ devType: dev.devType });
+    } catch (e) { }
+
+    if(exitDev) {
+      return DevError.DevExist;
+    }
+
+
     try {
       return await devDbService.create(dev);
     } catch (e) {
