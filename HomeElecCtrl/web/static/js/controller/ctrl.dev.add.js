@@ -103,7 +103,7 @@
       $scope.nDevice.pins.push({
         name: `pin-${idx}`,
         pinNb: 0,
-        type: '',
+        mode: '',
         level: 0
       });
     }

@@ -6,6 +6,7 @@
   "use strict";
 
   const logger = require('../util/logger');
+  const DeviceTypes = require('../app.constant').DeviceType;
 
   const ModuleString = {
     'linux': 'pigpio',
@@ -37,25 +38,41 @@
   /**
    *
    * @param config {object}
-   *  - name: {string}
-   *  - pin: {number} io pin id
-   *
+   * - id
+   * - name: {string}
+   // * - pin: {number} io pin id
+   * - pins: [
+   *  {
+   *    pinNb: nb
+   *  }
+   * ]
    * @constructor
    */
   function Switch(config) {
-    this.config = config;
-    this.name = config.name || 'unnamed';
     this.id = config.id;
+    this.name = config.name || 'unnamed';
+    this.devType = DeviceTypes.Switch;
+
+    let pin = config.pins[0];
+    pin.mode = Gpio.OUTPUT;
+    pin.status = Status.Off;
+    pin.io = new Gpio(pin.pinNb, { mode: Gpio.OUTPUT });
+
+    this.pins = [ pin ];
+
+    // TODO remove ?
+    this.config = config;
     this.status = Status.Off;
+
     this.reqStatus = null;
-    this.io = new Gpio(config.pin, {mode: Gpio.OUTPUT});
+    // this.io = new Gpio(config.pin, { mode: Gpio.OUTPUT });
     this.autoToggle = {
       active: false,
       onDelay: 30 * OneMinute,
       offDelay: 30 * OneMinute
     };
 
-    logger.info(`[switch] ${this.name} on pin#${config.pin}`);
+    logger.info(`[switch] ${this.name} on pin#${pin.pinNb}`);
   }
 
   Switch.constant = {
@@ -76,14 +93,18 @@
 
   function turnOn() {
     logger.info(`[switch][${this.name}] Turn On.`);
-    this.io.digitalWrite(Status.On);
+
+    let pin = this.pins[0];
+    pin.io.digitalWrite(Status.On);
     this.reqStatus = Status.On;
     this.updateStatus();
   }
 
   function turnOff() {
     logger.info(`[switch][${this.name}] Turn Off.`);
-    this.io.digitalWrite(Status.Off);
+
+    let pin = this.pins[0];
+    pin.io.digitalWrite(Status.Off);
     this.reqStatus = Status.Off;
 
     this.updateStatus();
@@ -91,11 +112,12 @@
 
   function updateStatus() {
     function Fn() {
-      let level = this.io.digitalRead();
+      let pin = this.pins[0];
+      let level = pin.io.digitalRead();
       //logger.info(`[switch][${this.name}] Current level: ${level}.`);
 
       if(level === Status.On || level === Status.Off) {
-        this.status = level;
+        pin.status = level;
       }
     }
 

@@ -251,10 +251,13 @@
 
   };
 
-  DsBase.prototype.findAll = function() {
+  DsBase.prototype.findAll = function(filter) {
     let model = this.model;
+    let f = filter || {};
+    let proj = {};
+
     return new Promise(function(resolve) {
-      model.find()
+      model.find(f, proj)
       .then(function(docs) {
         resolve(docs);
       })

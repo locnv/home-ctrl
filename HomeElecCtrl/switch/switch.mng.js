@@ -14,6 +14,7 @@
   const util = require('util');
 
   const DevError = require('../app.constant').DeviceError;
+  const DeviceTypes = require('../app.constant').DeviceType;
 
   const devDbService = require('../database/ds.device');
 
@@ -26,7 +27,7 @@
 
   /* Constructor */
   function SwitchManagement() {
-    this.initialize();
+    this.initialize().then(null);
     this.tmrUpdateStatus = null;
   }
 
@@ -45,36 +46,48 @@
   SwitchManagement.prototype.changeSwitchAutoToggle = changeSwitchAutoToggle;
 
   /* Initialize */
-  function initialize() {
+  async function initialize() {
     logger.info('[switch-mng] Initialized');
 
     this.switches = [ ];
-    let DefOfSwitches = require('./definition.json');
-    for(let i = 0; i < DefOfSwitches.length; i++) {
-      let d = DefOfSwitches[i];
-      let sw = new Switch(d);
-      sw.initialize();
-      this.switches.push(sw);
+
+    let allSwitches = await devDbService.findAll({ devType: 'switch' });
+    if(!allSwitches || allSwitches.length <= 0) {
+      allSwitches = await createDefaultSwitches();
     }
 
-    // Test
-    /*let fSW = this.switches[0];
-    let n = new Date().getTime();
-    let delay = 30*60*1000; // 30 minutes.
-    fSW.plans = [
-      {
-        id: appUtil.generateUuid(),
-        switchId: fSW.switchId,
-        command: SwitchCommands.TurnOff,
-        time: n + delay
-      }, {
-        id: appUtil.generateUuid(),
-        switchId: fSW.switchId,
-        command: SwitchCommands.TurnOn,
-        time: n + 2*delay
-      }
-    ];*/
+    allSwitches.forEach((sConfig) => {
+      let sw1 = new Switch(sConfig);
+      sw1.initialize();
+      this.switches.push(sw1);
+    });
+  }
 
+  async function createDefaultSwitches() {
+    let dbSwitches = [];
+    let DefOfSwitches = require('./definition.json');
+
+    for(let i = 0; i < DefOfSwitches.length; i++) {
+      let d = DefOfSwitches[i];
+
+      let swData = {
+        id: d.id,
+        name: d.name,
+        devType: DeviceTypes.Switch,
+        pins: [
+          {
+            name: 'pin#0',
+            pinNb: d.pin,
+            status: SwitchStatus.Off
+          }
+        ]
+      };
+
+      let dbSwitch = await devDbService.create(swData);
+      dbSwitches.push(dbSwitch);
+    }
+
+    return dbSwitches;
   }
 
   function reloadAllSwitchStatus() {
@@ -123,7 +136,7 @@
   async function addSwitch(dev) {
 
     if(dev.pins && dev.pins.length > 1) {
-      throw new Error('Too many pins. Switch device accepts 1 and onely 1 pin.');
+      throw new Error('Too many pins. Switch device accepts 1 and only 1 pin.');
     }
 
     let exitDev = null;
@@ -134,7 +147,6 @@
     if(exitDev) {
       return DevError.DevExist;
     }
-
 
     try {
       return await devDbService.create(dev);
