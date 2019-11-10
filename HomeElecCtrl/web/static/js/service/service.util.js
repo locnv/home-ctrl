@@ -23,9 +23,6 @@
     let mPlatform = null;
 
     return {
-      Remote: {
-        Host: 'http://localhost:1337',
-      },
       stringToByteArray: stringToByteArray,
       hexStringToByteArray: hexStringToByteArray,
       isHexString: isHexString,

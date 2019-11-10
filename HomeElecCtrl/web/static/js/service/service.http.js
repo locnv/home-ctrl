@@ -7,11 +7,11 @@
   angular.module(_global.AppName)
   .factory('HttpComm', ServiceImpl);
 
-  ServiceImpl.$inject = [ '$http', 'Util', 'LogService' ];
+  ServiceImpl.$inject = [ '$http', 'Util', 'LogService', 'AppConstants' ];
 
-  function ServiceImpl( $http, util, logger ) {
+  function ServiceImpl( $http, util, logger, appConst ) {
 
-    let Host = util.Remote.Host;
+    let Host = appConst.Host;
 
     let Methods = {
       Get: 'get',

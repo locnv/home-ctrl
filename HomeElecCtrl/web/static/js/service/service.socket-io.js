@@ -16,7 +16,7 @@
 
   function ServiceImpl( logger, util, appConst ) {
 
-    let Host = util.Remote.Host;
+    let Host = appConst.Host;
     let mInitialized = false;
     let mSocket = null;
     let Identifier = appConst.Identifier;

@@ -13,6 +13,8 @@
       AppName: 'AppTest',
       Identifier: 'locnv-agents',
       GW: 'home-npc-2018',
+      Host: 'http://localhost:1337',
+      // Host: 'http://192.168.4.1:1337',
 
       /* Routes */
       Routes: {
