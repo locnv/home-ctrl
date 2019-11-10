@@ -1,5 +1,5 @@
 {
-  "name": "HomeElecCtrl",
+  "name": "home-elec-ctrl",
   "version": "1.0.0",
   "description": "Home control application.",
   "main": "app.js",
